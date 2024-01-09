@@ -1,0 +1,19 @@
+@import "../../styles/helpers/mixins.scss";
+
+.container {
+  transition: all 0.5s smooth;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  text-align: start;
+}
+
+.gradingTitleOption {
+  cursor: pointer;
+}

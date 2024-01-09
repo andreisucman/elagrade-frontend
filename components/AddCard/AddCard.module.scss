@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey);
+  min-height: 12rem;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  margin: auto;
+}
+
+.label {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-size: 15%;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image {
+  cursor: pointer;
+}

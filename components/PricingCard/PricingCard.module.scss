@@ -1,0 +1,47 @@
+@import "../../styles/helpers/animations.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 31rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--black);
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  gap: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.explanation {
+  text-align: center;
+}
+
+.title {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.range_label {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.totalPrice {
+  font-size: 2rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey);
+  border-radius: 1rem;
+}

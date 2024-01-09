@@ -1,0 +1,32 @@
+@import "normalize.css";
+@import "./helpers/colors.scss";
+@import "./helpers/icons.scss";
+@import "./helpers/range.scss";
+@import "./helpers/normalize.scss";
+@import "./helpers/misc.scss";
+
+html {
+  font-family: "Open Sans", "sans-serif";
+  font-size: 16px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  background-repeat: repeat;
+  color: var(--black);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+}

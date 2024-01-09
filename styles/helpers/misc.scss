@@ -1,0 +1,40 @@
+@import "./animations.scss";
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+  right: 1rem;
+  top: 1rem;
+
+  width: 1rem;
+  height: 1rem;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../public/assets/close.svg");
+}
+
+.link {
+  cursor: pointer;
+  color: var(--black);
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+
+  &_active {
+    font-weight: 700;
+    position: relative;
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+}

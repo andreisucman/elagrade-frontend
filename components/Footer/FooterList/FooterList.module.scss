@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-self: center;
+  gap: 1.5rem;
+}
+
+.title {
+  &::after {
+    content: "";
+    display: block;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--grey);
+  }
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  position: relative;
+  transition: all 0.3s ease;
+
+  display: inline-block;
+  width: fit-content;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

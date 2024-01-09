@@ -1,0 +1,40 @@
+.container {
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 1fr minmax(100px, 0.75fr) minmax(100px, 0.45fr);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr minmax(100px, 0.75fr) minmax(100px, 0.45fr);
+  align-items: center;
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey);
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+}
+
+.download {
+  padding: 0.75rem;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: var(--primary-color);
+  }
+}
+
+.placeholder {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey);
+}

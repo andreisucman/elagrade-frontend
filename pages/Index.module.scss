@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:3rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1rem;
+  max-width: 50rem;
+  width: 100%;
+  align-items: center;
+  margin: auto;
+}
+
+.full_width {
+  width: 100%;
+  background-color: var(--grey-light);
+  padding: 2rem 0 2.5rem 0;
+}
+
+
+.intro_title,
+.how_title {
+  line-height: 140%;
+  font-size: 1.75rem;
+}
+
+.how {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: rem;
+  max-width: 50rem;
+  padding: 0 1rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.item {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}

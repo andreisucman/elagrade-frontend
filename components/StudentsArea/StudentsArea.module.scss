@@ -1,0 +1,18 @@
+@import "../../styles/helpers/mixins.scss";
+
+.container {
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.note {
+  padding-bottom: 1rem;
+}

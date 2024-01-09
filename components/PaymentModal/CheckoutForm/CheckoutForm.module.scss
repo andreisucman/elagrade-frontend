@@ -1,0 +1,54 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth_el {
+  margin-bottom: 0.5rem;
+}
+
+#payment-message {
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding-top: 0.75rem;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#payment-element {
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons and links */
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.15rem;
+
+  background: var(--primary-color);
+  color: white;
+  border-radius: 1rem;
+  border: 0;
+  height: 3.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.displayMessage {
+  padding: 0.25rem 0;
+  text-align: center;
+}

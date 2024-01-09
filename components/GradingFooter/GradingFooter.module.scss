@@ -1,0 +1,42 @@
+@import "../../styles/helpers/mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.selectors {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+
+  @include desktop {
+    gap: 1rem;
+  }
+}
+
+.selector {
+  cursor: pointer;
+
+  @include desktop {
+    padding: 1rem 0;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  margin-right: auto;
+  text-align: left;
+}

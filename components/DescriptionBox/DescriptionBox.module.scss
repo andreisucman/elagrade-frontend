@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  flex-basis: 40%;
+
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey);
+}
+
+.title {
+  font-size: 0.8rem;
+}
+
+.input {
+  min-height: 2rem;
+  line-height: unset;
+}
