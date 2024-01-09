@@ -204,7 +204,11 @@ const Grading = () => {
     const response = await callTheServer({
       endpoint: "gradePaper",
       method: "POST",
-      body: { files: payload, assignmentName },
+      body: {
+        files: payload,
+        assignmentName:
+          assignmentName !== "" ? assignmentName : "Untitled assignment",
+      },
     });
 
     if (response?.status === 200) {
@@ -219,7 +223,10 @@ const Grading = () => {
     } else if (response?.status === 400) {
       setProblemPopupMessage(response?.message);
       setShowGradingOverlay(false);
-      setOpenAccordion(2);
+
+      if (response.message === "grading criteria missing") {
+        setOpenAccordion(2);
+      }
     }
   }
 

@@ -129,7 +129,6 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ isSignin }) => {
           <Button
             buttonText={isSignin ? "Sign in" : "Sign up"}
             innerStyle={{ maxWidth: "unset" }}
-            onClick={onEmailAuthClick}
           />
 
           <SocialRow

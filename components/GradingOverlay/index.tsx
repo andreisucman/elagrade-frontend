@@ -31,11 +31,7 @@ const GradingOverlay = () => {
           }}
         />
         {countdown > 0 ? (
-          <p className={styles.paragraphs}>
-            {countdown}
-            <span>s</span>
-            left
-          </p>
+          <p className={styles.paragraphs}>{countdown}s left</p>
         ) : (
           <p className={styles.paragraphs}>Almost done...</p>
         )}

@@ -8,7 +8,7 @@ type Props = {
   buttonText: string;
   isDisabled?: boolean;
   customClass?: string;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 const Button = ({
@@ -21,7 +21,7 @@ const Button = ({
   onClick,
 }: Props) => {
   function handleClick() {
-    onClick();
+    if (onClick) onClick();
   }
   return (
     <div
