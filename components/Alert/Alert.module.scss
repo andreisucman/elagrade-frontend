@@ -3,7 +3,7 @@
 .container {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 1003;
   background-color: rgba($color: #000, $alpha: 0.5);
 }
 
@@ -36,4 +36,8 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
+}
+
+.onClickText {
+  cursor: pointer;
 }

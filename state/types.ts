@@ -19,6 +19,7 @@ export type UserType = {
   email: string;
   plan: string;
   subscriptionId: string | null;
+  emailVerified: boolean;
 } | null;
 
 export type UserContextType = {

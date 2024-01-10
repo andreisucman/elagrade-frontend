@@ -9,9 +9,12 @@ import GradingFooter from "@/components/GradingFooter";
 import StudentsArea from "@/components/StudentsArea";
 import GradingResult from "@/components/GradingResult";
 import { resizeImage } from "@/functions/resizeImage";
+import { BsExclamationDiamond } from "react-icons/bs";
 import DescriptionBox from "@/components/DescriptionBox";
 import GradingOverlay from "@/components/GradingOverlay";
 import InsufficientFunds from "@/components/ProblemPopup";
+import AnnouncementBar from "@/components/AnnouncementBar";
+import Alert from "@/components/Alert";
 import styles from "./grading.module.scss";
 
 const Grading = () => {
@@ -27,6 +30,10 @@ const Grading = () => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
   const [assignmentName, setAssignmentName] = useState("");
   const [problemPopupMessage, setProblemPopupMessage] = useState(null);
+  const [alertMessage, setAlertMessage] = useState<string | null>(null);
+  const [resendEmailText, setResendEmailText] = useState(
+    "(Click to resend the email)"
+  );
   const { userDetails, setUserDetails } = useContext(GeneralContext);
 
   const [isWholeFeedback, setIsWholeFeedback] = useState(true);
@@ -161,6 +168,13 @@ const Grading = () => {
   }
 
   async function handleGrade() {
+    if (!userDetails?.emailVerified)
+      return setAlertMessage(
+        `We've sent a verification email to ${
+          userDetails?.email ? userDetails.email : "your email"
+        }. Please confirm it.`
+      );
+
     setShowGradingOverlay(true);
     const allFileBatches = students.map((student: any) => student.files);
     const allUrls = [];
@@ -234,6 +248,24 @@ const Grading = () => {
     setOpenAccordion(openAccordion === index ? null : index);
   };
 
+  async function resendVerificationEmail() {
+    console.log("USER DETAILS", userDetails);
+    const response = await callTheServer({
+      endpoint: `sendVerificationEmail/${userDetails?.email}`,
+      method: "GET",
+    });
+
+    if (response?.status === 200) {
+      setResendEmailText("Please check your inbox");
+
+      const tId = setTimeout(() => {
+        setResendEmailText("(Click to resend the email)");
+        setAlertMessage(null);
+        clearTimeout(tId);
+      }, 4000);
+    }
+  }
+
   const parts = [
     {
       title: "Assignment name",
@@ -286,40 +318,63 @@ const Grading = () => {
   ];
 
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        {problemPopupMessage && (
-          <InsufficientFunds
-            message={problemPopupMessage}
-            setShowModal={() => setProblemPopupMessage(null)}
-          />
-        )}
-        {showGradingOverlay && <GradingOverlay />}
-        <GradingHeader />
-        {parts.map((part: any, index: number) => (
-          <div key={index} className={styles.accordionItem}>
-            <div
-              className={styles.accordionQuestion}
-              onClick={() => toggleAccordion(index)}
-            >
-              <p className={styles.accordionItemTitle}>{part.title}</p>
-              {openAccordion === index ? <FaChevronUp /> : <FaChevronDown />}
+    <>
+      {!userDetails?.emailVerified && (
+        <AnnouncementBar
+          icon={<BsExclamationDiamond />}
+          message="Verify your email"
+          onClick={() =>
+            setAlertMessage(
+              `We've sent a verification email to ${
+                userDetails?.email ? userDetails.email : "your email"
+              }. Please confirm it.`
+            )
+          }
+        />
+      )}
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          {alertMessage && (
+            <Alert
+              message={alertMessage}
+              setShowAlert={() => setAlertMessage(null)}
+              onClickText={resendEmailText}
+              onClick={resendVerificationEmail}
+            />
+          )}
+          {problemPopupMessage && (
+            <InsufficientFunds
+              message={problemPopupMessage}
+              setShowModal={() => setProblemPopupMessage(null)}
+            />
+          )}
+          {showGradingOverlay && <GradingOverlay />}
+          <GradingHeader />
+          {parts.map((part: any, index: number) => (
+            <div key={index} className={styles.accordionItem}>
+              <div
+                className={styles.accordionQuestion}
+                onClick={() => toggleAccordion(index)}
+              >
+                <p className={styles.accordionItemTitle}>{part.title}</p>
+                {openAccordion === index ? <FaChevronUp /> : <FaChevronDown />}
+              </div>
+              {openAccordion === index && (
+                <div className={styles.accordionAnswer}>{part.html}</div>
+              )}
             </div>
-            {openAccordion === index && (
-              <div className={styles.accordionAnswer}>{part.html}</div>
-            )}
-          </div>
-        ))}
+          ))}
 
-        {studentsExist.current && (
-          <GradingFooter
-            students={students}
-            gradingResults={gradingResults}
-            handleGrade={handleGrade}
-          />
-        )}
+          {studentsExist.current && (
+            <GradingFooter
+              students={students}
+              gradingResults={gradingResults}
+              handleGrade={handleGrade}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -20,6 +20,7 @@ export const defaultUser: UserType = {
   pagesLeft: 0,
   email: "",
   plan: "",
+  emailVerified: false,
   subscriptionId: null,
 };
 
