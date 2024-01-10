@@ -26,7 +26,7 @@ const GradingFooter = ({ students, gradingResults, handleGrade }: Props) => {
           buttonText="Download all"
           customStyle={{ minWidth: "17rem" }}
           innerStyle={{ margin: "auto 0 0 auto", maxWidth: "unset" }}
-          onClick={() => handleDownload(gradingResults.classReportUrl)}
+          onClick={() => handleDownload(gradingResults.assignmentReportUrl)}
         />
       )}
       {students.length > 0 && !gradingResults && (

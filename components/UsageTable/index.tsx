@@ -17,20 +17,23 @@ const UsageTable = ({ pagination, classesResults, loadNext }: Props) => {
           <b style={{ justifySelf: "start" }}>Assignment</b>
           <b style={{ justifySelf: "end" }}>Pages</b>
         </div>
-        {classesResults?.map((classResult: any, index: number) => {
-          const date = new Date(classResult._created_at).toLocaleDateString(
-            "en-US",
-            { year: "2-digit", month: "short", day: "numeric" }
-          );
-          const pagesUsed = classResult?.totalPages
-            ? classResult?.totalPages?.toFixed(2)
+        {classesResults?.map((assignmentResult: any, index: number) => {
+          const date = new Date(
+            assignmentResult._created_at
+          ).toLocaleDateString("en-US", {
+            year: "2-digit",
+            month: "short",
+            day: "numeric",
+          });
+          const pagesUsed = assignmentResult?.totalPages
+            ? assignmentResult?.totalPages?.toFixed(2)
             : 0;
           return (
             <div className={styles.group} key={index}>
               <div className={styles.top_row}>
                 <p style={{ justifySelf: "start" }}>{date}</p>
                 <p style={{ justifySelf: "start" }}>
-                  {classResult.assignmentName}
+                  {assignmentResult.assignmentName}
                 </p>
                 <p style={{ justifySelf: "end" }}>{pagesUsed}</p>
               </div>

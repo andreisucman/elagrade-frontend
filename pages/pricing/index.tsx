@@ -82,6 +82,13 @@ const Results: React.FC = () => {
     priceId: string;
     prepaidPages: string | null;
   }) {
+    if (!priceId) {
+      router.push({
+        pathname: "/sign-in",
+      });
+      return;
+    }
+
     if (prepaidPages) {
       payPrepaid({ priceId, prepaidPages });
     } else {
@@ -192,15 +199,24 @@ const Results: React.FC = () => {
               userDetails?.plan === "yearly" &&
               title?.toLowerCase() === "monthly";
 
-            const unbockButton = isPrepaid
-              ? true
-              : monthlyMonthly
-              ? false
-              : yearlyYearly
-              ? false
-              : yearlyMonthly
-              ? false
-              : true;
+            const freeAndLoggedOut = !priceId && !userDetails?.email;
+
+            let unblockButton = false;
+
+            if (isPrepaid && priceId) {
+              unblockButton = true;
+            }
+
+            if (freeAndLoggedOut) {
+              unblockButton = true;
+            }
+
+            if (!monthlyMonthly && !isPrepaid) {
+              unblockButton = true;
+            }
+            if (!yearlyMonthly && !isPrepaid) {
+              unblockButton = true;
+            }
 
             const discountedPPP =
               isPrepaid && userDetails?.plan === "yearly" ? PPP * 0.7 : PPP;
@@ -209,7 +225,7 @@ const Results: React.FC = () => {
               <React.Fragment key={index}>
                 <PricingCard
                   PPP={Number(discountedPPP.toFixed(2))}
-                  isUnblocked={unbockButton}
+                  isUnblocked={unblockButton}
                   title={title}
                   pages={pages}
                   price={price}
@@ -217,9 +233,11 @@ const Results: React.FC = () => {
                   priceId={priceId}
                   isPrepaid={isPrepaid}
                   buttonText={
-                    isPrepaid
+                    !priceId
+                      ? "Sign up"
+                      : isPrepaid
                       ? "Top up"
-                      : unbockButton
+                      : unblockButton
                       ? "Subscribe"
                       : "Plan active"
                   }

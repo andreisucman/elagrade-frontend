@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Button from "../Button";
+import Alert from "../Alert";
 import styles from "./PricingCard.module.scss";
 
 type Props = {
@@ -28,6 +29,7 @@ const PricingCard = ({
   handleCheckout,
 }: Props) => {
   const [totalPages, setTotalPages] = useState("10");
+  const [alertMessage, setAlertMessage] = useState<null | string>(null);
 
   function getExplanation(title: string) {
     switch (title) {
@@ -35,29 +37,46 @@ const PricingCard = ({
         return "For teachers who just want to try it. Top up as little as $1 USD.";
       case "Monthly":
         return "For teachers who seek better value. Pay 7 cents per page (500 words).";
-      case "Yearly":
-        return "For teachers who want the best value. Pay 4 cents per page (500 words)";
+      case "Free":
+        return "Get 200 pages free to try and see if you like it. No credit card required.";
     }
   }
 
   const priceRef = useRef(0);
+  const pagesRef = useRef(0);
 
-  priceRef.current = isPrepaid ? Number(totalPages) * PPP : price;
+  priceRef.current = !priceId
+    ? price
+    : isPrepaid
+    ? Number(totalPages) * PPP
+    : price;
+
+  pagesRef.current = !priceId
+    ? Number(pages)
+    : isPrepaid
+    ? Number(totalPages)
+    : Number(pages);
 
   return (
     <div className={styles.container}>
+      {alertMessage && (
+        <Alert
+          message={alertMessage}
+          setShowAlert={() => setAlertMessage(null)}
+        />
+      )}
       <div className={styles.wrapper}>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.totalPrice}>${priceRef.current.toFixed(2)} USD</p>
         <p className={styles.totalPages}>
-          Pages: {isPrepaid ? totalPages : pages}
+          Pages: {pagesRef.current.toFixed(0)}
         </p>
         <p className={styles.totalPages}>PPP: ${PPP} USD</p>
         <p className={styles.extra}>
           Extra: {isPrepaid ? "\u2500" : `$${extra} USD`}
         </p>
         <p className={styles.explanation}>{getExplanation(title)}</p>
-        {isPrepaid && (
+        {isPrepaid && priceId && (
           <label className={styles.range_label}>
             <input
               onChange={(e) => setTotalPages(e.target.value)}
@@ -71,13 +90,15 @@ const PricingCard = ({
         )}
         {!isPrepaid && (
           <>
-            {title === "Monthly" ? (
-              <span style={{ fontSize: "1.25rem" }}>Better value</span>
-            ) : (
-              <b style={{ fontSize: "1.25rem" }}>Best value</b>
-            )}
+            <span style={{ fontSize: "1.25rem" }}>Better value</span>
           </>
         )}
+        {!priceId && <span style={{ fontSize: "1.25rem" }}>Free value</span>}
+        <div className={styles.calculate}>
+          {pagesRef.current} pages save you 5 min each, amounting to ~
+          {((Number(pagesRef.current) * 5) / 60).toFixed(0)} hours in total.
+          Multiply this with your hourly wage to see how much you're saving.
+        </div>
       </div>
       <Button
         customClass={isUnblocked ? "" : "disabled"}

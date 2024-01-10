@@ -17,17 +17,6 @@ export default function RadioGroup({
       <label className={styles.label}>
         <input
           type="radio"
-          checked={isWholeFeedback}
-          value="wholeFeedback"
-          onChange={() =>
-            toggleIsWholeFeedback ? toggleIsWholeFeedback(true) : () => {}
-          }
-        />
-        I give feedback as a whole
-      </label>
-      <label className={styles.label}>
-        <input
-          type="radio"
           checked={!isWholeFeedback}
           value="subsectionFeedback"
           onChange={() =>
@@ -35,6 +24,17 @@ export default function RadioGroup({
           }
         />
         I give feedback for each rubric
+      </label>
+      <label className={styles.label}>
+        <input
+          type="radio"
+          checked={isWholeFeedback}
+          value="wholeFeedback"
+          onChange={() =>
+            toggleIsWholeFeedback ? toggleIsWholeFeedback(true) : () => {}
+          }
+        />
+        I give feedback as a whole
       </label>
     </div>
   );

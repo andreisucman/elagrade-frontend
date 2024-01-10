@@ -34,9 +34,10 @@ const Grading = () => {
   const [resendEmailText, setResendEmailText] = useState(
     "(Click to resend the email)"
   );
-  const { userDetails, setUserDetails } = useContext(GeneralContext);
+  const [announcementBarClass, setAnnouncementBarClass] = useState("hidden");
+  const { userDetails, setUserDetails, isLoading } = useContext(GeneralContext);
 
-  const [isWholeFeedback, setIsWholeFeedback] = useState(true);
+  const [isWholeFeedback, setIsWholeFeedback] = useState(false);
 
   const disableSavingCriteria = useRef(true);
   disableSavingCriteria.current =
@@ -86,6 +87,12 @@ const Grading = () => {
     );
   }, []);
 
+  useEffect(() => {
+    if (!isLoading) {
+      if (!userDetails?.emailVerified) setAnnouncementBarClass("");
+    }
+  }, [isLoading]);
+
   function onAddStudentFiles(studentId: string, newFiles: File[]) {
     setStudents(
       students.map((student: any) => {
@@ -126,6 +133,8 @@ const Grading = () => {
   }
 
   function onRemoveStudentCard(studentToRemove: any) {
+    setGradingResults(null);
+
     const newStudents = students.filter(
       (student: any) => student.id !== studentToRemove.id
     );
@@ -249,7 +258,6 @@ const Grading = () => {
   };
 
   async function resendVerificationEmail() {
-    console.log("USER DETAILS", userDetails);
     const response = await callTheServer({
       endpoint: `sendVerificationEmail/${userDetails?.email}`,
       method: "GET",
@@ -319,19 +327,18 @@ const Grading = () => {
 
   return (
     <>
-      {!userDetails?.emailVerified && (
-        <AnnouncementBar
-          icon={<BsExclamationDiamond />}
-          message="Verify your email"
-          onClick={() =>
-            setAlertMessage(
-              `We've sent a verification email to ${
-                userDetails?.email ? userDetails.email : "your email"
-              }. Please confirm it.`
-            )
-          }
-        />
-      )}
+      <AnnouncementBar
+        icon={<BsExclamationDiamond />}
+        message="Verify your email"
+        customClass={announcementBarClass}
+        onClick={() =>
+          setAlertMessage(
+            `We've sent a verification email to ${
+              userDetails?.email ? userDetails.email : "your email"
+            }. Please confirm it.`
+          )
+        }
+      />
       <div className={styles.container}>
         <div className={styles.wrapper}>
           {alertMessage && (

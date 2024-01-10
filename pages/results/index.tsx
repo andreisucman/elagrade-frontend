@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { TbDownload } from "react-icons/tb";
 import callTheServer from "@/functions/callTheServer";
 import Pagination from "@/components/Pagination";
 import EmptyPlaceholder from "../../components/EmptyPlaceholder";
@@ -12,7 +13,7 @@ type LoadNext = {
 };
 
 const Results: React.FC = () => {
-  const [classesResults, setClassesResults] = useState([]);
+  const [assignments, setAssignments] = useState<any>([]);
   const [pagination, setPagination] = useState({
     currentPage: 1,
     totalPages: 1,
@@ -26,7 +27,7 @@ const Results: React.FC = () => {
     }).then(async (response: any) => {
       if (response?.status === 200) {
         const { result, pagination } = response?.message;
-        setClassesResults(result);
+        setAssignments(result);
         setPagination(pagination);
       }
     });
@@ -39,10 +40,47 @@ const Results: React.FC = () => {
     }).then(async (response: any) => {
       if (response?.status === 200) {
         const { result, pagination } = response?.message;
-        setClassesResults(result);
+        setAssignments(result);
         setPagination(pagination);
       }
     });
+  }
+
+  async function deleteResult(assignmentId: string, resultId: string) {
+    const response = await callTheServer({
+      endpoint: `deleteGradingResult/${assignmentId}/${resultId}`,
+      method: "DELETE",
+    });
+
+    if (response?.status === 200) {
+      const assignmentIndex = assignments.findIndex(
+        (assignment: any) => assignment._id === assignmentId
+      );
+      if (assignmentIndex === -1) {
+        console.error("Assignment not found");
+        return;
+      }
+
+      const updatedResults: any = assignments[assignmentIndex].results.filter(
+        (result: any) => result.resultId !== resultId
+      );
+
+      if (updatedResults.length === 0) {
+        const newAssignments = assignments.filter(
+          (assignment: any, index: number) => index !== assignmentIndex
+        );
+        setAssignments(newAssignments);
+      } else {
+        const newAssignments: any = [...assignments];
+        newAssignments[assignmentIndex] = {
+          ...newAssignments[assignmentIndex],
+          results: updatedResults,
+        };
+        setAssignments(newAssignments);
+      }
+    } else {
+      console.error("Failed to delete result");
+    }
   }
 
   return (
@@ -50,28 +88,27 @@ const Results: React.FC = () => {
       <div className={styles.wrapper}>
         <h2 className={styles.title}>Results</h2>
         <div className={styles.content}>
-          {classesResults.length > 0 ? (
-            classesResults.map((classResult: any, index: number) => {
-              const date = new Date(classResult._created_at).toLocaleDateString(
-                "en-US",
-                {
-                  year: "2-digit",
-                  month: "short",
-                  day: "numeric",
-                }
-              );
+          {assignments.length > 0 ? (
+            assignments.map((assignmentResult: any, index: number) => {
+              const date = new Date(
+                assignmentResult._created_at
+              ).toLocaleDateString("en-US", {
+                year: "2-digit",
+                month: "short",
+                day: "numeric",
+              });
               return (
                 <div className={styles.group} key={index}>
                   <div className={styles.top_row}>
-                    <p>{classResult.assignmentName}</p>
+                    <p>{assignmentResult.assignmentName}</p>
                     <a
-                      href={classResult.classReportUrl}
+                      href={assignmentResult.assignmentReportUrl}
                       className={styles.downloadClass}
                     >
                       Download all
                     </a>
                   </div>
-                  {classResult.results.map((paper: any, index: number) => (
+                  {assignmentResult.results.map((paper: any, index: number) => (
                     <div key={index} className={styles.row}>
                       <p>{date}</p>
                       <p>{paper.studentName}</p>
@@ -80,14 +117,21 @@ const Results: React.FC = () => {
                         className={styles.download}
                         onClick={() =>
                           prepareAndDownloadReport(
-                            classResult._id,
+                            assignmentResult._id,
                             paper.resultId,
                             paper.studentName
                           )
                         }
                       >
-                        Download
+                        <TbDownload className={styles.icon} />
                       </button>
+                      <div
+                        className="close"
+                        style={{ position: "static", justifySelf: "flex-end" }}
+                        onClick={() =>
+                          deleteResult(assignmentResult?._id, paper.resultId)
+                        }
+                      />
                     </div>
                   ))}
                 </div>
@@ -104,12 +148,14 @@ const Results: React.FC = () => {
             />
           )}
         </div>
-        <Pagination
-          currentPage={pagination.currentPage}
-          totalPages={pagination.totalPages}
-          perPage={pagination.perPage}
-          onClick={loadNext}
-        />
+        {assignments.length > 0 && (
+          <Pagination
+            currentPage={pagination.currentPage}
+            totalPages={pagination.totalPages}
+            perPage={pagination.perPage}
+            onClick={loadNext}
+          />
+        )}
       </div>
     </main>
   );
