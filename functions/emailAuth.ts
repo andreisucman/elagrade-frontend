@@ -2,18 +2,16 @@ import callTheServer from "./callTheServer";
 
 type Props = {
   email: string;
-  isSignin?: boolean;
+  isSignIn?: boolean;
   password: string;
 };
 
-export async function emailAuth({ isSignin, email, password }: Props) {
+export async function emailAuth({ isSignIn, email, password }: Props) {
   const response = await callTheServer({
-    endpoint: isSignin ? "emailSignIn" : "emailSignUp",
+    endpoint: isSignIn ? "emailSignIn" : "emailSignUp",
     body: { email, password },
     method: "POST",
   });
 
-  if (response?.status === 200) {
-    return response?.message;
-  }
+  return response;
 }

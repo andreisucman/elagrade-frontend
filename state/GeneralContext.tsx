@@ -1,6 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
 import callTheServer from "@/functions/callTheServer";
-import { useRouter } from "next/router";
 import type {
   UserContextType,
   UserContextProviderProps,
@@ -39,7 +38,6 @@ export const GeneralContext = createContext<UserContextType>({
 const GeneralContextProvider: React.FC<UserContextProviderProps> = ({
   children,
 }) => {
-  const router = useRouter();
   const [userDetails, setUserDetails] = useState<UserType>(defaultUser);
   const [isLoading, setIsLoading] = useState(true);
 

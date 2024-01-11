@@ -34,6 +34,10 @@ const callTheServer = async <T>({ endpoint, method, body }: Props<T>) => {
         window.location.pathname !== "/" &&
         window.location.pathname !== "/sign-in" &&
         window.location.pathname !== "/sign-up" &&
+        window.location.pathname !== "/gpt-auth" &&
+        window.location.pathname !== "/contact" &&
+        window.location.pathname !== "/legal/terms" &&
+        window.location.pathname !== "/legal/privacy" &&
         window.location.pathname !== "/pricing"
       ) {
         const searchParams = new URLSearchParams(window.location.search);

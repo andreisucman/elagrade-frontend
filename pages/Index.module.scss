@@ -1,12 +1,14 @@
+@import "../styles/helpers/mixins.scss";
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:3rem;
+  gap: 4rem;
   animation: fadeIn 0.5s ease-in-out;
 }
 
-.box {
+.group {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -17,12 +19,33 @@
   margin: auto;
 }
 
+.boxes {
+  display: grid;
+  gap: 1rem;
+
+  @include laptop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--grey-light);
+  border-radius: 1rem;
+  border: 1px solid var(--grey);
+  text-align: center;
+}
+
 .full_width {
   width: 100%;
   background-color: var(--grey-light);
   padding: 2rem 0 2.5rem 0;
 }
-
 
 .intro_title,
 .how_title {

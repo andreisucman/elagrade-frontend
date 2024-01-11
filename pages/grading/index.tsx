@@ -1,5 +1,5 @@
-import { v4 } from "uuid";
 import React, { useState, useEffect, useContext, useRef } from "react";
+import { v4 } from "uuid";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { GeneralContext } from "@/state/GeneralContext";
 import callTheServer from "@/functions/callTheServer";
@@ -14,6 +14,8 @@ import DescriptionBox from "@/components/DescriptionBox";
 import GradingOverlay from "@/components/GradingOverlay";
 import InsufficientFunds from "@/components/ProblemPopup";
 import AnnouncementBar from "@/components/AnnouncementBar";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Alert from "@/components/Alert";
 import styles from "./grading.module.scss";
 
@@ -327,6 +329,7 @@ const Grading = () => {
 
   return (
     <>
+      <Header />
       <AnnouncementBar
         icon={<BsExclamationDiamond />}
         message="Verify your email"
@@ -381,6 +384,7 @@ const Grading = () => {
           )}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

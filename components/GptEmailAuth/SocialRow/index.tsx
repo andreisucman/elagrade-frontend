@@ -4,12 +4,14 @@ import styles from "./SocialRow.module.scss";
 
 type SocialRowProps = {
   isSignIn: boolean;
-  setShowRecoverPassword: React.Dispatch<React.SetStateAction<boolean>>;
   onSocialSignUpClick: () => void;
+  setShowRecoverPassword: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsSignIn: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const SocialRow: React.FC<SocialRowProps> = ({
   isSignIn,
+  setIsSignIn,
   onSocialSignUpClick,
   setShowRecoverPassword,
 }) => {
@@ -17,12 +19,6 @@ const SocialRow: React.FC<SocialRowProps> = ({
   const containerStyle = isSignIn
     ? styles.container
     : `${styles.container} ${styles.container__signup}`;
-
-  function handleRouter() {
-    isSignIn
-      ? router.push({ pathname: "/sign-up", query: router.query })
-      : router.push({ pathname: "/sign-in", query: router.query });
-  }
 
   return (
     <div className={containerStyle}>
@@ -37,7 +33,7 @@ const SocialRow: React.FC<SocialRowProps> = ({
           {isSignIn ? "Sign in with Google" : "Sign up with Google"}
         </button>
       </div>
-      <p onClick={handleRouter} className={styles.link}>
+      <p onClick={() => setIsSignIn((prev) => !prev)} className={styles.link}>
         {isSignIn ? "Sign up instead" : "Sign in instead"}
       </p>
     </div>

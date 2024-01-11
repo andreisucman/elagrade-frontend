@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
 import { GeneralContext } from "@/state/GeneralContext";
 import Button from "@/components/Button";
@@ -81,42 +83,46 @@ const Results: React.FC = () => {
     : 0;
 
   return (
-    <main className={styles.container}>
-      <div className={styles.header}>
-        <h2 className={styles.title}>Account</h2>
-        <button className={styles.signOut} onClick={handleSignOut}>
-          Sign out
-        </button>
-      </div>
-      <div className={styles.wrapper}>
-        <UsageChart data={classesResults} />
-        <UsageTable
-          classesResults={classesResults}
-          pagination={pagination}
-          loadNext={loadNext}
-        />
-        <div className={styles.balance}>
-          <p>Your plan is {userDetails?.plan}</p>
-          <p>Pages left: {pagesLeft}</p>
-          <Button
-            buttonText="Top up"
-            customStyle={{
-              justifySelf: "flex-end",
-              maxWidth: "unset",
-              width: "100%",
-              minWidth: "10rem",
-            }}
-            innerStyle={{ margin: "0", marginLeft: "auto" }}
-            onClick={() => router.push("/pricing")}
-          />
-          {userDetails?.subscriptionId && (
-            <p className={styles.cancel} onClick={cancelSubscription}>
-              Cancel plan
-            </p>
-          )}
+    <>
+      <Header />
+      <main className={styles.container}>
+        <div className={styles.header}>
+          <h2 className={styles.title}>Account</h2>
+          <button className={styles.signOut} onClick={handleSignOut}>
+            Sign out
+          </button>
         </div>
-      </div>
-    </main>
+        <div className={styles.wrapper}>
+          <UsageChart data={classesResults} />
+          <UsageTable
+            classesResults={classesResults}
+            pagination={pagination}
+            loadNext={loadNext}
+          />
+          <div className={styles.balance}>
+            <p>Your plan is {userDetails?.plan}</p>
+            <p>Pages left: {pagesLeft}</p>
+            <Button
+              buttonText="Top up"
+              customStyle={{
+                justifySelf: "flex-end",
+                maxWidth: "unset",
+                width: "100%",
+                minWidth: "10rem",
+              }}
+              innerStyle={{ margin: "0", marginLeft: "auto" }}
+              onClick={() => router.push("/pricing")}
+            />
+            {userDetails?.subscriptionId && (
+              <p className={styles.cancel} onClick={cancelSubscription}>
+                Cancel plan
+              </p>
+            )}
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 };
 
