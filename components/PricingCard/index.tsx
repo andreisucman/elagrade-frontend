@@ -34,11 +34,11 @@ const PricingCard = ({
   function getExplanation(title: string) {
     switch (title) {
       case "Prepaid":
-        return "For teachers who just want to try it. Top up as little as $1 USD.";
+        return "For teachers looking for total freedom.";
       case "Monthly":
-        return "For teachers who seek better value. Pay 7 cents per page (500 words).";
+        return "For teachers seeking better value.";
       case "Free":
-        return "Get 200 pages free to try and see if you like it. No credit card required.";
+        return "Get 200 pages free. No credit card required.";
     }
   }
 
@@ -95,7 +95,7 @@ const PricingCard = ({
         )}
         {!priceId && <span style={{ fontSize: "1.25rem" }}>Free value</span>}
         <div className={styles.calculate}>
-          {pagesRef.current} pages save you 5 min each, amounting to ~
+          {pagesRef.current} assessments save you 5 min each, amounting to ~
           {((Number(pagesRef.current) * 5) / 60).toFixed(0)} hours in total.
           Multiply this with your hourly wage to see how much you're saving.
         </div>

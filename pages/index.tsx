@@ -1,6 +1,9 @@
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { useRouter } from "next/router";
 import YoutubeEmbed from "@/components/YoutubeEmbed";
+import FAQ from "@/components/FAQ";
+import { testimonials, faqs } from "../data/data";
+import Testimonials from "@/components/Testimonials";
 import Button from "@/components/Button";
 import Banner from "@/components/Banner";
 import styles from "./Index.module.scss";
@@ -18,12 +21,12 @@ export default function Home() {
           After a long and exhausting day the thought of assignments awaiting
           you in the drawer can be really overwhelming. It's a familiar scene
           for many educators: you're exhausted, yet there's still a pile of
-          paperwork that should have been graded already today.
+          essays that should have been graded already today.
         </p>
         <p className={styles.intro_body}>
           But imagine a different world, one where you can reclaim your time for
           self-care, family, or professional development and never have to grade
-          assignments anymore. With elagrade you can do just that - grade your
+          assignments anymore. With Elagrade you can do just that - grade your
           whole class in minutes, all while maintaining your personal grading
           style and providing personalized feedback for each student. No more
           late nights buried in papers, no more weekends lost to grading
@@ -32,9 +35,18 @@ export default function Home() {
           receiving the attention and feedback they need.
         </p>
       </div>
+      <Button
+        customStyle={{ maxWidth: "15rem", width: "100%" }}
+        innerStyle={{ fontSize: "1.25rem" }}
+        buttonText="Start grading now"
+        onClick={() => router.push("/grading")}
+      />
       <div className={styles.full_width}>
         <div className={styles.box}>
           <h3 className={styles.how_title}>End The Unpaid After-Hours</h3>
+          <p className={styles.intro_body}>
+            Get rid of the stress of being late without having to work for free.
+          </p>
           <YoutubeEmbed
             videoId="PlYEQQreR-M"
             title="Elagrade - Automatic Grading For Ela Teachers"
@@ -49,6 +61,10 @@ export default function Home() {
           <li className={styles.item}>
             <IoIosCheckmarkCircle className={styles.icon} />
             Grade 30-50-100 papers in one click with your personal grading style
+          </li>
+          <li className={styles.item}>
+            <IoIosCheckmarkCircle className={styles.icon} />
+            Specify your personal rubrics you want the grading to be made on
           </li>
           <li className={styles.item}>
             <IoIosCheckmarkCircle className={styles.icon} />
@@ -67,11 +83,13 @@ export default function Home() {
         </ul>
       </div>
       <Button
-        customStyle={{ maxWidth: "15rem", width: "100%", marginBottom: "4rem" }}
+        customStyle={{ maxWidth: "15rem", width: "100%" }}
         innerStyle={{ fontSize: "1.25rem" }}
         buttonText="Start grading now"
         onClick={() => router.push("/grading")}
       />
+      <FAQ faqs={faqs} />
+      <Testimonials title={"What Teachers Say"} testimonials={testimonials} />
     </div>
   );
 }
