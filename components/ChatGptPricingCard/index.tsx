@@ -29,7 +29,7 @@ const ChatGptPricingCard = () => {
               <ul className={styles.list}>
                 <li className={styles.item}>
                   <IoIosCheckmarkCircle className={styles.icon} />
-                  Unlimited grading
+                  Unlimited quota
                 </li>
                 <li className={styles.item}>
                   <RxCross2 className={styles.icon} />

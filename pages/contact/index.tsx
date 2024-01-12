@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Button from "../../components/Button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,6 +12,7 @@ export async function getStaticProps() {
 }
 
 const AboutPage: React.FC = () => {
+  const router = useRouter();
   return (
     <>
       <Header />
@@ -18,21 +20,18 @@ const AboutPage: React.FC = () => {
         <div className={styles.wrapper}>
           <h2 className={styles.title}>Contact</h2>
           <p className={styles.paragraph}>
-            Learn how to ease your life as a mother with our books! Equip
-            yourself with proven baby care strategies, family relationships
-            insights, self-care organization tips and wisdom shared by thousands
-            of mothers and concisely compiled in easy to read books, action
-            notes and todo lists.
+            Reclaim your time for self-care, family, health, and professional
+            development. Say goodbye to anxiety, relieve stress and feel
+            fulfilled and happier every day!
           </p>
-          <p>
-            Say goodbye to anxiety, relieve stress and feel fulfilled and
-            happier every day!
-          </p>
+
           <p>And if you need to reach us you can always send an email here:</p>
           <p className={styles.email}>info@elagrade.com</p>
+          <p>or call this number:</p>
+          <p className={styles.email}>+1 323 540 57 18</p>
           <Button
-            buttonText={"Check the bundles"}
-            onClick={() => (window.location.href = "/bundles")}
+            buttonText={"Start grading now"}
+            onClick={() => router.push("/grading")}
             customStyle={{ margin: "1rem 0" }}
           />
         </div>

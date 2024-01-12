@@ -8,12 +8,10 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   margin: auto;
   max-width: 40rem;
   padding: 1rem;
-  margin-bottom: 3rem;
 }
 
 .paragraph {
@@ -28,7 +26,8 @@
 
 .email {
   padding: 2rem;
-  border: 2px dashed var(--primary-color);
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey);
   width: 100%;
   text-align: center;
   border-radius: 1rem;

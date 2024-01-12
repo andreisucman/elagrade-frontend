@@ -15,6 +15,14 @@ const Footer: React.FC = () => {
         href: "/legal/privacy",
         title: "Privacy",
       },
+      {
+        href: "/blog",
+        title: "Blog",
+      },
+      {
+        href: "/contact",
+        title: "Contact",
+      },
     ],
   };
 

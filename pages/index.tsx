@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       <div className={styles.container}>
         <Banner />
-        <div className={styles.group}>
+        <div className={styles.group} style={{ maxWidth: "60rem" }}>
           <h3 className={styles.intro_title}>
             Embrace Teaching Without The Burden Of Grading
           </h3>
@@ -43,7 +43,7 @@ export default function Home() {
           customStyle={{
             maxWidth: "15rem",
             width: "100%",
-            marginTop: "-1.5rem",
+            marginTop: "-1rem",
           }}
           innerStyle={{ fontSize: "1.25rem" }}
           buttonText="Start grading now"
@@ -61,7 +61,6 @@ export default function Home() {
               title="Elagrade - Automatic Grading For Ela Teachers"
             />
           </div>
-          
         </div>
         <div className={styles.group} style={{ marginTop: "0.5rem" }}>
           <h3 className={styles.how_title}>
@@ -135,7 +134,7 @@ export default function Home() {
           customStyle={{
             maxWidth: "15rem",
             width: "100%",
-            marginTop: "-1.5rem",
+            marginTop: "-1rem",
           }}
           innerStyle={{ fontSize: "1.25rem" }}
           buttonText="Start grading free"

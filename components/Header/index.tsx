@@ -91,7 +91,6 @@ const Header: React.FC = () => {
             customStyle={{
               maxWidth: "8rem",
               width: "100%",
-              marginLeft: "1rem",
             }}
             innerStyle={{
               padding: "0.75rem 1rem",

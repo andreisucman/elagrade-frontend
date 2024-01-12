@@ -1,0 +1,29 @@
+@import "../../styles/helpers/mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem;
+  gap: 1.5rem;
+  width: 100%;
+
+  background-color: var(--grey-light);
+
+  @include desktop {
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+
+  @include desktop {
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  }
+}

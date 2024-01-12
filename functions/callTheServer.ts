@@ -38,6 +38,7 @@ const callTheServer = async <T>({ endpoint, method, body }: Props<T>) => {
         window.location.pathname !== "/contact" &&
         window.location.pathname !== "/legal/terms" &&
         window.location.pathname !== "/legal/privacy" &&
+        !window.location.pathname.includes("blog") &&
         window.location.pathname !== "/pricing"
       ) {
         const searchParams = new URLSearchParams(window.location.search);
