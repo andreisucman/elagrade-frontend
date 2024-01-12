@@ -25,7 +25,6 @@ const Grading = () => {
   const [lowest, setLowest] = useState("");
   const [rubrics, setRubrics] = useState("");
   const [important, setImportant] = useState("");
-  const [gradingSystem, setGradingSystem] = useState("");
   const [fieldsSnapshot, setFieldsSnapshot] = useState("");
   const [gradingResults, setGradingResults] = useState<any>(null);
   const [showGradingOverlay, setShowGradingOverlay] = useState(false);
@@ -44,13 +43,9 @@ const Grading = () => {
   const disableSavingCriteria = useRef(true);
   disableSavingCriteria.current =
     (isWholeFeedback
-      ? highest + lowest + important + gradingSystem + isWholeFeedback
-      : highest +
-        lowest +
-        important +
-        gradingSystem +
-        isWholeFeedback +
-        rubrics) === fieldsSnapshot;
+      ? highest + lowest + important + isWholeFeedback
+      : highest + lowest + important + isWholeFeedback + rubrics) ===
+    fieldsSnapshot;
 
   const studentsExist = useRef(false);
   studentsExist.current = students.length > 0 ? true : false;
@@ -59,29 +54,17 @@ const Grading = () => {
     callTheServer({ endpoint: "getGradingCriteria", method: "GET" }).then(
       async (response: any) => {
         if (response?.status === 200) {
-          const {
-            highest,
-            lowest,
-            important,
-            grading_system,
-            isWholeFeedback,
-            rubrics,
-          } = response.message;
+          const { highest, lowest, important, isWholeFeedback, rubrics } =
+            response.message;
           setHighest(highest);
           setLowest(lowest);
           setImportant(important);
-          setGradingSystem(grading_system);
           setIsWholeFeedback(isWholeFeedback);
           setRubrics(rubrics);
 
           const criteria = isWholeFeedback
-            ? highest + lowest + important + grading_system + isWholeFeedback
-            : highest +
-              lowest +
-              important +
-              grading_system +
-              isWholeFeedback +
-              rubrics;
+            ? highest + lowest + important + isWholeFeedback
+            : highest + lowest + important + isWholeFeedback + rubrics;
 
           setFieldsSnapshot(criteria);
         }
@@ -149,7 +132,6 @@ const Grading = () => {
         highest,
         lowest,
         important,
-        grading_system: gradingSystem,
         rubrics: isWholeFeedback ? "" : rubrics,
         isWholeFeedback,
       },
@@ -163,13 +145,8 @@ const Grading = () => {
 
     if (response?.status === 200) {
       const criteria = isWholeFeedback
-        ? highest + lowest + important + gradingSystem + isWholeFeedback
-        : highest +
-          lowest +
-          important +
-          gradingSystem +
-          isWholeFeedback +
-          rubrics;
+        ? highest + lowest + important + isWholeFeedback
+        : highest + lowest + important + isWholeFeedback + rubrics;
       setFieldsSnapshot(criteria);
 
       return true;
@@ -310,13 +287,11 @@ const Grading = () => {
           rubrics={rubrics}
           lowest={lowest}
           important={important}
-          gradingSystem={gradingSystem}
           setIsWholeFeedback={setIsWholeFeedback}
           setHighest={setHighest}
           setRubrics={setRubrics}
           setLowest={setLowest}
           setImportant={setImportant}
-          setGradingSystem={setGradingSystem}
           saveCriteria={saveCriteria}
         />
       ),

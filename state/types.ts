@@ -2,7 +2,6 @@ type GradingCriteria = {
   highest: string;
   lowest: string;
   important: string;
-  grading_system: string;
   isWholeFeedback: boolean;
 };
 

@@ -10,7 +10,6 @@ type Props = {
   highest: string;
   lowest: string;
   important: string;
-  gradingSystem: string;
   rubrics: string;
   isWholeFeedback: boolean;
   disableSaveButton: boolean;
@@ -20,7 +19,6 @@ type Props = {
   setLowest: React.Dispatch<React.SetStateAction<string>>;
   setRubrics: React.Dispatch<React.SetStateAction<string>>;
   setImportant: React.Dispatch<React.SetStateAction<string>>;
-  setGradingSystem: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const GradingCriteriaBox = ({
@@ -28,14 +26,12 @@ const GradingCriteriaBox = ({
   lowest,
   rubrics,
   important,
-  gradingSystem,
   isWholeFeedback,
   disableSaveButton,
   setHighest,
   setLowest,
   setRubrics,
   setImportant,
-  setGradingSystem,
   setIsWholeFeedback,
   saveCriteria,
 }: Props) => {
@@ -106,12 +102,6 @@ const GradingCriteriaBox = ({
               "Example: The student must demonstrate that they have done their research and structured their paper logically"
             }
             setText={setImportant}
-          />
-          <DescriptionBox
-            title={"What grading system you use?"}
-            text={gradingSystem}
-            placeholder={"Example: A-F Letter Grading System"}
-            setText={setGradingSystem}
           />
           <RadioGroup
             isWholeFeedback={isWholeFeedback}

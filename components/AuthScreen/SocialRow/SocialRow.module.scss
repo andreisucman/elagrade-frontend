@@ -3,7 +3,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 0.75rem 0 0.25rem;
+  padding: 0.25rem 0 0.25rem;
 
   @include mobile {
     gap: 0.5rem;
@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--grey);
-  padding: 0.5rem;
+  padding: 0.75rem;
   border-radius: 0.5rem;
   transition: all 0.3s;
 

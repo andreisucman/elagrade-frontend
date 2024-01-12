@@ -37,6 +37,10 @@ const GptAuth: React.FC = () => {
             <div className="icon icon__google icon_xs" />
             Sign in with Google
           </button>
+          <p className={styles.explanation}>
+            You need to sign in to give the app the ability to store and retrieve your
+            grading criteria so you don't have to copy and paste it each time.
+          </p>
         </div>
       )}
     </div>

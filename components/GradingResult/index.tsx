@@ -9,6 +9,7 @@ type Props = {
 };
 
 const GradingResult = ({ gradingResults }: Props) => {
+  console.log("RESULT", gradingResults);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -16,7 +17,16 @@ const GradingResult = ({ gradingResults }: Props) => {
           gradingResults?.results?.map((paper, index) => (
             <div key={index} className={styles.row}>
               <p>{paper.studentName}</p>
-              <p>{paper.grade}</p>
+              <p className={styles.grades}>
+                {Object.keys(paper.grades)
+                  .map((rubric) => {
+                    const value = paper.grades[rubric];
+                    const formattedRubric =
+                      rubric[0].toUpperCase() + rubric.slice(1);
+                    return `${formattedRubric}: ${value}`;
+                  })
+                  .join(", ")}
+              </p>
               <button
                 className={styles.download}
                 onClick={() =>

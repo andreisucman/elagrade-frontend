@@ -29,7 +29,13 @@ const Results: React.FC = () => {
     }).then(async (response: any) => {
       if (response?.status === 200) {
         const { result, pagination } = response?.message;
-        setAssignments(result);
+        setAssignments(
+          result.sort(
+            (a: any, b: any) =>
+              new Date(b._created_at).getTime() -
+              new Date(a._created_at).getTime()
+          )
+        );
         setPagination(pagination);
       }
     });
@@ -117,7 +123,16 @@ const Results: React.FC = () => {
                         <div key={index} className={styles.row}>
                           <p>{date}</p>
                           <p>{paper.studentName}</p>
-                          <p>{paper.grade}</p>
+                          <p className={styles.grades}>
+                            {Object.keys(paper.grades)
+                              .map((rubric) => {
+                                const value = paper.grades[rubric];
+                                const formattedRubric =
+                                  rubric[0].toUpperCase() + rubric.slice(1);
+                                return `${formattedRubric}: ${value}`;
+                              })
+                              .join(", ")}
+                          </p>
                           <button
                             className={styles.download}
                             onClick={() =>

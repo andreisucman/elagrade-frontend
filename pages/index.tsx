@@ -61,6 +61,7 @@ export default function Home() {
               title="Elagrade - Automatic Grading For Ela Teachers"
             />
           </div>
+          
         </div>
         <div className={styles.group} style={{ marginTop: "0.5rem" }}>
           <h3 className={styles.how_title}>
@@ -69,7 +70,7 @@ export default function Home() {
           <ul className={styles.list}>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
-              Grade 30-50-100 papers in one click with your personal grading
+              Grade 10-50-100 papers in one click with your personal grading
               style
             </li>
             <li className={styles.item}>
@@ -92,11 +93,28 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className={styles.group} style={{ marginTop: "0.5rem", maxWidth: "70rem" }}>
+        <div
+          className={styles.group}
+          style={{ marginTop: "0.5rem", maxWidth: "70rem" }}
+        >
           <h3 className={styles.how_title}>
             What Can You Do With The Time Saved
           </h3>
           <ul className={styles.boxes}>
+            <li className={styles.box}>
+              <div
+                style={{ width: "3rem", height: "3rem" }}
+                className={"icon icon__money"}
+              />
+              Get a side hustle and earn extra cash
+            </li>
+            <li className={styles.box}>
+              <div
+                style={{ width: "3rem", height: "3rem" }}
+                className={"icon icon__workout"}
+              />
+              Start working out and getting in shape
+            </li>
             <li className={styles.box}>
               <div
                 style={{ width: "3rem", height: "3rem" }}
@@ -111,20 +129,6 @@ export default function Home() {
               />
               Start a new hobby, book, or a video game you love
             </li>
-            <li className={styles.box}>
-              <div
-                style={{ width: "3rem", height: "3rem" }}
-                className={"icon icon__workout"}
-              />
-              Start working out and getting in shape
-            </li>
-            <li className={styles.box}>
-              <div
-                style={{ width: "3rem", height: "3rem" }}
-                className={"icon icon__money"}
-              />
-              Get a side hustle and earn extra cash
-            </li>
           </ul>
         </div>
         <Button
@@ -134,7 +138,7 @@ export default function Home() {
             marginTop: "-1.5rem",
           }}
           innerStyle={{ fontSize: "1.25rem" }}
-          buttonText="Start grading now"
+          buttonText="Start grading free"
           onClick={() => router.push("/grading")}
         />
         <FAQ faqs={faqs} />

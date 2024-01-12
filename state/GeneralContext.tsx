@@ -12,7 +12,6 @@ export const defaultUser: UserType = {
     lowest: "",
     isWholeFeedback: false,
     important: "",
-    grading_system: "",
   },
   gradingResultsList: [],
   accessToken: "",

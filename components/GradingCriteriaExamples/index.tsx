@@ -51,10 +51,6 @@ const GradingCriteriaExamples = ({ setShowGradingCriteriaExamples }: Props) => {
               "The student must demonstrate that they have done their research and structured their ideas logically"
             }
           />
-          <DescriptionBox
-            title={"What grading system you use?"}
-            text={"A-F Letter Grading System"}
-          />
           <RadioGroup isWholeFeedback={false} />
           <DescriptionBox
             title={"What are the feedback rubrics?"}
