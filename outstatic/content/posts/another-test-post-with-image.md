@@ -10,7 +10,7 @@ coverImage: '/images/image2.jpg-Y3NT.png'
 publishedAt: '2024-01-12T17:31:19.350Z'
 ---
 
-### How to do something
+## How to do something
 
 To do something, first determine the specific task you want to accomplish. Then, gather the necessary materials and plan out the steps involved. Follow the instructions carefully and make adjustments as needed. Practice and patience are key to success.
 
