@@ -6,7 +6,7 @@ author:
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
 slug: 'this-is-a-test-post'
 description: 'Another test description here goes'
-coverImage: ''
+coverImage: '/images/image-Y1MD.jpg'
 publishedAt: '2024-01-12T16:17:51.519Z'
 ---
 
