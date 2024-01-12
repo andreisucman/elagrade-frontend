@@ -96,7 +96,7 @@ const PricingCard = ({
         {!priceId && <span style={{ fontSize: "1.25rem" }}>Free value</span>}
         <div className={styles.calculate}>
           {pagesRef.current} assessments save you 5 min each, amounting to ~
-          {((Number(pagesRef.current) * 5) / 60).toFixed(0)} hours in total.
+          {((Number(pagesRef.current) * 5) / 60).toFixed(0)} hour(s) in total.
           Multiply this with your hourly wage to see how much you're saving.
         </div>
       </div>

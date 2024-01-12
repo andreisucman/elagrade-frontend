@@ -8,6 +8,7 @@ import PaymentModal from "../../components/PaymentModal";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./pricing.module.scss";
+import ChatGptPricingCard from "@/components/ChatGptPricingCard";
 
 type PriceItem = {
   title: string;
@@ -255,6 +256,7 @@ const Results: React.FC = () => {
             }
           )}
         </div>
+        <ChatGptPricingCard />
       </main>
       <Footer />
     </>

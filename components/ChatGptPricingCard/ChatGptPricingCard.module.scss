@@ -1,0 +1,93 @@
+@import "../../styles/helpers/mixins.scss";
+@import "../../styles/helpers/animations.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 45rem;
+  border-radius: 1rem;
+  gap: 1.5rem;
+}
+
+.about {
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--grey-light);
+  border-radius: 1rem;
+  border: 1px solid var(--grey);
+
+  @include laptop {
+    flex-direction: row;
+  }
+}
+
+.item {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.accordionSubtitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.accordionItem {
+  border: 1px solid var(--black);
+  border-radius: 1rem;
+  background-color: var(--background-color-dark);
+}
+
+.accordionQuestion {
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+  padding: 1rem;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+
+  svg {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+}
+
+.accordionItemTitle {
+  cursor: pointer;
+  font-size: 1.15rem;
+}
+
+.accordionAnswer {
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 0 1rem 1rem 1rem;
+}
