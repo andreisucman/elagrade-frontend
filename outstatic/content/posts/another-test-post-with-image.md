@@ -5,7 +5,7 @@ author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
 slug: 'another-test-post-with-image'
-description: ''
+description: 'This is a test description of a post'
 coverImage: '/images/image2.jpg-Y3NT.png'
 publishedAt: '2024-01-12T17:31:19.350Z'
 ---
