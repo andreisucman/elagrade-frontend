@@ -170,7 +170,7 @@ const Results: React.FC = () => {
               <EmptyPlaceholder
                 icon={
                   <TiDocumentText
-                    style={{ minWidth: "2.5rem", minHeight: "2.5rem" }}
+                    style={{ minWidth: "2rem", minHeight: "2rem" }}
                   />
                 }
                 message={"Your grading results will be here"}
