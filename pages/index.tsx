@@ -24,26 +24,26 @@ export default function Home() {
             Embrace Teaching Without The Burden Of Grading
           </h3>
           <p className={styles.intro_body}>
-            After a long and exhausting day the thought of assignments awaiting
-            you in the drawer can be really overwhelming. It's a familiar scene
-            for many educators: you're exhausted, yet there's still a pile of
+            After a long and exhausting day the thought of assignments waiting
+            for you in the drawer can be really overwhelming. It's a familiar
+            scene for many teachers: you're exhausted, yet there is a pile of
             essays that should have been graded already today.
           </p>
           <p className={styles.intro_body}>
-            But imagine a different world, one where you can reclaim your time
-            for self-care, family, or personal development and never have to
-            grade assignments anymore.
+            But imagine a different world, one where you have time for
+            self-care, family, or professional development because you don't
+            lose it to grading.
           </p>
           <p className={styles.intro_body}>
             With Elagrade you can do just that - grade your whole class in
-            minutes, all while maintaining your personal grading style and
-            providing personalized feedback for each student. No more late
-            nights buried in papers, no more weekends lost to grading marathons.
+            minutes, all while maintaining your personal style and providing
+            feedback to each student. No more late nights buried in papers, no
+            more weekends lost to grading marathons.
           </p>
           <p className={styles.intro_body}>
-            Embrace the freedom to relax and enjoy your personal time, knowing
-            that you've met all of the requirements and your students are
-            receiving the attention and feedback they need.
+            Embrace the freedom to relax and enjoy your free time, knowing that
+            you've met all of the requirements and your students get the
+            attention and feedback they need.
           </p>
         </div>
         <Button
@@ -59,11 +59,9 @@ export default function Home() {
         />
         <div className={styles.full_width}>
           <div className={styles.group} style={{ gap: "1.5rem" }}>
-            <h3 className={styles.how_title}>End The Unpaid After-Hours</h3>
-            <p className={styles.intro_body}>
-              Get rid of the stress of being late without having to work for
-              free.
-            </p>
+            <h3 className={styles.how_title}>
+              More Time, More Energy, Better Motivation
+            </h3>
             <YoutubeEmbed
               videoId="PlYEQQreR-M"
               title="Elagrade - Automatic Grading For Ela Teachers"
@@ -71,9 +69,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.group} style={{ marginTop: "0.5rem" }}>
-          <h3 className={styles.how_title}>
-            More Time, More Energy, Better Motivation
-          </h3>
+          <h3 className={styles.how_title}>End The Unpaid After-Hours</h3>
           <ul className={styles.list}>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
