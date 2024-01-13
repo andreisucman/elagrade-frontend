@@ -2,21 +2,18 @@ type GradingCriteria = {
   highest: string;
   lowest: string;
   important: string;
+  rubrics: string;
   isWholeFeedback: boolean;
-};
-
-type GradingResult = {
-  grade: string;
-  explanation: string;
 };
 
 export type UserType = {
   gradingCriteria: GradingCriteria | null;
-  gradingResultsList: GradingResult[] | null;
+  gradingResultsList: any[] | null;
   accessToken: string;
   pagesLeft: number;
   email: string;
   plan: string;
+  customerId: string;
   subscriptionId: string | null;
   emailVerified: boolean;
 } | null;

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
 import Head from "next/head";
 import { v4 } from "uuid";
-import { useSpring, animated } from "react-spring";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { GeneralContext } from "@/state/GeneralContext";
 import callTheServer from "@/functions/callTheServer";
@@ -349,37 +348,20 @@ const Grading = () => {
           )}
           {showGradingOverlay && <GradingOverlay />}
           <GradingHeader />
-          {parts.map((part: any, index: number) => {
-            const expand = useSpring({
-              height: openAccordion === index ? "auto" : 0,
-              opacity: openAccordion === index ? 1 : 0,
-              overflow: "hidden",
-            });
-
-            return (
-              <div key={index} className={styles.accordionItem}>
-                <div
-                  className={styles.accordionQuestion}
-                  onClick={() => toggleAccordion(index)}
-                >
-                  <p className={styles.accordionItemTitle}>{part.title}</p>
-                  {openAccordion === index ? (
-                    <FaChevronUp />
-                  ) : (
-                    <FaChevronDown />
-                  )}
-                </div>
-                {openAccordion === index && (
-                  <animated.div
-                    style={expand}
-                    className={styles.accordionAnswer}
-                  >
-                    {part.html}
-                  </animated.div>
-                )}
+          {parts.map((part: any, index: number) => (
+            <div key={index} className={styles.accordionItem}>
+              <div
+                className={styles.accordionQuestion}
+                onClick={() => toggleAccordion(index)}
+              >
+                <p className={styles.accordionItemTitle}>{part.title}</p>
+                {openAccordion === index ? <FaChevronUp /> : <FaChevronDown />}
               </div>
-            );
-          })}
+              {openAccordion === index && (
+                <div className={styles.accordionAnswer}>{part.html}</div>
+              )}
+            </div>
+          ))}
 
           {studentsExist.current && (
             <GradingFooter

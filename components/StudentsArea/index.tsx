@@ -32,7 +32,6 @@ const FilesArea = ({
             />
           </React.Fragment>
         ))}
-        {/* {showAddFileCard && <AddFileCard files={files} onAddFile={onAddFile} />} */}
         <AddCard onClick={onAddStudentCard} />
       </div>
     </div>
