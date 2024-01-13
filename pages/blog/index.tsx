@@ -1,4 +1,3 @@
-export const runtime = "edge";
 import { getDocuments } from "outstatic/server";
 import React from "react";
 import Head from "next/head";
@@ -44,6 +43,10 @@ export default function Index({ posts }: Props) {
     </>
   );
 }
+
+export const config = {
+  runtime: "experimental-edge",
+};
 
 export const getStaticProps = async () => {
   const posts = getDocuments("posts", [

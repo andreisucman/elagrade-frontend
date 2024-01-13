@@ -1,4 +1,3 @@
-export const runtime = "edge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDocumentBySlug, getDocumentPaths } from "outstatic/server";
@@ -47,6 +46,10 @@ export const getStaticProps = async ({ params }: Params) => {
       },
     },
   };
+};
+
+export const config = {
+  runtime: "experimental-edge",
 };
 
 export async function getStaticPaths() {

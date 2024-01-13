@@ -1,5 +1,8 @@
-export const runtime = "edge";
 import { getDocuments } from "outstatic/server";
+
+export const config = {
+  runtime: "experimental-edge",
+};
 
 function generateSiteMap(posts: any) {
   return `<?xml version="1.0" encoding="UTF-8"?>
