@@ -48,10 +48,6 @@ export const getStaticProps = async ({ params }: Params) => {
   };
 };
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 export async function getStaticPaths() {
   return {
     paths: getDocumentPaths("posts"),

@@ -1,9 +1,5 @@
 import { getDocuments } from "outstatic/server";
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 function generateSiteMap(posts: any) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

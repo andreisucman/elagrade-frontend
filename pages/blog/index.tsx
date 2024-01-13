@@ -14,7 +14,7 @@ export default function Index({ posts }: Props) {
   return (
     <>
       <Head>
-        <title>{"Blog | Elagrade"}</title>
+        <title>Blog | Elagrade</title>
         <meta
           name="description"
           content={"Automated AI Essay Grading Tool For Teachers"}
@@ -43,10 +43,6 @@ export default function Index({ posts }: Props) {
     </>
   );
 }
-
-export const config = {
-  runtime: "experimental-edge",
-};
 
 export const getStaticProps = async () => {
   const posts = getDocuments("posts", [
