@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
+import Head from "next/head";
 import { v4 } from "uuid";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { GeneralContext } from "@/state/GeneralContext";
@@ -313,6 +314,10 @@ const Grading = () => {
 
   return (
     <>
+      <Head>
+        <title>Grading | Elagrade</title>
+        <meta name="description" content={"Elagrade - Grading"} />
+      </Head>
       <AnnouncementBar
         icon={<BsExclamationDiamond />}
         message="Verify your email"

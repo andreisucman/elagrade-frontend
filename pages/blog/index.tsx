@@ -1,7 +1,6 @@
-import { useState, useRef } from "react";
-import { getDocuments } from "outstatic/server";
-import React from "react";
+import React, { useState, useRef } from "react";
 import Head from "next/head";
+import { getDocuments } from "outstatic/server";
 import BlogCard from "@/components/BlogCard";
 import styles from "./Blog.module.scss";
 
@@ -16,10 +15,12 @@ export default function Index({ posts }: Props) {
   return (
     <>
       <Head>
-        <title>Blog | Elagrade</title>
+        <title>Blog | Main</title>
         <meta
           name="description"
-          content={"Automated AI Essay Grading Tool For Teachers"}
+          content={
+            "Blog - Elagrade - Automated AI Essay Grading Tool For Teachers"
+          }
         />
       </Head>
       <div className={styles.container}>

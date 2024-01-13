@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   const [activePage, setActivePage] = useState("/");
   const [isOpen, setIsOpen] = useState(false);
   const { userDetails, isLoading } = useContext(GeneralContext);
-  const [buttonClass, setButtonClass] = useState("invisible");
+  const [buttonClass, setButtonClass] = useState("hidden");
 
   useEffect(() => {
     setActivePage(router.pathname);

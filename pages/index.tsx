@@ -1,6 +1,7 @@
-import { IoIosCheckmarkCircle } from "react-icons/io";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import YoutubeEmbed from "@/components/YoutubeEmbed";
+import { IoIosCheckmarkCircle } from "react-icons/io";
 import FAQ from "@/components/FAQ";
 import { testimonials, faqs } from "../data/data";
 import Testimonials from "@/components/Testimonials";
@@ -12,6 +13,10 @@ export default function Home() {
   const router = useRouter();
   return (
     <>
+      <Head>
+        <title>Home | Elagrade</title>
+        <meta name="description" content={"Elagrade - Home Page"} />
+      </Head>
       <div className={styles.container}>
         <Banner />
         <div className={styles.group} style={{ maxWidth: "60rem" }}>

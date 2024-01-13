@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /grading
 Disallow: /account
 Disallow: /results
+Disallow: /gpt-auth

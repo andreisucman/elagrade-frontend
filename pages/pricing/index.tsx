@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { GeneralContext } from "@/state/GeneralContext";
 import callTheServer from "@/functions/callTheServer";
@@ -170,87 +171,96 @@ const Results: React.FC = () => {
   }
 
   return (
-    <main className={styles.container}>
-      {showPaymentStatus && (
-        <PaymentStatus
-          intentId={intentId}
-          setShowModal={setShowPaymentStatus}
-        />
-      )}
-      {showCheckout && (
-        <PaymentModal
-          orderData={orderData}
-          isLoading={isLoading}
-          clientSecret={clientSecret}
-          setShowCheckout={setShowCheckout}
-          setIsLoading={setIsLoading}
-        />
-      )}
-      <h2 className={styles.title}>Pricing</h2>
-      <div className={styles.wrapper}>
-        {prices.map(
-          ({ title, PPP, pages, price, extra, isPrepaid, priceId }, index) => {
-            const monthlyMonthly =
-              userDetails?.plan === "monthly" &&
-              title?.toLowerCase() === "monthly";
-            const yearlyYearly =
-              userDetails?.plan === "yearly" &&
-              title?.toLowerCase() === "yearly";
-            const yearlyMonthly =
-              userDetails?.plan === "yearly" &&
-              title?.toLowerCase() === "monthly";
-
-            const freeAndLoggedOut = !priceId && !userDetails?.email;
-
-            let unblockButton = false;
-
-            if (isPrepaid && priceId) {
-              unblockButton = true;
-            }
-
-            if (freeAndLoggedOut) {
-              unblockButton = true;
-            }
-
-            if (!monthlyMonthly && !isPrepaid) {
-              unblockButton = true;
-            }
-            if (!yearlyMonthly && !isPrepaid) {
-              unblockButton = true;
-            }
-
-            const discountedPPP =
-              isPrepaid && userDetails?.plan === "yearly" ? PPP * 0.7 : PPP;
-
-            return (
-              <React.Fragment key={index}>
-                <PricingCard
-                  PPP={Number(discountedPPP.toFixed(2))}
-                  isUnblocked={unblockButton}
-                  title={title}
-                  pages={pages}
-                  price={price}
-                  extra={extra}
-                  priceId={priceId}
-                  isPrepaid={isPrepaid}
-                  buttonText={
-                    !priceId
-                      ? "Sign up"
-                      : isPrepaid
-                      ? "Top up"
-                      : unblockButton
-                      ? "Subscribe"
-                      : "Plan active"
-                  }
-                  handleCheckout={handleCheckout}
-                />
-              </React.Fragment>
-            );
-          }
+    <>
+      <Head>
+        <title>Pricing | Elagrade</title>
+        <meta name="description" content={"Elagrade - Pricing"} />
+      </Head>
+      <main className={styles.container}>
+        {showPaymentStatus && (
+          <PaymentStatus
+            intentId={intentId}
+            setShowModal={setShowPaymentStatus}
+          />
         )}
-      </div>
-      <ChatGptPricingCard />
-    </main>
+        {showCheckout && (
+          <PaymentModal
+            orderData={orderData}
+            isLoading={isLoading}
+            clientSecret={clientSecret}
+            setShowCheckout={setShowCheckout}
+            setIsLoading={setIsLoading}
+          />
+        )}
+        <h2 className={styles.title}>Pricing</h2>
+        <div className={styles.wrapper}>
+          {prices.map(
+            (
+              { title, PPP, pages, price, extra, isPrepaid, priceId },
+              index
+            ) => {
+              const monthlyMonthly =
+                userDetails?.plan === "monthly" &&
+                title?.toLowerCase() === "monthly";
+              const yearlyYearly =
+                userDetails?.plan === "yearly" &&
+                title?.toLowerCase() === "yearly";
+              const yearlyMonthly =
+                userDetails?.plan === "yearly" &&
+                title?.toLowerCase() === "monthly";
+
+              const freeAndLoggedOut = !priceId && !userDetails?.email;
+
+              let unblockButton = false;
+
+              if (isPrepaid && priceId) {
+                unblockButton = true;
+              }
+
+              if (freeAndLoggedOut) {
+                unblockButton = true;
+              }
+
+              if (!monthlyMonthly && !isPrepaid) {
+                unblockButton = true;
+              }
+              if (!yearlyMonthly && !isPrepaid) {
+                unblockButton = true;
+              }
+
+              const discountedPPP =
+                isPrepaid && userDetails?.plan === "yearly" ? PPP * 0.7 : PPP;
+
+              return (
+                <React.Fragment key={index}>
+                  <PricingCard
+                    PPP={Number(discountedPPP.toFixed(2))}
+                    isUnblocked={unblockButton}
+                    title={title}
+                    pages={pages}
+                    price={price}
+                    extra={extra}
+                    priceId={priceId}
+                    isPrepaid={isPrepaid}
+                    buttonText={
+                      !priceId
+                        ? "Sign up"
+                        : isPrepaid
+                        ? "Top up"
+                        : unblockButton
+                        ? "Subscribe"
+                        : "Plan active"
+                    }
+                    handleCheckout={handleCheckout}
+                  />
+                </React.Fragment>
+              );
+            }
+          )}
+        </div>
+        <ChatGptPricingCard />
+      </main>
+    </>
   );
 };
 

@@ -1,32 +1,37 @@
 import React from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Button from "../../components/Button";
 import styles from "./Contact.module.scss";
 
-const AboutPage: React.FC = () => {
+const ContactPage: React.FC = () => {
   const router = useRouter();
   return (
-    <main className={styles.container}>
-      <div className={styles.wrapper}>
-        <h2 className={styles.title}>Contact</h2>
-        <p className={styles.paragraph}>
-          Reclaim your time for self-care, family, health, and professional
-          development. Say goodbye to anxiety, relieve stress and feel fulfilled
-          and happier every day!
-        </p>
-
-        <p>And if you need to reach us you can always send an email here:</p>
-        <p className={styles.email}>info@elagrade.com</p>
-        <p>or call this number:</p>
-        <p className={styles.email}>+1 323 540 57 18</p>
-        <Button
-          buttonText={"Start grading now"}
-          onClick={() => router.push("/grading")}
-          customStyle={{ margin: "1rem 0" }}
-        />
-      </div>
-    </main>
+    <>
+      <Head>
+        <title>Contact | Elagrade</title>
+        <meta name="description" content={"Elagrade - Contact Us"} />
+      </Head>
+      <main className={styles.container}>
+        <div className={styles.wrapper}>
+          <h2 className={styles.title}>Contact</h2>
+          <p className={styles.paragraph}>
+            Reclaim your time for self-care, family, and personal development.
+            Relieve stress and feel happier every day!
+          </p>
+          <p>And if you need to reach us you can always send an email here:</p>
+          <p className={styles.email}>info@elagrade.com</p>
+          <p>or call this number:</p>
+          <p className={styles.email}>+1 323 540 57 18</p>
+          <Button
+            buttonText={"Start grading now"}
+            onClick={() => router.push("/grading")}
+            customStyle={{ margin: "1rem 0" }}
+          />
+        </div>
+      </main>
+    </>
   );
 };
 
-export default AboutPage;
+export default ContactPage;
