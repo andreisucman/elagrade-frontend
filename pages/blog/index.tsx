@@ -1,3 +1,4 @@
+export const runtime = "edge";
 import { getDocuments } from "outstatic/server";
 import React from "react";
 import Head from "next/head";

@@ -1,4 +1,4 @@
-export const runtime = 'edge';
+export const runtime = "edge";
 import { getDocuments } from "outstatic/server";
 
 function generateSiteMap(posts: any) {

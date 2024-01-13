@@ -3,12 +3,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./legal.module.scss";
 
-export async function getStaticProps() {
-  return {
-    props: {},
-  };
-}
-
 const Privacy = () => {
   return (
     <>

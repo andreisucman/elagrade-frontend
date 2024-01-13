@@ -5,12 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./Contact.module.scss";
 
-export async function getStaticProps() {
-  return {
-    props: {},
-  };
-}
-
 const AboutPage: React.FC = () => {
   const router = useRouter();
   return (
