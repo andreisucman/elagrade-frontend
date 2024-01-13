@@ -44,7 +44,7 @@ const Header: React.FC = () => {
     {
       id: "3",
       href: "/pricing",
-      title: !isLoading && !userDetails?.email ? "Pricing" : "Top up",
+      title: "Pricing",
     },
     {
       id: "4",
