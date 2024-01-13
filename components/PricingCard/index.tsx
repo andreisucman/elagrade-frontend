@@ -103,6 +103,7 @@ const PricingCard = ({
       <Button
         customClass={isUnblocked ? "" : "disabled"}
         buttonText={buttonText}
+        id={`pricing_${buttonText.toLowerCase().split(" ").join("_")}`}
         innerStyle={
           isUnblocked
             ? { maxWidth: "unset" }

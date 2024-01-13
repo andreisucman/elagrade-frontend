@@ -12,6 +12,7 @@ const ChatGptPricingCard = () => {
       <div
         className={styles.accordionQuestion}
         onClick={() => setIsOpen((prev) => !prev)}
+        id={"pricing_have_chat_gpt_plus_plan"}
       >
         <p className={styles.accordionItemTitle}>
           Have ChatGPT Plus Plan?

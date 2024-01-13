@@ -162,7 +162,7 @@ export default function CheckoutForm({
         <p className={styles.displayMessage}>{getDisplayMessage()}</p>
       )}
       {showFields && (
-        <button className={styles.button} disabled={notReady} id="submit">
+        <button className={styles.button} disabled={notReady} id="checkout_pay">
           {notReady ? (
             <Loading
               innerStyle={{

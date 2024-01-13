@@ -42,12 +42,13 @@ export default function Home() {
             width: "100%",
             marginTop: "-1rem",
           }}
+          id={"home_upper_cta"}
           innerStyle={{ fontSize: "1.25rem" }}
           buttonText="Start grading now"
           onClick={() => router.push("/grading")}
         />
         <div className={styles.full_width}>
-          <div className={styles.group}>
+          <div className={styles.group} style={{ gap: "1.5rem" }}>
             <h3 className={styles.how_title}>End The Unpaid After-Hours</h3>
             <p className={styles.intro_body}>
               Get rid of the stress of being late without having to work for
@@ -133,6 +134,7 @@ export default function Home() {
             width: "100%",
             marginTop: "-1rem",
           }}
+          id={"home_lower_cta"}
           innerStyle={{ fontSize: "1.25rem" }}
           buttonText="Start grading free"
           onClick={() => router.push("/grading")}

@@ -8,6 +8,7 @@ type Props = {
   buttonText: string;
   isDisabled?: boolean;
   customClass?: string;
+  id?: string;
   onClick?: () => void;
 };
 
@@ -18,6 +19,7 @@ const Button = ({
   customClass,
   innerStyle,
   isDisabled,
+  id,
   onClick,
 }: Props) => {
   function handleClick() {
@@ -26,6 +28,7 @@ const Button = ({
   return (
     <div
       style={customStyle ? customStyle : {}}
+      id={id}
       className={
         customClass ? `${styles.container} ${customClass}` : styles.container
       }

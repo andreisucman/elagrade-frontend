@@ -5,6 +5,7 @@ import styles from "./FAQ.module.scss";
 type Faq = {
   question: string;
   answer: string;
+  id: string;
 };
 
 type Props = {
@@ -23,7 +24,7 @@ const FAQ = ({ faqs }: Props) => {
       <div className={styles.wrapper}>
         <h2 className={styles.title}>Your Questions Answered</h2>
         {faqs.map((faq, index) => (
-          <div key={index} className={styles.item}>
+          <div key={index} id={faq.id} className={styles.item}>
             <div className={styles.question} onClick={() => toggleFAQ(index)}>
               {faq.question}
               {openFAQ === index ? <FaChevronUp /> : <FaChevronDown />}
