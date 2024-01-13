@@ -12,16 +12,12 @@ type Params = {
 
 export default function Index({ post }: Props) {
   return (
-    <>
-      <Header />
-      <div className={styles.container}>
-        <div
-          className={styles.content}
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
-      </div>
-      <Footer />
-    </>
+    <div className={styles.container}>
+      <div
+        className={styles.content}
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      />
+    </div>
   );
 }
 

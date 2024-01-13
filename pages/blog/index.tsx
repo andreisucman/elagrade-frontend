@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 import { getDocuments } from "outstatic/server";
 import React from "react";
 import Head from "next/head";
@@ -9,6 +10,9 @@ type Props = {
 };
 
 export default function Index({ posts }: Props) {
+  const [showUntil, setShowUntil] = useState(8);
+  const hasMoreRef = useRef(false);
+  hasMoreRef.current = posts.length > showUntil;
   return (
     <>
       <Head>
@@ -21,19 +25,30 @@ export default function Index({ posts }: Props) {
       <div className={styles.container}>
         <h2>Blog</h2>
         <div className={styles.content}>
-          {posts.map((post: any, index: number) => (
-            <React.Fragment key={index}>
-              <BlogCard
-                title={post.title}
-                imageUrl={post.coverImage}
-                description={post.description}
-                date={post.date}
-                author={post.author}
-                slug={post.slug}
-              />
-            </React.Fragment>
-          ))}
+          {posts.map((post: any, index: number) => {
+            if (index > showUntil) return;
+            return (
+              <React.Fragment key={index}>
+                <BlogCard
+                  title={post.title}
+                  imageUrl={post.coverImage}
+                  description={post.description}
+                  date={post.date}
+                  author={post.author}
+                  slug={post.slug}
+                />
+              </React.Fragment>
+            );
+          })}
         </div>
+        {hasMoreRef.current && (
+          <button
+            className={styles.more}
+            onClick={() => setShowUntil((prev) => (prev += 4))}
+          >
+            More posts
+          </button>
+        )}
       </div>
     </>
   );
