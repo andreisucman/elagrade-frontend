@@ -20,7 +20,7 @@ const UsageChart = ({ data }: Props) => {
       month: "short",
       day: "numeric",
     }),
-    pv: record.totalTokens,
+    pv: Number(record.totalPages.toFixed(2)),
   }));
 
   const combinedData = formattedData.reduce((acc: any, record: any) => {
