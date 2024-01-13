@@ -11,9 +11,10 @@
   right: 0;
   width: 0;
   overflow: hidden;
-  z-index: 999;
+  z-index: 4;
 
   background-color: var(--mobile-menu-bg);
+  border: 1px solid var(--grey-light);
   transition: all 1s ease;
 
   &_open {

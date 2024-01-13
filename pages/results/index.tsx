@@ -20,6 +20,7 @@ const Results: React.FC = () => {
     totalPages: 1,
     perPage: 10,
   });
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     callTheServer({
@@ -36,6 +37,7 @@ const Results: React.FC = () => {
           )
         );
         setPagination(pagination);
+        setIsLoading(false);
       }
     });
   }, []);
@@ -167,14 +169,18 @@ const Results: React.FC = () => {
                 );
               })
             ) : (
-              <EmptyPlaceholder
-                icon={
-                  <TiDocumentText
-                    style={{ minWidth: "2rem", minHeight: "2rem" }}
+              <>
+                {!isLoading && (
+                  <EmptyPlaceholder
+                    icon={
+                      <TiDocumentText
+                        style={{ minWidth: "2rem", minHeight: "2rem" }}
+                      />
+                    }
+                    message={"Your grading results will be here"}
                   />
-                }
-                message={"Your grading results will be here"}
-              />
+                )}
+              </>
             )}
           </div>
           {assignments.length > 0 && (
