@@ -26,8 +26,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           <link rel="shortcut icon" href={fav.src} type="image/svg" />
         </Head>
         <Component {...pageProps} />
+        <Footer />
       </GeneralContextProvider>
-      <Footer />
     </Layout>
   );
 }

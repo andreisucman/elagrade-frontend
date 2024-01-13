@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   const [activePage, setActivePage] = useState("/");
   const [isOpen, setIsOpen] = useState(false);
   const { userDetails, isLoading } = useContext(GeneralContext);
-  const [buttonClass, setButtonClass] = useState("hidden");
+  const [buttonClass, setButtonClass] = useState("invisible");
 
   useEffect(() => {
     setActivePage(router.pathname);
@@ -93,8 +93,8 @@ const Header: React.FC = () => {
               width: "100%",
             }}
             innerStyle={{
-              padding: "0.75rem 1rem",
-
+              padding: "0.5rem 1rem",
+              fontSize: "1rem",
               margin: "0",
               whiteSpace: "nowrap",
             }}

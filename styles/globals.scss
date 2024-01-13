@@ -27,6 +27,10 @@ body {
   display: none !important;
 }
 
+.invisible {
+  visibility: hidden !important;
+}
+
 .disabled {
   pointer-events: none;
 }
