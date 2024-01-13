@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaRegFilePdf } from "react-icons/fa";
+import { FaRegFilePdf, FaRegFileWord } from "react-icons/fa";
+import { GrDocumentTxt } from "react-icons/gr";
 import styles from "./FileCard.module.scss";
 
 interface FileCardProps {
@@ -49,6 +50,30 @@ const FileCard: React.FC<FileCardProps> = ({ file, onRemoveFile }) => {
       return (
         <div className={styles.wrapper}>
           <FaRegFilePdf className={styles.icon} width={30} height={30} />
+          <p className={styles.paragraph}>{file.name}</p>
+          <div
+            className="close"
+            style={{ position: "static", justifySelf: "center" }}
+            onClick={() => onRemoveFile(file)}
+          />
+        </div>
+      );
+    } else if (file.type.includes("doc")) {
+      return (
+        <div className={styles.wrapper}>
+          <FaRegFileWord className={styles.icon} width={30} height={30} />
+          <p className={styles.paragraph}>{file.name}</p>
+          <div
+            className="close"
+            style={{ position: "static", justifySelf: "center" }}
+            onClick={() => onRemoveFile(file)}
+          />
+        </div>
+      );
+    } else if (file.type.includes("text")) {
+      return (
+        <div className={styles.wrapper}>
+          <GrDocumentTxt className={styles.icon} width={30} height={30} />
           <p className={styles.paragraph}>{file.name}</p>
           <div
             className="close"

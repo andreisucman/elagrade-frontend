@@ -24,7 +24,7 @@ const GradingOverlay = () => {
         <b style={{ fontSize: "1.75rem" }}>Grading</b>{" "}
         <Loading
           innerStyle={{
-            marginTop: "0.5rem",
+            marginTop: "0.25rem",
             color: "white",
             width: "5rem",
             height: "5rem",

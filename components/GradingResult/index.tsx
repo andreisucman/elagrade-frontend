@@ -9,7 +9,6 @@ type Props = {
 };
 
 const GradingResult = ({ gradingResults }: Props) => {
-  console.log("RESULT", gradingResults);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

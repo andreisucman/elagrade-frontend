@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 import FileCard from "../FileCard";
 import AddCard from "../AddCard";
@@ -13,7 +13,6 @@ type Props = {
 };
 
 const StudentCard = ({
-  index,
   student,
   onRemoveStudentCard,
   onAddStudentFiles,
@@ -21,9 +20,12 @@ const StudentCard = ({
 }: Props) => {
   // Initialize with accepted file types
   const [acceptedFileType, setAcceptedFileType] = useState<string[]>([
+    "image/jpg",
     "image/jpeg",
     "image/png",
-    "image/gif",
+    "application/msword",
+    "text/plain",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     "application/pdf",
   ]);
 
@@ -33,7 +35,6 @@ const StudentCard = ({
       {}
     ),
     onDrop: (acceptedFiles) => {
-      // Update the accepted file type based on the first file's type
       if (acceptedFiles.length > 0) {
         const firstFileType = acceptedFiles[0].type;
         if (!acceptedFileType.includes(firstFileType)) {
@@ -41,7 +42,7 @@ const StudentCard = ({
         }
       }
 
-      if (student.files.length < 3) {
+      if (student.files.length < 20) {
         onAddStudentFiles(student.id, acceptedFiles);
       }
     },
@@ -51,9 +52,12 @@ const StudentCard = ({
     // Reset to default file types when the component is unmounted
     return () =>
       setAcceptedFileType([
+        "image/jpg",
         "image/jpeg",
         "image/png",
-        "image/gif",
+        "application/msword",
+        "text/plain",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
         "application/pdf",
       ]);
   }, []);
@@ -64,7 +68,11 @@ const StudentCard = ({
 
   return (
     <div className={styles.container}>
-      <div className="close" onClick={() => onRemoveStudentCard(student)} style={{right: "0.75rem"}}/>
+      <div
+        className="close"
+        onClick={() => onRemoveStudentCard(student)}
+        style={{ right: "0.75rem" }}
+      />
       <div className={styles.wrapper} {...getRootProps()}>
         <AddCard
           customStyle={{
@@ -86,7 +94,8 @@ const StudentCard = ({
         </div>
         {student.files.length === 0 && (
           <div className={styles.paragraph}>
-            Drop the photo(s) or PDF here<i>(of a single student)</i>
+            Drop the files here (images, PDF, Doc, TXT)
+            <i>(of a single student)</i>
           </div>
         )}
       </div>

@@ -5,9 +5,9 @@ import styles from "./StudentsArea.module.scss";
 
 type Props = {
   students: any;
-  onAddStudentFiles: (studentId: string, newFiles: File[]) => void;
   onAddStudentCard: () => void;
   onRemoveStudentCard: (studentCard: any) => void;
+  onAddStudentFiles: (studentId: string, newFiles: File[]) => void;
   onRemoveStudentFile: (studentId: string, fileName: string) => void;
 };
 

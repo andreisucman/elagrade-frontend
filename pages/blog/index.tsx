@@ -1,4 +1,4 @@
-import { getDocuments, getDocumentPaths } from "outstatic/server";
+import { getDocuments } from "outstatic/server";
 import React from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
@@ -11,7 +11,6 @@ type Props = {
 };
 
 export default function Index({ posts }: Props) {
-  console.log("POSTS", posts);
   return (
     <>
       <Head>
@@ -58,10 +57,3 @@ export const getStaticProps = async () => {
     props: { posts },
   };
 };
-
-// export async function getStaticPaths() {
-//   return {
-//     paths: getDocumentPaths("posts"),
-//     fallback: false,
-//   };
-// }

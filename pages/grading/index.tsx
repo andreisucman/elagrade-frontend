@@ -12,8 +12,8 @@ import { resizeImage } from "@/functions/resizeImage";
 import { BsExclamationDiamond } from "react-icons/bs";
 import DescriptionBox from "@/components/DescriptionBox";
 import GradingOverlay from "@/components/GradingOverlay";
-import InsufficientFunds from "@/components/ProblemPopup";
 import AnnouncementBar from "@/components/AnnouncementBar";
+import ProblemPopup from "@/components/ProblemPopup";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Alert from "@/components/Alert";
@@ -170,9 +170,9 @@ const Grading = () => {
     for (let fileGroup of allFileBatches) {
       const formData = new FormData();
       for (const file of fileGroup) {
-        let mimeType = file.type.includes("image") ? "image" : "pdf";
+        let isImage = file.type.includes("image");
 
-        if (mimeType === "image") {
+        if (isImage) {
           const url = URL.createObjectURL(file);
           const resizedImageUrl = await resizeImage({ url, maxSize: 1200 });
           const response = await fetch(resizedImageUrl);
@@ -194,11 +194,22 @@ const Grading = () => {
       }
     }
 
-    // Prepare payload for grading endpoint
-    const payload: any = allUrls.map((batch) =>
+    const payload = allUrls.map((batch) =>
       batch.map((url: string) => {
-        let mimeType =
-          url.includes(".jpg") || url.includes(".png") ? "image" : "pdf";
+        let mimeType;
+        if (
+          url.includes(".jpg") ||
+          url.includes(".jpeg") ||
+          url.includes(".png")
+        ) {
+          mimeType = "image";
+        } else if (url.includes(".pdf")) {
+          mimeType = "pdf";
+        } else if (url.includes(".doc") || url.includes(".docx")) {
+          mimeType = "doc";
+        } else if (url.includes(".txt")) {
+          mimeType = "txt";
+        }
         return { type: mimeType, url };
       })
     );
@@ -226,7 +237,7 @@ const Grading = () => {
       setProblemPopupMessage(response?.message);
       setShowGradingOverlay(false);
 
-      if (response.message === "grading criteria missing") {
+      if (response.message.title === "Grading criteria missing") {
         setOpenAccordion(2);
       }
     }
@@ -328,7 +339,7 @@ const Grading = () => {
             />
           )}
           {problemPopupMessage && (
-            <InsufficientFunds
+            <ProblemPopup
               message={problemPopupMessage}
               setShowModal={() => setProblemPopupMessage(null)}
             />
