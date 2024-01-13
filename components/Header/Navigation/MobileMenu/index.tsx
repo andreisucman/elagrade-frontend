@@ -62,7 +62,7 @@ const MobileMenu: React.FC<props> = ({
           <li
             className={`${styles.link} ${markActive(link.href)}`}
             key={link.id}
-            style={link.isMobile ? { fontSize: "0.85rem" } : {}}
+            style={link.isMobile ? { fontSize: "0.9rem" } : {}}
           >
             <Link href={link.href}>{link.title}</Link>
           </li>

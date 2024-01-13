@@ -38,7 +38,7 @@ const PricingCard = ({
       case "Monthly":
         return "For teachers seeking better value.";
       case "Free":
-        return "Get 200 pages free. No credit card required.";
+        return "Get 100 pages free. No credit card required.";
     }
   }
 

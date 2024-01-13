@@ -31,14 +31,19 @@ export default function Home() {
           </p>
           <p className={styles.intro_body}>
             But imagine a different world, one where you can reclaim your time
-            for self-care, family, or professional development and never have to
-            grade assignments anymore. With Elagrade you can do just that -
-            grade your whole class in minutes, all while maintaining your
-            personal grading style and providing personalized feedback for each
-            student. No more late nights buried in papers, no more weekends lost
-            to grading marathons. Embrace the freedom to relax and enjoy your
-            personal time, knowing that you've met all of the requirements and
-            your students are receiving the attention and feedback they need.
+            for self-care, family, or personal development and never have to
+            grade assignments anymore.
+          </p>
+          <p className={styles.intro_body}>
+            With Elagrade you can do just that - grade your whole class in
+            minutes, all while maintaining your personal grading style and
+            providing personalized feedback for each student. No more late
+            nights buried in papers, no more weekends lost to grading marathons.
+          </p>
+          <p className={styles.intro_body}>
+            Embrace the freedom to relax and enjoy your personal time, knowing
+            that you've met all of the requirements and your students are
+            receiving the attention and feedback they need.
           </p>
         </div>
         <Button
@@ -48,7 +53,7 @@ export default function Home() {
             marginTop: "-1rem",
           }}
           id={"home_upper_cta"}
-          innerStyle={{ fontSize: "1.25rem" }}
+          innerStyle={{ fontSize: "1.15rem", padding: "1.15rem" }}
           buttonText="Start grading now"
           onClick={() => router.push("/grading")}
         />
@@ -140,7 +145,7 @@ export default function Home() {
             marginTop: "-1rem",
           }}
           id={"home_lower_cta"}
-          innerStyle={{ fontSize: "1.25rem" }}
+          innerStyle={{ fontSize: "1.15rem", padding: "1.15rem" }}
           buttonText="Start grading free"
           onClick={() => router.push("/grading")}
         />

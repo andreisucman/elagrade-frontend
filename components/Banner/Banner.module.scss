@@ -5,16 +5,23 @@
   position: relative;
 
   background-image: url("../../public/assets/banner.webp");
-  background-size: 450%;
-  background-position: 30% 100%;
+  background-size: 320%;
+  background-position: 50% 20%;
   background-repeat: no-repeat;
 
   width: 100%;
   min-height: 600px;
 
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+
   @include laptop {
-    background-size: cover;
+    background-size: fill;
     min-height: 800px;
+    background-size: 110%;
+    background-position: 0 25%;
   }
 
   animation: fadeIn 0.5s ease-in-out;
@@ -24,12 +31,15 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 5rem;
   padding: 1rem;
-  border-radius: 1rem;
-  position: absolute;
-  top: 40%;
+  background-color: rgba(255, 255, 255, 0.5);
 
   @include laptop {
+    position: absolute;
+    margin-top: unset;
+    border-radius: 1rem;
+
     top: 55%;
     left: 5rem;
     transform: translateY(-75%);

@@ -34,19 +34,21 @@ const Pagination: React.FC<Props> = ({
 
   return (
     <div className={styles.container} style={customStyles ? customStyles : {}}>
-      {generatePageNumbers().map((pageNumber) => (
-        <p
-          key={pageNumber}
-          onClick={() => onClick({ page: pageNumber, perPage })}
-          className={
-            pageNumber === currentPage
-              ? `${styles.active} ${styles.paragraph}`
-              : `${styles.paragraph}`
-          }
-        >
-          {pageNumber}
-        </p>
-      ))}
+      {generatePageNumbers().map((pageNumber) => {
+        return (
+          <p
+            key={pageNumber}
+            onClick={() => onClick({ page: pageNumber, perPage })}
+            className={
+              +pageNumber === +currentPage
+                ? `${styles.paragraph} ${styles.active} `
+                : `${styles.paragraph}`
+            }
+          >
+            {pageNumber}
+          </p>
+        );
+      })}
     </div>
   );
 };

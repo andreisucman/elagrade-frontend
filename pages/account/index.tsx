@@ -14,10 +14,11 @@ type LoadNext = {
 };
 
 const Results: React.FC = () => {
+  const [chartData, setChartData] = useState([]);
   const [classesResults, setClassesResults] = useState([]);
   const [pagination, setPagination] = useState({
     currentPage: 1,
-    perPage: 10,
+    perPage: 4,
     totalPages: 1,
   });
   const { userDetails, setUserDetails, defaultUser } =
@@ -33,6 +34,16 @@ const Results: React.FC = () => {
         const { result, pagination } = response.message;
         setClassesResults(result);
         setPagination(pagination);
+      }
+    });
+
+    callTheServer({
+      endpoint: `getGradingResultsList?page=1&toDays=30`,
+      method: "GET",
+    }).then(async (response: any) => {
+      if (response?.status === 200) {
+        const { result } = response.message;
+        setChartData(result);
       }
     });
   }, []);
@@ -99,14 +110,14 @@ const Results: React.FC = () => {
           </button>
         </div>
         <div className={styles.wrapper}>
-          <UsageChart data={classesResults} />
+          <UsageChart data={chartData} />
           <UsageTable
             classesResults={classesResults}
             pagination={pagination}
             loadNext={loadNext}
           />
           <div className={styles.balance}>
-            <p>Your plan is {userDetails?.plan}</p>
+            <p>Your plan is <b>{userDetails?.plan}</b></p>
             <p>Pages left: {pagesLeft}</p>
             <Button
               buttonText="Top up"
