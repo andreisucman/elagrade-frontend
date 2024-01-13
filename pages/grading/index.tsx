@@ -14,8 +14,6 @@ import DescriptionBox from "@/components/DescriptionBox";
 import GradingOverlay from "@/components/GradingOverlay";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ProblemPopup from "@/components/ProblemPopup";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Alert from "@/components/Alert";
 import styles from "./grading.module.scss";
 
@@ -315,7 +313,6 @@ const Grading = () => {
 
   return (
     <>
-      <Header />
       <AnnouncementBar
         icon={<BsExclamationDiamond />}
         message="Verify your email"
@@ -370,7 +367,6 @@ const Grading = () => {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

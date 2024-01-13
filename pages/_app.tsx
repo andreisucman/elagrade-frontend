@@ -3,10 +3,10 @@ import Head from "next/head";
 import type { AppProps } from "next/app";
 import fav from "../public/fav.svg";
 import Layout from "../components/Layout";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import GeneralContextProvider from "@/state/GeneralContext";
 import Hotjar from "@hotjar/browser";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./global-env.d.ts";
 import "../styles/globals.scss";
 
@@ -20,12 +20,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Layout>
+      <Header />
       <GeneralContextProvider>
         <Head>
           <link rel="shortcut icon" href={fav.src} type="image/svg" />
         </Head>
         <Component {...pageProps} />
       </GeneralContextProvider>
+      <Footer />
     </Layout>
   );
 }

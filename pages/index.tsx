@@ -1,8 +1,6 @@
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { useRouter } from "next/router";
 import YoutubeEmbed from "@/components/YoutubeEmbed";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import { testimonials, faqs } from "../data/data";
 import Testimonials from "@/components/Testimonials";
@@ -14,7 +12,6 @@ export default function Home() {
   const router = useRouter();
   return (
     <>
-      <Header />
       <div className={styles.container}>
         <Banner />
         <div className={styles.group} style={{ maxWidth: "60rem" }}>
@@ -143,7 +140,6 @@ export default function Home() {
         <FAQ faqs={faqs} />
         <Testimonials title={"What Teachers Say"} testimonials={testimonials} />
       </div>
-      <Footer />
     </>
   );
 }

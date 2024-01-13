@@ -5,8 +5,6 @@ import Pagination from "@/components/Pagination";
 import EmptyPlaceholder from "../../components/EmptyPlaceholder";
 import { TiDocumentText } from "react-icons/ti";
 import prepareAndDownloadReport from "@/functions/prepareAndDownloadReport";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import styles from "./results.module.scss";
 
 type LoadNext = {
@@ -92,101 +90,92 @@ const Results: React.FC = () => {
   }
 
   return (
-    <>
-      <Header />
-      <main className={styles.container}>
-        <div className={styles.wrapper}>
-          <h2 className={styles.title}>Results</h2>
-          <div className={styles.content}>
-            {assignments.length > 0 ? (
-              assignments.map((assignmentResult: any, index: number) => {
-                const date = new Date(
-                  assignmentResult._created_at
-                ).toLocaleDateString("en-US", {
-                  year: "2-digit",
-                  month: "short",
-                  day: "numeric",
-                });
-                return (
-                  <div className={styles.group} key={index}>
-                    <div className={styles.top_row}>
-                      <p>{assignmentResult.assignmentName}</p>
-                      <a
-                        href={assignmentResult.assignmentReportUrl}
-                        className={styles.downloadClass}
-                      >
-                        Download all
-                      </a>
-                    </div>
-                    {assignmentResult.results.map(
-                      (paper: any, index: number) => (
-                        <div key={index} className={styles.row}>
-                          <p>{date}</p>
-                          <p>{paper.studentName}</p>
-                          <p className={styles.grades}>
-                            {Object.keys(paper.grades)
-                              .map((rubric) => {
-                                const value = paper.grades[rubric];
-                                const formattedRubric =
-                                  rubric[0].toUpperCase() + rubric.slice(1);
-                                return `${formattedRubric}: ${value}`;
-                              })
-                              .join(", ")}
-                          </p>
-                          <button
-                            className={styles.download}
-                            onClick={() =>
-                              prepareAndDownloadReport(
-                                assignmentResult._id,
-                                paper.resultId,
-                                paper.studentName
-                              )
-                            }
-                          >
-                            <TbDownload className={styles.icon} />
-                          </button>
-                          <div
-                            className="close"
-                            style={{
-                              position: "static",
-                              justifySelf: "flex-end",
-                            }}
-                            onClick={() =>
-                              deleteResult(
-                                assignmentResult?._id,
-                                paper.resultId
-                              )
-                            }
-                          />
-                        </div>
-                      )
-                    )}
+    <main className={styles.container}>
+      <div className={styles.wrapper}>
+        <h2 className={styles.title}>Results</h2>
+        <div className={styles.content}>
+          {assignments.length > 0 ? (
+            assignments.map((assignmentResult: any, index: number) => {
+              const date = new Date(
+                assignmentResult._created_at
+              ).toLocaleDateString("en-US", {
+                year: "2-digit",
+                month: "short",
+                day: "numeric",
+              });
+              return (
+                <div className={styles.group} key={index}>
+                  <div className={styles.top_row}>
+                    <p>{assignmentResult.assignmentName}</p>
+                    <a
+                      href={assignmentResult.assignmentReportUrl}
+                      className={styles.downloadClass}
+                    >
+                      Download all
+                    </a>
                   </div>
-                );
-              })
-            ) : (
-              <EmptyPlaceholder
-                icon={
-                  <TiDocumentText
-                    style={{ minWidth: "2.5rem", minHeight: "2.5rem" }}
-                  />
-                }
-                message={"Your grading results will be here"}
-              />
-            )}
-          </div>
-          {assignments.length > 0 && (
-            <Pagination
-              currentPage={pagination.currentPage}
-              totalPages={pagination.totalPages}
-              perPage={pagination.perPage}
-              onClick={loadNext}
+                  {assignmentResult.results.map((paper: any, index: number) => (
+                    <div key={index} className={styles.row}>
+                      <p>{date}</p>
+                      <p>{paper.studentName}</p>
+                      <p className={styles.grades}>
+                        {Object.keys(paper.grades)
+                          .map((rubric) => {
+                            const value = paper.grades[rubric];
+                            const formattedRubric =
+                              rubric[0].toUpperCase() + rubric.slice(1);
+                            return `${formattedRubric}: ${value}`;
+                          })
+                          .join(", ")}
+                      </p>
+                      <button
+                        className={styles.download}
+                        onClick={() =>
+                          prepareAndDownloadReport(
+                            assignmentResult._id,
+                            paper.resultId,
+                            paper.studentName
+                          )
+                        }
+                      >
+                        <TbDownload className={styles.icon} />
+                      </button>
+                      <div
+                        className="close"
+                        style={{
+                          position: "static",
+                          justifySelf: "flex-end",
+                        }}
+                        onClick={() =>
+                          deleteResult(assignmentResult?._id, paper.resultId)
+                        }
+                      />
+                    </div>
+                  ))}
+                </div>
+              );
+            })
+          ) : (
+            <EmptyPlaceholder
+              icon={
+                <TiDocumentText
+                  style={{ minWidth: "2.5rem", minHeight: "2.5rem" }}
+                />
+              }
+              message={"Your grading results will be here"}
             />
           )}
         </div>
-      </main>
-      <Footer />
-    </>
+        {assignments.length > 0 && (
+          <Pagination
+            currentPage={pagination.currentPage}
+            totalPages={pagination.totalPages}
+            perPage={pagination.perPage}
+            onClick={loadNext}
+          />
+        )}
+      </div>
+    </main>
   );
 };
 

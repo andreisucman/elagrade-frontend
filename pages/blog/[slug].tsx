@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { getDocumentBySlug, getDocumentPaths } from "outstatic/server";
 import markdownToHtml from "../../functions/markdownToHtml";
 import styles from "./BlogPost.module.scss";

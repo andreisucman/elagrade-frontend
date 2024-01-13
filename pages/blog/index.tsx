@@ -1,8 +1,6 @@
 import { getDocuments } from "outstatic/server";
 import React from "react";
 import Head from "next/head";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
 import styles from "./Blog.module.scss";
 
@@ -20,7 +18,6 @@ export default function Index({ posts }: Props) {
           content={"Automated AI Essay Grading Tool For Teachers"}
         />
       </Head>
-      <Header />
       <div className={styles.container}>
         <h2>Blog</h2>
         <div className={styles.content}>
@@ -38,8 +35,6 @@ export default function Index({ posts }: Props) {
           ))}
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }
