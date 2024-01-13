@@ -258,7 +258,7 @@ const Results: React.FC = () => {
             }
           )}
         </div>
-        <ChatGptPricingCard />
+        {prices.length > 0 && <ChatGptPricingCard />}
       </main>
     </>
   );
