@@ -46,7 +46,7 @@ export default function Index({ posts }: Props) {
             className={styles.more}
             onClick={() => setShowUntil((prev) => (prev += 4))}
           >
-            More posts
+            Load more posts
           </button>
         )}
       </div>
