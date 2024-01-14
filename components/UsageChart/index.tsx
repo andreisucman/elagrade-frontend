@@ -25,7 +25,7 @@ const UsageChart = ({ data }: Props) => {
 
   const combinedData = formattedData.reduce((acc: any, record: any) => {
     if (acc[record.name]) {
-      acc[record.name].pv += record.pv;
+      acc[record.name].pv += Number(record.pv.toFixed(2));
     } else {
       acc[record.name] = { ...record };
     }
@@ -41,7 +41,7 @@ const UsageChart = ({ data }: Props) => {
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip cursor={{ fill: "#dfe3eb" }} />
-        <Bar dataKey="pv" fill="#04a8b7" />
+        <Bar dataKey="pv" fill="#04a8b7"/>
       </BarChart>
     </ResponsiveContainer>
   );
