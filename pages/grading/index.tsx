@@ -348,16 +348,24 @@ const Grading = () => {
           )}
           {showGradingOverlay && <GradingOverlay />}
           <GradingHeader />
-          {parts.map((part: any, index: number) => (
-            <div key={index} className={styles.accordionItem}>
-              <div
-                className={styles.accordionQuestion}
-                onClick={() => toggleAccordion(index)}
-              >
-                <p className={styles.accordionItemTitle}>{part.title}</p>
-                <div className={styles.chevronWrapper}>
-                  {part.title === "Grading result" &&
-                    gradingResults?.assignmentReportUrl && (
+          {parts.map((part: any, index: number) => {
+            const showDonwloadAll =
+              part.title === "Grading result" &&
+              gradingResults?.assignmentReportUrl;
+            const showPapersToGrade =
+              part.title === "Upload papers" && students.length > 0;
+
+            return (
+              <div key={index} className={styles.accordionItem}>
+                <div
+                  className={styles.accordionQuestion}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <p className={styles.accordionItemTitle}>
+                    {part.title} {showPapersToGrade && `(${students.length})`}
+                  </p>
+                  <div className={styles.chevronWrapper}>
+                    {showDonwloadAll && (
                       <a
                         className={styles.downloadAll}
                         onClick={(event) => event.stopPropagation()}
@@ -366,18 +374,19 @@ const Grading = () => {
                         Download all
                       </a>
                     )}
-                  {openAccordion === index ? (
-                    <FaChevronUp />
-                  ) : (
-                    <FaChevronDown />
-                  )}
+                    {openAccordion === index ? (
+                      <FaChevronUp />
+                    ) : (
+                      <FaChevronDown />
+                    )}
+                  </div>
                 </div>
+                {openAccordion === index && (
+                  <div className={styles.accordionAnswer}>{part.html}</div>
+                )}
               </div>
-              {openAccordion === index && (
-                <div className={styles.accordionAnswer}>{part.html}</div>
-              )}
-            </div>
-          ))}
+            );
+          })}
 
           {studentsExist.current && (
             <GradingFooter
