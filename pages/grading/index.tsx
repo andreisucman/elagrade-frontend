@@ -247,6 +247,8 @@ const Grading = () => {
   };
 
   async function resendVerificationEmail() {
+    if (resendEmailText !== "(Click to resend the email)") return;
+
     const response = await callTheServer({
       endpoint: `sendVerificationEmail/${userDetails?.email}`,
       method: "GET",
