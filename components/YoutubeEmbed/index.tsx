@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import YouTube from "react-youtube";
 import Loading from "../Loading";
 import styles from "./YoutubeEmbed.module.scss";
 
@@ -8,27 +9,24 @@ type Props = {
 };
 
 export default function YoutubeEmbed({ videoId, title }: Props) {
-  const [isLoading, setIsLoading] = useState(true);
+  const opts = {
+    height: "472",
+    width: "770",
+    playerVars: {
+      autoplay: 0,
+      rel: 0,
+      vq: "hd720",
+    },
+  };
 
   return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.wrapper}>
-          {isLoading && (
-            <Loading customStyle={{ position: "absolute", margin: "auto" }} />
-          )}
-          <iframe
-            onLoad={() => setIsLoading(false)}
-            width={"560"}
-            height={"315"}
-            src={`https://www.youtube.com/embed/${videoId}?vq=hd720&rel=0`}
-            title={title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            className={styles.iframe}
-          ></iframe>
-        </div>
-      </div>
-    </>
+    <div className={styles.container}>
+      <YouTube
+        videoId={videoId}
+        opts={opts}
+        title={title}
+        className={styles.player}
+      />
+    </div>
   );
 }
