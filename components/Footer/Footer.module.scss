@@ -22,7 +22,7 @@
   z-index: 1;
   margin: auto;
   padding: 1rem;
-  gap: 0.5rem;
+  gap: 1rem;
   width: 100%;
 
   @include desktop {
@@ -37,4 +37,19 @@
   position: relative;
   z-index: 2;
   text-align: center;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+
+  & a {
+    display: flex;
+  }
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
 }

@@ -1,5 +1,10 @@
 import React from "react";
 import FooterList from "./FooterList";
+import {
+  PiRedditLogoLight,
+  PiFacebookLogo,
+  PiPinterestLogo,
+} from "react-icons/pi";
 import styles from "./Footer.module.scss";
 
 const Footer: React.FC = () => {
@@ -23,12 +28,27 @@ const Footer: React.FC = () => {
         href: "/contact",
         title: "Contact",
       },
+      {
+        href: "/sitemap.xml",
+        title: "Sitemap",
+      },
     ],
   };
 
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
+        <div className={styles.socials}>
+          <a href="https://www.reddit.com/user/elagrade_com">
+            <PiRedditLogoLight className={styles.icon} />
+          </a>
+          <a href="https://www.facebook.com/elagrade">
+            <PiFacebookLogo className={styles.icon} />
+          </a>
+          <a href="https://pinterest.com/elagrade/">
+            <PiPinterestLogo className={styles.icon} />
+          </a>
+        </div>
         <FooterList data={links} />
         <p className={styles.copyright}>
           &copy; {year} Elagrade. All rights reserved.
