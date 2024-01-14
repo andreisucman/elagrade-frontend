@@ -13,6 +13,7 @@ type Props = {
 };
 
 const StudentCard = ({
+  index,
   student,
   onRemoveStudentCard,
   onAddStudentFiles,

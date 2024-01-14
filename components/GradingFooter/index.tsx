@@ -6,9 +6,15 @@ type Props = {
   students: any[];
   handleGrade: () => void;
   gradingResults: any;
+  gradingStatus: string | null;
 };
 
-const GradingFooter = ({ students, gradingResults, handleGrade }: Props) => {
+const GradingFooter = ({
+  students,
+  gradingStatus,
+  gradingResults,
+  handleGrade,
+}: Props) => {
   async function handleDownload(url: string) {
     const a = document.createElement("a");
     a.href = url;
@@ -31,6 +37,7 @@ const GradingFooter = ({ students, gradingResults, handleGrade }: Props) => {
       )}
       {students.length > 0 && !gradingResults && (
         <Button
+          isDisabled={!gradingStatus}
           buttonText="Grade"
           customStyle={{ minWidth: "10rem" }}
           innerStyle={{ margin: "auto 0 0 auto" }}

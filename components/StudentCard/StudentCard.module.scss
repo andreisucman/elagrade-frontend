@@ -28,6 +28,13 @@
   border-radius: 20px;
 }
 
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .paragraph {
   position: absolute;
   left: 50%;

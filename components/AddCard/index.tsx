@@ -5,7 +5,7 @@ import face_plus from "../../public/assets/face_plus.svg";
 import styles from "./AddCard.module.scss";
 
 type Props = {
-  onClick: () => void;
+  onClick: (e: any) => void;
   isFile?: boolean;
   customStyle?: any;
   innerStyle?: any;

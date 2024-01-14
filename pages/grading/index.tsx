@@ -26,7 +26,6 @@ const Grading = () => {
   const [important, setImportant] = useState("");
   const [fieldsSnapshot, setFieldsSnapshot] = useState("");
   const [gradingResults, setGradingResults] = useState<any>(null);
-  const [showGradingOverlay, setShowGradingOverlay] = useState(false);
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
   const [assignmentName, setAssignmentName] = useState("");
   const [problemPopupMessage, setProblemPopupMessage] = useState(null);
@@ -38,6 +37,7 @@ const Grading = () => {
   const { userDetails, setUserDetails, isLoading } = useContext(GeneralContext);
 
   const [isWholeFeedback, setIsWholeFeedback] = useState(false);
+  const [gradingStatus, setGradingStatus] = useState<string | null>(null);
 
   const disableSavingCriteria = useRef(true);
   disableSavingCriteria.current =
@@ -167,7 +167,7 @@ const Grading = () => {
         }. Please confirm it.`
       );
 
-    setShowGradingOverlay(true);
+    setGradingStatus("preparing");
     const allFileBatches = students.map((student: any) => student.files);
     const allUrls = [];
 
@@ -218,6 +218,12 @@ const Grading = () => {
       })
     );
 
+    if (totalFilesRef.current > 40) {
+      setGradingStatus("queued");
+    } else {
+      setGradingStatus("grading");
+    }
+
     const response = await callTheServer({
       endpoint: "gradePaper",
       method: "POST",
@@ -230,20 +236,20 @@ const Grading = () => {
 
     if (response?.status === 200) {
       setGradingResults(response.message);
-      setShowGradingOverlay(false);
       setOpenAccordion(3);
       setUserDetails(
         Object.assign({}, userDetails, {
           pagesLeft: response.message.pagesLeft,
         })
       );
+      setGradingStatus(null);
     } else if (response?.status === 400) {
       setProblemPopupMessage(response?.message);
-      setShowGradingOverlay(false);
 
       if (response.message.title === "Grading criteria missing") {
         setOpenAccordion(2);
       }
+      setGradingStatus(null);
     }
   }
 
@@ -353,8 +359,11 @@ const Grading = () => {
               setShowModal={() => setProblemPopupMessage(null)}
             />
           )}
-          {showGradingOverlay && (
-            <GradingOverlay seconds={totalFilesRef.current * 5} />
+          {gradingStatus && (
+            <GradingOverlay
+              seconds={totalFilesRef.current * 5}
+              gradingStatus={gradingStatus}
+            />
           )}
           <GradingHeader />
           {parts.map((part: any, index: number) => {
@@ -402,6 +411,7 @@ const Grading = () => {
               students={students}
               gradingResults={gradingResults}
               handleGrade={handleGrade}
+              gradingStatus={gradingStatus}
             />
           )}
         </div>
