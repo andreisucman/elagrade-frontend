@@ -4,7 +4,7 @@ import styles from "./GradingOverlay.module.scss";
 
 const GradingOverlay = () => {
   const containerRef = useRef(null);
-  const [countdown, setCountdown] = useState(30);
+  const [countdown, setCountdown] = useState(180);
 
   useEffect(() => {
     if (countdown > 0) {
