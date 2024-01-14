@@ -5,5 +5,5 @@ export default function convertSecondsToMinSec(seconds: number) {
   remainingSeconds =
     remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds;
 
-  return minutes + ":" + remainingSeconds;
+  return minutes + ":" + remainingSeconds + "s";
 }

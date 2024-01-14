@@ -38,6 +38,7 @@ const Grading = () => {
 
   const [isWholeFeedback, setIsWholeFeedback] = useState(false);
   const [gradingStatus, setGradingStatus] = useState<string | null>(null);
+  const [showGradingOverlay, setShowGradingOverlay] = useState<boolean>(false);
 
   const disableSavingCriteria = useRef(true);
   disableSavingCriteria.current =
@@ -159,15 +160,6 @@ const Grading = () => {
     return false;
   }
 
-  async function handleTest() {
-    const response = await callTheServer({
-      endpoint: "test",
-      method: "GET",
-    });
-
-    console.log("response", response);
-  }
-
   async function handleGrade() {
     if (!userDetails?.emailVerified)
       return setAlertMessage(
@@ -176,6 +168,7 @@ const Grading = () => {
         }. Please confirm it.`
       );
 
+    setShowGradingOverlay(true);
     setGradingStatus("preparing");
     const allFileBatches = students.map((student: any) => student.files);
     const allUrls = [];
@@ -227,34 +220,68 @@ const Grading = () => {
       })
     );
 
-    setGradingStatus("grading");
-
-    const response = await callTheServer({
-      endpoint: "gradePaper",
+    /* check quota */
+    const quotaResponse = await callTheServer({
+      endpoint: "checkQuota",
       method: "POST",
       body: {
         files: payload,
-        assignmentName:
-          assignmentName !== "" ? assignmentName : "Untitled assignment",
       },
     });
 
-    if (response?.status === 200) {
-      setGradingResults(response.message);
-      setOpenAccordion(3);
-      setUserDetails(
-        Object.assign({}, userDetails, {
-          pagesLeft: response.message.pagesLeft,
-        })
-      );
-      setGradingStatus(null);
-    } else if (response?.status === 400) {
-      setProblemPopupMessage(response?.message);
+    if (quotaResponse?.status === 400) {
+      setProblemPopupMessage(quotaResponse?.message);
 
-      if (response.message.title === "Grading criteria missing") {
+      if (quotaResponse.message.title === "Grading criteria missing") {
         setOpenAccordion(2);
       }
       setGradingStatus(null);
+      setShowGradingOverlay(false);
+      return;
+    }
+
+    if (totalFilesRef.current > 40) {
+      setGradingStatus("processing");
+
+      callTheServer({
+        endpoint: "gradePaper",
+        method: "POST",
+        body: {
+          assignmentName:
+            assignmentName !== "" ? assignmentName : "Untitled assignment",
+        },
+      });
+    } else {
+      /* grade if quota is ok */
+      setGradingStatus("grading");
+      const response = await callTheServer({
+        endpoint: "gradePaper",
+        method: "POST",
+        body: {
+          assignmentName:
+            assignmentName !== "" ? assignmentName : "Untitled assignment",
+        },
+      });
+
+      if (response?.status === 200) {
+        setGradingResults(response.message);
+        setOpenAccordion(3);
+        setUserDetails(
+          Object.assign({}, userDetails, {
+            pagesLeft: response.message.pagesLeft,
+          })
+        );
+        setGradingStatus(null);
+        setShowGradingOverlay(false);
+      } else if (response?.status === 400) {
+        setProblemPopupMessage(response?.message);
+
+        if (response.message.title === "Grading criteria missing") {
+          setOpenAccordion(2);
+        }
+        setGradingStatus(null);
+        setShowGradingOverlay(false);
+      }
     }
   }
 
@@ -326,7 +353,13 @@ const Grading = () => {
     },
     {
       title: "Grading result",
-      html: <GradingResult gradingResults={gradingResults} />,
+      html: (
+        <GradingResult
+          gradingResults={gradingResults}
+          totalFiles={totalFilesRef.current}
+          gradingStatus={gradingStatus}
+        />
+      ),
     },
   ];
 
@@ -348,6 +381,14 @@ const Grading = () => {
           )
         }
       />
+      {showGradingOverlay && (
+        <GradingOverlay
+          seconds={totalFilesRef.current * 10}
+          gradingStatus={gradingStatus}
+          setShowGradingOverlay={setShowGradingOverlay}
+        />
+      )}
+
       <div className={styles.container}>
         <div className={styles.wrapper}>
           {alertMessage && (
@@ -364,12 +405,7 @@ const Grading = () => {
               setShowModal={() => setProblemPopupMessage(null)}
             />
           )}
-          {gradingStatus && (
-            <GradingOverlay
-              seconds={totalFilesRef.current * 10}
-              gradingStatus={gradingStatus}
-            />
-          )}
+
           <GradingHeader />
           {parts.map((part: any, index: number) => {
             const showDonwloadAll =
@@ -415,7 +451,7 @@ const Grading = () => {
             <GradingFooter
               students={students}
               gradingResults={gradingResults}
-              handleGrade={handleTest}
+              handleGrade={handleGrade}
               gradingStatus={gradingStatus}
             />
           )}

@@ -13,7 +13,7 @@ const Loading: React.FC<props> = ({ customStyle, innerStyle, message }) => {
     <div className={styles.container} style={customStyle && customStyle}>
       <div style={innerStyle && innerStyle}>
         <ReactLoading
-          type={"spin"}
+          type={"bars"}
           color={innerStyle?.color || "#858585"}
           height={innerStyle?.height || 50}
           width={innerStyle?.width || 50}

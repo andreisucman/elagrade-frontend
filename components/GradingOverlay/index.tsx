@@ -6,23 +6,31 @@ import styles from "./GradingOverlay.module.scss";
 type Props = {
   seconds: number;
   gradingStatus: string | null;
+  setShowGradingOverlay: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const GradingOverlay = ({ seconds, gradingStatus }: Props) => {
+const GradingOverlay = ({
+  seconds,
+  gradingStatus,
+  setShowGradingOverlay,
+}: Props) => {
   const containerRef = useRef(null);
   const [countdown, setCountdown] = useState(seconds);
 
   useEffect(() => {
     if (gradingStatus === "preparing") {
-      setCountdown(Math.ceil(seconds / 2));
+      setCountdown(Math.ceil(seconds));
+    } else if (gradingStatus === "processing") {
+      setCountdown(seconds);
     } else if (gradingStatus === "grading") {
       setCountdown(seconds);
     }
   }, [gradingStatus, seconds]);
 
   useEffect(() => {
+    document.body.style.overflow = "hidden";
+
     if (countdown > 0) {
-      document.body.style.overflow = "hidden";
       const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
 
       return () => {
@@ -40,17 +48,44 @@ const GradingOverlay = ({ seconds, gradingStatus }: Props) => {
             <b style={{ fontSize: "1.75rem" }}>Preparing files</b>
             <Loading
               innerStyle={{
-                marginTop: "0.25rem",
                 color: "white",
                 width: "5rem",
                 height: "5rem",
               }}
             />
             {countdown > 0 ? (
-              <p className={styles.paragraphs}>{countdown}s left</p>
+              <p className={styles.paragraphs}>
+                {convertSecondsToMinSec(countdown)} left
+              </p>
             ) : (
-              <p className={styles.paragraphs}>Almost done...</p>
+              <p className={styles.paragraphs}>Finalizing...</p>
             )}
+          </div>
+        );
+      case "processing":
+        return (
+          <div className={styles.box}>
+            <b style={{ fontSize: "1.75rem" }}>Grading started</b>
+            <Loading
+              innerStyle={{
+                marginTop: "0.25rem",
+                color: "white",
+                width: "5rem",
+                height: "5rem",
+              }}
+            />
+            <p className={styles.paragraphs}>
+              It should be finished in {convertSecondsToMinSec(countdown)}
+            </p>
+            <p className={styles.paragraphs}>
+              Please check the results page after this time
+            </p>
+            <button
+              className={styles.button}
+              onClick={() => setShowGradingOverlay(false)}
+            >
+              Close
+            </button>
           </div>
         );
       case "grading":
@@ -70,7 +105,7 @@ const GradingOverlay = ({ seconds, gradingStatus }: Props) => {
                 {convertSecondsToMinSec(countdown)} left
               </p>
             ) : (
-              <p className={styles.paragraphs}>Almost done...</p>
+              <p className={styles.paragraphs}>Finalizing...</p>
             )}
           </div>
         );

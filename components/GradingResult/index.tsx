@@ -1,14 +1,42 @@
 import React from "react";
 import EmptyPlaceholder from "../EmptyPlaceholder";
+import convertSecondsToMinSec from "@/functions/convertSecondsToMinutes";
 import { TiDocumentText } from "react-icons/ti";
+import { LuBrainCog } from "react-icons/lu";
 import prepareAndDownloadReport from "@/functions/prepareAndDownloadReport";
 import styles from "./GradingResult.module.scss";
 
 type Props = {
   gradingResults: { _id: string; results: any[] };
+  gradingStatus: string | null;
+  totalFiles: number;
 };
 
-const GradingResult = ({ gradingResults }: Props) => {
+const GradingResult = ({
+  totalFiles,
+  gradingStatus,
+  gradingResults,
+}: Props) => {
+  function getContent() {
+    if (gradingStatus === "processing") {
+      return {
+        text: `Your papers are processing and will appear on the results page after about ${convertSecondsToMinSec(
+          totalFiles * 10
+        )}`,
+        icon: <LuBrainCog style={{ minWidth: "2rem", minHeight: "2rem" }} />,
+      };
+    } else {
+      return {
+        text: "Your grading results will be here",
+        icon: (
+          <TiDocumentText style={{ minWidth: "2rem", minHeight: "2rem" }} />
+        ),
+      };
+    }
+  }
+
+  const content = getContent();
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -42,10 +70,8 @@ const GradingResult = ({ gradingResults }: Props) => {
           ))
         ) : (
           <EmptyPlaceholder
-            icon={
-              <TiDocumentText style={{ minWidth: "2rem", minHeight: "2rem" }} />
-            }
-            message={"Your grading results will be here"}
+            icon={content.icon}
+            message={content.text}
             innerStyle={{ transform: "unset" }}
             customStyle={{ padding: "1rem" }}
           />
