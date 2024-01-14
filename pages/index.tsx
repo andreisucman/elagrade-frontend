@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <Banner />
-        <div className={styles.group} style={{ maxWidth: "60rem" }}>
+        <div className={styles.group} id="intro" style={{ maxWidth: "60rem" }}>
           <h3 className={styles.intro_title}>
             Embrace Teaching Without The Burden Of Grading
           </h3>

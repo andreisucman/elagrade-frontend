@@ -37,7 +37,7 @@ const BlogAnnouncement = () => {
 
   return (
     <div
-      onClick={() => (window.location.href = "/")}
+      onClick={() => (window.location.href = "/#intro")}
       style={combinedStyles as any}
       className={styles.container}
     >

@@ -9,8 +9,6 @@ type Props = {
 
 export default function YoutubeEmbed({ videoId, title }: Props) {
   const opts = {
-    height: "472",
-    width: "770",
     playerVars: {
       autoplay: 0,
       rel: 0,
