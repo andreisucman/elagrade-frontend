@@ -30,7 +30,7 @@ const SocialRow: React.FC<SocialRowProps> = ({
         )}
         <button className={styles.button} onClick={onSocialSignUpClick}>
           <div className="icon icon__google icon_xs" />
-          {isSignIn ? "Sign in with Google" : "Sign up with Google"}
+          {isSignIn ? "Google sign in" : "Google sign up"}
         </button>
       </div>
       <p onClick={() => setIsSignIn((prev) => !prev)} className={styles.link}>

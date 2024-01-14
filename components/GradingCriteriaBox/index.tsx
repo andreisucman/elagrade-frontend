@@ -61,6 +61,20 @@ const GradingCriteriaBox = ({
     setIsWholeFeedback(result);
   }
 
+  function setDefaults() {
+    setHighest(
+      "To a cohesive paper without grammatical errors that has introduction, body, and conclusion"
+    );
+    setLowest(
+      "To a paper that contains multiple grammatical errors, lacks arguments, has off-topic text and demonstrates lack of preparation"
+    );
+    setImportant(
+      "The student must demonstrate logical thinking and support their claims with argumentation"
+    );
+    setRubrics("Focus, clarity, grammar");
+    setIsWholeFeedback(false);
+  }
+
   return (
     <>
       {showGradingCriteriaExamples && (
@@ -78,12 +92,15 @@ const GradingCriteriaBox = ({
             >
               See criteria examples
             </p>
+            <p className={styles.gradingTitleOption} onClick={setDefaults}>
+              Set defaults
+            </p>
           </div>
           <DescriptionBox
             title={"What do you give the highest grade to?"}
             text={highest}
             placeholder={
-              "Example: To a paper that contains no grammatical errors, has a logical structure with introduction, body, and conclusion, proper citations, and demonstration of critical reasoning"
+              "Example: To a cohesive paper without grammatical errors that has introduction, body, and conclusion"
             }
             setText={setHighest}
           />
@@ -91,7 +108,7 @@ const GradingCriteriaBox = ({
             title={"What do you give the lowest grade to?"}
             text={lowest}
             placeholder={
-              "Example: To a paper that contains multiple grammatical errors, lacks citations, has off-topic text, and demonstrates lack of preparation"
+              "Example: To a paper that contains multiple grammatical errors, lacks arguments, has off-topic text and demonstrates lack of preparation"
             }
             setText={setLowest}
           />
@@ -99,7 +116,7 @@ const GradingCriteriaBox = ({
             title={"What is the most important for the student to demonstrate?"}
             text={important}
             placeholder={
-              "Example: The student must demonstrate that they have done their research and structured their paper logically"
+              "Example: The student must demonstrate logical thinking and support their claims with argumentation"
             }
             setText={setImportant}
           />
