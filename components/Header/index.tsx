@@ -66,7 +66,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <section className={styles.container}>
+    <header className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.rectangle} onClick={() => router.push("/")}>
           <Image
@@ -103,7 +103,7 @@ const Header: React.FC = () => {
         </div>
         <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
-    </section>
+    </header>
   );
 };
 

@@ -1,8 +1,9 @@
-import React, { useState, useRef } from "react";
-import { VscEmptyWindow } from "react-icons/vsc";
 import Head from "next/head";
-import EmptyPlaceholder from "@/components/EmptyPlaceholder";
+import React, { useState, useRef } from "react";
 import { getDocuments } from "outstatic/server";
+import { VscEmptyWindow } from "react-icons/vsc";
+import BlogAnnouncement from "@/components/BlogAnnouncement";
+import EmptyPlaceholder from "@/components/EmptyPlaceholder";
 import BlogCard from "@/components/BlogCard";
 import styles from "./Blog.module.scss";
 
@@ -25,6 +26,7 @@ export default function Index({ posts }: Props) {
           }
         />
       </Head>
+      <BlogAnnouncement />
       <div className={styles.container}>
         <h2>Blog</h2>
         {posts.length > 0 ? (

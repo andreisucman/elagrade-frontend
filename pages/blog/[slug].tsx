@@ -1,6 +1,7 @@
 import { getDocumentBySlug, getDocumentPaths } from "outstatic/server";
 import Head from "next/head";
 import markdownToHtml from "../../functions/markdownToHtml";
+import BlogAnnouncement from "@/components/BlogAnnouncement";
 import styles from "./BlogPost.module.scss";
 
 type Props = {
@@ -18,6 +19,7 @@ export default function BlogPost({ post }: Props) {
         <title>Blog | {post.title}</title>
         <meta name="description" content={post.description} />
       </Head>
+      <BlogAnnouncement />
       <div className={styles.container}>
         <div
           className={styles.content}
