@@ -159,6 +159,15 @@ const Grading = () => {
     return false;
   }
 
+  async function handleTest() {
+    const response = await callTheServer({
+      endpoint: "test",
+      method: "GET",
+    });
+
+    console.log("response", response);
+  }
+
   async function handleGrade() {
     if (!userDetails?.emailVerified)
       return setAlertMessage(
@@ -406,7 +415,7 @@ const Grading = () => {
             <GradingFooter
               students={students}
               gradingResults={gradingResults}
-              handleGrade={handleGrade}
+              handleGrade={handleTest}
               gradingStatus={gradingStatus}
             />
           )}
