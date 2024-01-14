@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import YouTube from "react-youtube";
-import Loading from "../Loading";
 import styles from "./YoutubeEmbed.module.scss";
 
 type Props = {
