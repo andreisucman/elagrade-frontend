@@ -2,9 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import Loading from "../Loading";
 import styles from "./GradingOverlay.module.scss";
 
-const GradingOverlay = () => {
+type Props = {
+  seconds: number;
+}
+
+const GradingOverlay = ({ seconds }: Props) => {
   const containerRef = useRef(null);
-  const [countdown, setCountdown] = useState(180);
+  const [countdown, setCountdown] = useState(seconds);
 
   useEffect(() => {
     if (countdown > 0) {

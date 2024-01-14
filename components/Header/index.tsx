@@ -93,7 +93,7 @@ const Header: React.FC = () => {
               width: "100%",
             }}
             innerStyle={{
-              padding: "0.5rem 1rem",
+              padding: "0.45rem 1rem",
               fontSize: "1rem",
               margin: "0",
               whiteSpace: "nowrap",

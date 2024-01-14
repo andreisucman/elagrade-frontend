@@ -49,6 +49,11 @@ const Grading = () => {
   const studentsExist = useRef(false);
   studentsExist.current = students.length > 0 ? true : false;
 
+  const totalFilesRef = useRef(0);
+  totalFilesRef.current = students
+    .map((student: any) => student.files)
+    .flat().length;
+
   useEffect(() => {
     callTheServer({ endpoint: "getGradingCriteria", method: "GET" }).then(
       async (response: any) => {
@@ -348,7 +353,9 @@ const Grading = () => {
               setShowModal={() => setProblemPopupMessage(null)}
             />
           )}
-          {showGradingOverlay && <GradingOverlay />}
+          {showGradingOverlay && (
+            <GradingOverlay seconds={totalFilesRef.current * 5} />
+          )}
           <GradingHeader />
           {parts.map((part: any, index: number) => {
             const showDonwloadAll =

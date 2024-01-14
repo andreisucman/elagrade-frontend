@@ -16,6 +16,8 @@
   margin: auto;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid var(--grey-light);
+  border-top: 1px solid var(--grey-light);
 
   @include laptop {
     min-height: 800px;
