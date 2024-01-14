@@ -36,25 +36,25 @@ const GradingCriteriaExamples = ({ setShowGradingCriteriaExamples }: Props) => {
           <DescriptionBox
             title={"What do you give the highest grade to?"}
             text={
-              "I give the highest grade to a paper that contains no grammatical errors, has a logical structure with introduction, body, and conclusion, proper citations, and demonstration of critical reasoning"
+              "I give the highest grade to a paper that contains no grammatical errors, has a logical structure with introduction, body, and conclusion, proper citations, and demonstration of critical reasoning."
             }
           />
           <DescriptionBox
             title={"What do you give the lowest grade to?"}
             text={
-              "I give the lowest grade to a paper that contains multiple grammatical errors, lacks citations, has off-topic text, and demonstrates lack of preparation"
+              "I give the lowest grade to a paper that contains multiple grammatical errors, lacks citations, has off-topic text, and demonstrates lack of preparation."
             }
           />
           <DescriptionBox
             title={"What is the most important for the student to demonstrate?"}
             text={
-              "The student must demonstrate that they have done their research and structured their ideas logically"
+              "The student must demonstrate that they have done their research and structured their ideas logically."
             }
           />
           <RadioGroup isWholeFeedback={false} />
           <DescriptionBox
             title={"What are the feedback rubrics?"}
-            text={"Focus, clarity, logical reasoning"}
+            text={"Focus, clarity, logical reasoning."}
           />
         </div>
       </div>
