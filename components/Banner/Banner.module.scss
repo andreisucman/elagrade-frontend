@@ -40,10 +40,14 @@
     border-radius: 1rem;
 
     top: 55%;
-    left: 5rem;
+    left: 2rem;
     transform: translateY(-75%);
 
     padding: 2rem;
+  }
+
+  @include desktop {
+    left: 5rem;
   }
 }
 
@@ -51,13 +55,22 @@
   line-height: 140%;
 
   @include laptop {
+    font-size: 2.5rem;
+  }
+
+  @include desktop {
     font-size: 2.75rem;
   }
 }
 
 .subtitle {
   line-height: 140%;
+
   @include laptop {
+    font-size: 1.65rem;
+  }
+
+  @include desktop {
     font-size: 1.8rem;
   }
 }
