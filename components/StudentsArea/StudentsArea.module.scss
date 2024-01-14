@@ -8,8 +8,12 @@
   grid-template-columns: 1fr;
   gap: 0.5rem;
 
-  @include desktop {
+  @include laptop {
     grid-template-columns: 1fr 1fr;
+  }
+  
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
