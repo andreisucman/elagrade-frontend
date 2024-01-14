@@ -37,6 +37,17 @@
   background-color: var(--background-color-dark);
 }
 
+.chevronWrapper {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  & a {
+    font-weight: 500;
+  }
+}
+
 .accordionQuestion {
   cursor: pointer;
   font-weight: bold;
@@ -64,7 +75,6 @@
 .accordionAnswer {
   color: var(--black);
   font-size: 1rem;
-  line-height: 1.4;
   padding: 0 1rem 1rem 1rem;
 }
 

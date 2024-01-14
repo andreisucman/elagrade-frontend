@@ -123,6 +123,7 @@ const GradingCriteriaBox = ({
               backgroundColor: "transparent",
               color: "#023a4c",
               border: "1px solid #023a4c",
+              maxWidth: "10rem",
             }}
             onClick={handleSaveCriteria}
           />

@@ -27,6 +27,8 @@
 .grades {
   width: 100%;
   overflow: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   &::-webkit-scrollbar {
     display: none;

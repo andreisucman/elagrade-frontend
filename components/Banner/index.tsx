@@ -7,7 +7,7 @@ const Banner = () => {
       <div className={styles.wrapper}>
         <h1 className={styles.title}>Helping Teachers Love Grading</h1>
         <h3 className={styles.subtitle}>
-          Automatic Grading Software For ELA Teachers
+          Automatic Grading Platform For ELA Teachers
         </h3>
       </div>
     </div>

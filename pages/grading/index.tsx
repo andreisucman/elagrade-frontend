@@ -355,7 +355,23 @@ const Grading = () => {
                 onClick={() => toggleAccordion(index)}
               >
                 <p className={styles.accordionItemTitle}>{part.title}</p>
-                {openAccordion === index ? <FaChevronUp /> : <FaChevronDown />}
+                <div className={styles.chevronWrapper}>
+                  {part.title === "Grading result" &&
+                    gradingResults?.assignmentReportUrl && (
+                      <a
+                        className={styles.downloadAll}
+                        onClick={(event) => event.stopPropagation()}
+                        href={gradingResults?.assignmentReportUrl}
+                      >
+                        Download all
+                      </a>
+                    )}
+                  {openAccordion === index ? (
+                    <FaChevronUp />
+                  ) : (
+                    <FaChevronDown />
+                  )}
+                </div>
               </div>
               {openAccordion === index && (
                 <div className={styles.accordionAnswer}>{part.html}</div>
