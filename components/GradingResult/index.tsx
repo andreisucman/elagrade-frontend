@@ -43,9 +43,7 @@ const GradingResult = ({ gradingResults }: Props) => {
         ) : (
           <EmptyPlaceholder
             icon={
-              <TiDocumentText
-                style={{ minWidth: "2rem", minHeight: "2rem" }}
-              />
+              <TiDocumentText style={{ minWidth: "2rem", minHeight: "2rem" }} />
             }
             message={"Your grading results will be here"}
             innerStyle={{ transform: "unset" }}

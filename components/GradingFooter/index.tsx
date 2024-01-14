@@ -37,7 +37,7 @@ const GradingFooter = ({
       )}
       {students.length > 0 && !gradingResults && (
         <Button
-          isDisabled={!gradingStatus}
+          isDisabled={gradingStatus !== null}
           buttonText="Grade"
           customStyle={{ minWidth: "10rem" }}
           innerStyle={{ margin: "auto 0 0 auto" }}

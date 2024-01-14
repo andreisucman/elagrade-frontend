@@ -218,11 +218,7 @@ const Grading = () => {
       })
     );
 
-    if (totalFilesRef.current > 40) {
-      setGradingStatus("queued");
-    } else {
-      setGradingStatus("grading");
-    }
+    setGradingStatus("grading");
 
     const response = await callTheServer({
       endpoint: "gradePaper",
@@ -361,7 +357,7 @@ const Grading = () => {
           )}
           {gradingStatus && (
             <GradingOverlay
-              seconds={totalFilesRef.current * 5}
+              seconds={totalFilesRef.current * 10}
               gradingStatus={gradingStatus}
             />
           )}

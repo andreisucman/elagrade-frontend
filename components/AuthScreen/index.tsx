@@ -18,9 +18,9 @@ type AuthScreenProps = {
 const AuthScreen: React.FC<AuthScreenProps> = ({ isSignIn }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordRepeat, setPasswordRepeat] = useState("");
   const [showRecoverPassword, setShowRecoverPassword] = useState(false);
   const [alertMessage, setAlertMessage] = useState<string | null>(null);
+  const [passwordType, setPasswordType] = useState("password");
   const router = useRouter();
 
   useEffect(() => {
@@ -43,10 +43,6 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ isSignIn }) => {
 
     if (isSignIn && (email.length === 0 || password.length === 0)) {
       return setAlertMessage("Email and password can't be empty");
-    }
-
-    if (!isSignIn && password !== passwordRepeat) {
-      return setAlertMessage("Passwords don't match");
     }
 
     const response = await emailAuth({ isSignIn, email, password });
@@ -77,6 +73,14 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ isSignIn }) => {
   function onSocialSignUpClick() {
     const orderPayload = router.query ? JSON.stringify(router.query) : null;
     socialAuth(orderPayload);
+  }
+
+  function togglePasswordVisibility() {
+    if (passwordType === "password") {
+      setPasswordType("text");
+    } else {
+      setPasswordType("password");
+    }
   }
 
   return (
@@ -113,19 +117,21 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ isSignIn }) => {
             setData={setEmail}
           />
 
-          <InputField
-            type={"password"}
-            placeholder={"Enter your password"}
-            setData={setPassword}
-          />
-
-          {!isSignIn && (
-            <InputField
-              type={"password"}
-              placeholder={"Repeat your password"}
-              setData={setPasswordRepeat}
+          <label className={styles.label}>
+            <div
+              className={
+                passwordType === "password"
+                  ? `${styles.passwordIcon} icon icon__eye`
+                  : `${styles.passwordIcon} icon icon__eye_crossed`
+              }
+              onClick={togglePasswordVisibility}
             />
-          )}
+            <InputField
+              type={passwordType}
+              placeholder={"Enter your password"}
+              setData={setPassword}
+            />
+          </label>
 
           <Button
             buttonText={isSignIn ? "Sign in" : "Sign up"}
