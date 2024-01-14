@@ -5,10 +5,6 @@
   flex-direction: column;
   padding: 0.25rem 0 0.25rem;
 
-  @include mobile {
-    gap: 0.5rem;
-  }
-
   &__signup {
     width: 100%;
     align-items: center;

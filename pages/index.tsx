@@ -35,14 +35,14 @@ export default function Home() {
             lose it to grading.
           </p>
           <p className={styles.intro_body}>
-            With Elagrade you can do just that - grade your whole class in
-            minutes, all while maintaining your personal style and providing
+            With Elagrade, you can do just that - grade your whole class in
+            minutes all while maintaining your personal style and providing
             feedback to each student. No more late nights buried in papers, no
             more weekends lost to grading marathons.
           </p>
           <p className={styles.intro_body}>
             Embrace the freedom to relax and enjoy your free time, knowing that
-            you've met all of the requirements and your students get the
+            you've met all of the requirements, and your students get the
             attention and feedback they need.
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function Home() {
           customStyle={{
             maxWidth: "15rem",
             width: "100%",
-            marginTop: "-1rem",
+            marginTop: "-0.5rem",
           }}
           id={"home_upper_cta"}
           innerStyle={{ fontSize: "1.15rem", padding: "1.15rem" }}
@@ -74,25 +74,25 @@ export default function Home() {
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
               Grade 10-50-100 papers in one click with your personal grading
-              style
+              style.
             </li>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
-              Specify your personal rubrics you want the grading to be made on
+              Specify your personal rubrics you want the grading to be made on.
             </li>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
               Get a grade, explanation and unique feedback for every uploaded
-              paper
+              paper.
             </li>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
-              Upload handwritten assignments by taking pictures, and electronic
-              ones with PDF or text files
+              Upload handwritten assignments by taking pictures and electronic
+              ones with PDF or text files.
             </li>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
-              Grade hard to understand text without draining your mind
+              Grade hard to understand text without draining your mind.
             </li>
           </ul>
         </div>
@@ -116,7 +116,7 @@ export default function Home() {
                 style={{ width: "3rem", height: "3rem" }}
                 className={"icon icon__workout"}
               />
-              Start working out and getting in shape
+              Start working out to get in shape
             </li>
             <li className={styles.box}>
               <div
@@ -138,7 +138,7 @@ export default function Home() {
           customStyle={{
             maxWidth: "15rem",
             width: "100%",
-            marginTop: "-1rem",
+            marginTop: "-0.5rem",
           }}
           id={"home_lower_cta"}
           innerStyle={{ fontSize: "1.15rem", padding: "1.15rem" }}

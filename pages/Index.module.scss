@@ -60,7 +60,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: rem;
+  gap: 1rem;
   max-width: 50rem;
   padding: 0 1rem;
 }
@@ -73,6 +73,8 @@
 
 .item {
   display: flex;
+  align-items: center;
+  font-size: 1rem;
   gap: 1rem;
 }
 

@@ -1,6 +1,9 @@
 @import "../../../../styles/helpers/mixins.scss";
+@import "../../../../styles/helpers/animations.scss";
 
 .container {
+  animation: fadeIn 0.5s ease-in-out;
+
   @include desktop {
     display: none;
   }

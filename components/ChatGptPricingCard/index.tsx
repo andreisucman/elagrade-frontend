@@ -14,9 +14,7 @@ const ChatGptPricingCard = () => {
         onClick={() => setIsOpen((prev) => !prev)}
         id={"pricing_have_chat_gpt_plus_plan"}
       >
-        <p className={styles.accordionItemTitle}>
-          Have ChatGPT Plus Plan?
-        </p>
+        <p className={styles.accordionItemTitle}>Have ChatGPT Plus Plan?</p>
         {isOpen ? <FaChevronUp /> : <FaChevronDown />}
       </div>
       {isOpen && (
@@ -24,7 +22,7 @@ const ChatGptPricingCard = () => {
           <div className={styles.container}>
             <div className={styles.wrapper}>
               <p className={styles.about}>
-                If you have ChatGPT <b>Plus</b> membership you can use a basic
+                If you have ChatGPT <b>Plus</b> plan you can use the basic
                 version of Elagrade free.
               </p>
               <ul className={styles.list}>
@@ -38,10 +36,16 @@ const ChatGptPricingCard = () => {
                 </li>
                 <li className={styles.item}>
                   <RxCross2 className={styles.icon} />
-                  No docx reports
+                  No bulk reports
                 </li>
               </ul>
-              <Button buttonText="Try it out" />
+              <Button
+                buttonText="Try it out"
+                onClick={() =>
+                  (window.location.href =
+                    "https://chat.openai.com/g/g-e1s0iBTaq-elagrade-teacher-s-grading-assistant")
+                }
+              />
             </div>
           </div>
         </div>

@@ -22,8 +22,8 @@ const Terms = () => {
 
           <h3>Description of Service</h3>
           <p>
-            elagrade.com is a publishing company that offers their products to
-            the user in the form of digital books.
+            elagrade.com is an text analysis software offered to the user in the
+            form of a web platform and autonomous conversational bot (GPT).
           </p>
 
           <h3>User Obligations</h3>
@@ -36,8 +36,7 @@ const Terms = () => {
           <h3>Data Use and Privacy</h3>
           <p>
             By using the Site, you acknowledge and agree that elagrade.com may
-            analyze the information you submit for advertising purposes and to
-            enhance the user experience{" "}
+            analyze the information you submit to enhance the user experience{" "}
             <a href="/legal/privacy">
               <u>Privacy Policy</u>
             </a>
@@ -49,9 +48,8 @@ const Terms = () => {
             (a) All content and services provided on the Site are protected by
             copyright, trademark, and other applicable intellectual property
             rights. (b) You grant the elagrade.com a worldwide, royalty-free,
-            and non-exclusive license to reproduce, modify, distribute, and
-            publish the content you upload for the sole purpose of providing the
-            Site&quot;s services.
+            and non-exclusive license to analyze and store the content you
+            upload for the sole purpose of providing the Site&quot;s services.
           </p>
 
           <h3>Limitation of Liability</h3>
