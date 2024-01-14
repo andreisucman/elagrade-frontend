@@ -202,12 +202,6 @@ const Results: React.FC = () => {
               const monthlyMonthly =
                 userDetails?.plan === "monthly" &&
                 title?.toLowerCase() === "monthly";
-              const yearlyYearly =
-                userDetails?.plan === "yearly" &&
-                title?.toLowerCase() === "yearly";
-              const yearlyMonthly =
-                userDetails?.plan === "yearly" &&
-                title?.toLowerCase() === "monthly";
 
               const freeAndLoggedOut = !priceId && !userDetails?.email;
 
@@ -221,11 +215,8 @@ const Results: React.FC = () => {
                 unblockButton = true;
               }
 
-              if (!monthlyMonthly && !isPrepaid) {
-                unblockButton = true;
-              }
-              if (!yearlyMonthly && !isPrepaid) {
-                unblockButton = true;
+              if (monthlyMonthly) {
+                unblockButton = false;
               }
 
               const discountedPPP =

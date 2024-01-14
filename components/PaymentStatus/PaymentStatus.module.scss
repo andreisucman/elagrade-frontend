@@ -1,8 +1,14 @@
+@import "../../styles/helpers/mixins.scss";
+@import "../../styles/helpers/animations.scss";
+
 .container {
   position: fixed;
   inset: 0;
   z-index: 4;
   background-color: rgba($color: black, $alpha: 0.5);
+  animation: fadeIn 0.5s ease-in-out;
+  animation-delay: 3s;
+  overflow: hidden;
 }
 
 .wrapper {
