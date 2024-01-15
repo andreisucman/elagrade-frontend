@@ -184,9 +184,10 @@ const Grading = () => {
 
     setShowGradingOverlay(true);
     setGradingStatus("preparing");
-    setProcessingTime(averageUploadTime);
     const allFileBatches = students.map((student: any) => student.files);
     const allUrls = [];
+
+    setProcessingTime(averageUploadTime * allFileBatches.flat().length);
 
     const uploadStarted = new Date().getTime();
     for (let fileGroup of allFileBatches) {
@@ -249,7 +250,7 @@ const Grading = () => {
 
     /* grade if quota is ok */
     setGradingStatus("grading");
-    setProcessingTime(averageGradingTime);
+    setProcessingTime(averageGradingTime * allUrls.length);
     const response = await callTheServer({
       endpoint: "gradePaper",
       method: "POST",
