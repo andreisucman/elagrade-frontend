@@ -39,6 +39,7 @@ const Grading = () => {
   const [isWholeFeedback, setIsWholeFeedback] = useState(false);
   const [gradingStatus, setGradingStatus] = useState<string | null>(null);
   const [showGradingOverlay, setShowGradingOverlay] = useState<boolean>(false);
+  const [processingTime, setProcessingTime] = useState(0);
 
   const disableSavingCriteria = useRef(true);
   disableSavingCriteria.current =
@@ -170,9 +171,11 @@ const Grading = () => {
 
     setShowGradingOverlay(true);
     setGradingStatus("preparing");
+    setProcessingTime(userDetails?.times?.uploadTime || 60);
     const allFileBatches = students.map((student: any) => student.files);
     const allUrls = [];
 
+    const uploadStarted = new Date().getTime();
     for (let fileGroup of allFileBatches) {
       const formData = new FormData();
       for (const file of fileGroup) {
@@ -220,8 +223,20 @@ const Grading = () => {
       })
     );
 
+    const uploadEnded = new Date().getTime();
+
+    /* update upload times */
+    callTheServer({
+      endpoint: "updateUploadTime",
+      method: "POST",
+      body: {
+        uploadTime: (uploadEnded - uploadStarted) / allUrls.length,
+      },
+    });
+
     /* grade if quota is ok */
     setGradingStatus("grading");
+    setProcessingTime(userDetails?.times?.gradingTime || 180);
     const response = await callTheServer({
       endpoint: "gradePaper",
       method: "POST",
@@ -351,9 +366,8 @@ const Grading = () => {
       />
       {showGradingOverlay && (
         <GradingOverlay
-          seconds={totalFilesRef.current * 10}
+          seconds={processingTime}
           gradingStatus={gradingStatus}
-          setShowGradingOverlay={setShowGradingOverlay}
         />
       )}
 

@@ -1,7 +1,5 @@
 import React from "react";
-import convertSecondsToMinSec from "@/functions/convertSecondsToMinutes";
 import { TiDocumentText } from "react-icons/ti";
-import { LuBrainCog } from "react-icons/lu";
 import prepareAndDownloadReport from "@/functions/prepareAndDownloadReport";
 import EmptyPlaceholder from "../EmptyPlaceholder";
 import styles from "./GradingResult.module.scss";
@@ -18,21 +16,12 @@ const GradingResult = ({
   totalFiles,
 }: Props) => {
   function getContent() {
-    if (gradingStatus) {
-      return {
-        text: `Your latest submission is processing and should be ready after ${convertSecondsToMinSec(
-          totalFiles * 10
-        )}`,
-        icon: <LuBrainCog style={{ minWidth: "2rem", minHeight: "2rem" }} />,
-      };
-    } else {
-      return {
-        text: "Your grading results will be here",
-        icon: (
-          <TiDocumentText style={{ minWidth: "1.5rem", minHeight: "1.5rem" }} />
-        ),
-      };
-    }
+    return {
+      text: "Your grading results will be here",
+      icon: (
+        <TiDocumentText style={{ minWidth: "1.5rem", minHeight: "1.5rem" }} />
+      ),
+    };
   }
 
   const content = getContent();

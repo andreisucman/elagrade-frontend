@@ -6,24 +6,15 @@ import styles from "./GradingOverlay.module.scss";
 type Props = {
   seconds: number;
   gradingStatus: string | null;
-  setShowGradingOverlay: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const GradingOverlay = ({
-  seconds,
-  gradingStatus,
-  setShowGradingOverlay,
-}: Props) => {
+const GradingOverlay = ({ seconds, gradingStatus }: Props) => {
   const containerRef = useRef(null);
   const [countdown, setCountdown] = useState(seconds);
 
   useEffect(() => {
-    if (gradingStatus === "preparing") {
-      setCountdown(Math.ceil(seconds / 5));
-    } else if (gradingStatus === "grading") {
-      setCountdown(seconds);
-    }
-  }, [gradingStatus, seconds]);
+    setCountdown(Math.ceil(seconds));
+  }, [seconds]);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";

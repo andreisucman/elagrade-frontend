@@ -16,7 +16,13 @@ export type UserType = {
   customerId: string;
   subscriptionId: string | null;
   emailVerified: boolean;
+  times: Times | null;
 } | null;
+
+type Times = {
+  uploadTime: number;
+  gradingTime: number;
+};
 
 export type UserContextType = {
   userDetails: UserType | null;
