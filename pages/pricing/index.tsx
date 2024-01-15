@@ -207,7 +207,7 @@ const Results: React.FC = () => {
 
                 const freeAndLoggedOut = !priceId && !userDetails?.email;
 
-                let unblockButton = false;
+                let unblockButton = true;
 
                 if (isPrepaid && priceId) {
                   unblockButton = true;
@@ -221,13 +221,16 @@ const Results: React.FC = () => {
                   unblockButton = false;
                 }
 
-                const discountedPPP =
-                  isPrepaid && userDetails?.plan === "yearly" ? PPP * 0.7 : PPP;
+                if (userDetails?.email && title.toLowerCase() === "free") {
+                  unblockButton = false;
+                }
+
+                console.log("mm", freeAndLoggedOut);
 
                 return (
                   <React.Fragment key={index}>
                     <PricingCard
-                      PPP={Number(discountedPPP.toFixed(2))}
+                      PPP={PPP}
                       isUnblocked={unblockButton}
                       title={title}
                       pages={pages}
