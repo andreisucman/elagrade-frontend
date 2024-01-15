@@ -41,7 +41,7 @@ const FileCard: React.FC<FileCardProps> = ({ file, onRemoveFile }) => {
           <p className={styles.paragraph}>{file.name}</p>
           <div
             className="close"
-            style={{ position: "static", justifySelf: "center" }}
+            style={{ position: "static", justifySelf: "center", zIndex: "0" }}
             onClick={() => onRemoveFile(file)}
           />
         </div>
@@ -53,7 +53,7 @@ const FileCard: React.FC<FileCardProps> = ({ file, onRemoveFile }) => {
           <p className={styles.paragraph}>{file.name}</p>
           <div
             className="close"
-            style={{ position: "static", justifySelf: "center" }}
+            style={{ position: "static", justifySelf: "center", zIndex: "0" }}
             onClick={() => onRemoveFile(file)}
           />
         </div>
