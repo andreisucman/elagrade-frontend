@@ -220,32 +220,13 @@ const Grading = () => {
       })
     );
 
-    /* check quota */
-    const quotaResponse = await callTheServer({
-      endpoint: "checkQuota",
-      method: "POST",
-      body: {
-        files: payload,
-      },
-    });
-
-    if (quotaResponse?.status === 400) {
-      setProblemPopupMessage(quotaResponse?.message);
-
-      if (quotaResponse.message.title === "Grading criteria missing") {
-        setOpenAccordion(2);
-      }
-      setGradingStatus(null);
-      setShowGradingOverlay(false);
-      return;
-    }
-
     /* grade if quota is ok */
     setGradingStatus("grading");
     const response = await callTheServer({
       endpoint: "gradePaper",
       method: "POST",
       body: {
+        files: payload,
         assignmentName:
           assignmentName !== "" ? assignmentName : "Untitled assignment",
       },
