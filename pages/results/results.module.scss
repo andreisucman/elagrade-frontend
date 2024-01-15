@@ -35,6 +35,17 @@
   flex: 1;
 }
 
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--black);
+  border-radius: 1rem;
+  width: 100%;
+}
+
 .group {
   animation: fadeIn 0.5s ease-in-out;
   display: flex;
