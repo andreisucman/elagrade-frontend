@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { GeneralContext } from "@/state/GeneralContext";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import YoutubeEmbed from "@/components/YoutubeEmbed";
@@ -10,7 +12,17 @@ import Banner from "@/components/Banner";
 import styles from "./Index.module.scss";
 
 export default function Home() {
+  const { userDetails } = useContext(GeneralContext);
   const router = useRouter();
+
+  function handleRoute() {
+    if (userDetails?.email !== "") {
+      router.push("/grading");
+    } else {
+      router.push("/sign-up");
+    }
+  }
+
   return (
     <>
       <Head>
@@ -26,7 +38,7 @@ export default function Home() {
           <p className={styles.intro_body}>
             After a long and exhausting day the thought of assignments waiting
             for you in the drawer can be really overwhelming. It's a familiar
-            scene for many teachers: you're exhausted, yet there is a pile of
+            scene for many educators: you're exhausted, yet there is a pile of
             essays that should have been graded already today.
           </p>
           <p className={styles.intro_body}>
@@ -45,23 +57,22 @@ export default function Home() {
             you've met all of the requirements, and your students get the
             attention and feedback they need.
           </p>
+          <Button
+            customStyle={{
+              maxWidth: "15rem",
+              width: "100%",
+            }}
+            id={"home_upper_cta"}
+            innerStyle={{ fontSize: "1.15rem", padding: "1.15rem" }}
+            buttonText="Start grading now"
+            onClick={handleRoute}
+          />
         </div>
-        <Button
-          customStyle={{
-            maxWidth: "15rem",
-            width: "100%",
-            marginTop: "-0.5rem",
-          }}
-          id={"home_upper_cta"}
-          innerStyle={{ fontSize: "1.15rem", padding: "1.15rem" }}
-          buttonText="Start grading now"
-          onClick={() => router.push("/grading")}
-        />
+
         <div className={styles.full_width}>
           <div className={styles.group} style={{ gap: "1.5rem" }}>
-            <h3 className={styles.how_title}>
-              More Time, More Energy, Better Motivation
-            </h3>
+            <h3 className={styles.how_title}>End The Unpaid After-Hours</h3>
+
             <YoutubeEmbed
               videoId="PlYEQQreR-M"
               title="Elagrade - Automatic Grading For Ela Teachers"
@@ -69,7 +80,9 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.group} style={{ marginTop: "0.5rem" }}>
-          <h3 className={styles.how_title}>End The Unpaid After-Hours</h3>
+          <h3 className={styles.how_title}>
+            More Time, More Energy, Better Motivation
+          </h3>
           <ul className={styles.list}>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
@@ -133,18 +146,19 @@ export default function Home() {
               Start a new hobby, book, or a video game you love
             </li>
           </ul>
+          <Button
+            customStyle={{
+              maxWidth: "15rem",
+              width: "100%",
+              marginTop: "0.5rem",
+            }}
+            id={"home_lower_cta"}
+            innerStyle={{ fontSize: "1.15rem", padding: "1.15rem" }}
+            buttonText="Start grading free"
+            onClick={handleRoute}
+          />
         </div>
-        <Button
-          customStyle={{
-            maxWidth: "15rem",
-            width: "100%",
-            marginTop: "-0.5rem",
-          }}
-          id={"home_lower_cta"}
-          innerStyle={{ fontSize: "1.15rem", padding: "1.15rem" }}
-          buttonText="Start grading free"
-          onClick={() => router.push("/grading")}
-        />
+
         <FAQ faqs={faqs} />
         <Testimonials title={"What Teachers Say"} testimonials={testimonials} />
       </div>

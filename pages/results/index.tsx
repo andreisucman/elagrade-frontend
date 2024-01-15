@@ -3,6 +3,7 @@ import Head from "next/head";
 import { TbDownload } from "react-icons/tb";
 import callTheServer from "@/functions/callTheServer";
 import Pagination from "@/components/Pagination";
+import CardPlaceholder from "@/components/CardPlaceholder";
 import EmptyPlaceholder from "../../components/EmptyPlaceholder";
 import { TiDocumentText } from "react-icons/ti";
 import prepareAndDownloadReport from "@/functions/prepareAndDownloadReport";
@@ -170,7 +171,13 @@ const Results: React.FC = () => {
               })
             ) : (
               <>
-                {!isLoading && (
+                {isLoading ? (
+                  <>
+                    <CardPlaceholder viewBox={`0 0 400 80`} />
+                    <CardPlaceholder viewBox={`0 0 400 80`} />
+                    <CardPlaceholder viewBox={`0 0 400 80`} />
+                  </>
+                ) : (
                   <EmptyPlaceholder
                     icon={
                       <TiDocumentText

@@ -1,4 +1,3 @@
-@import "../../styles/helpers/animations.scss";
 
 .container {
   display: flex;
@@ -11,7 +10,6 @@
   border-radius: 1rem;
   width: 100%;
   gap: 1rem;
-  animation: fadeIn 0.5s ease-in-out;
 }
 
 .wrapper {

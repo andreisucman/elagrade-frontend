@@ -6,8 +6,9 @@ import callTheServer from "@/functions/callTheServer";
 import PricingCard from "@/components/PricingCard";
 import PaymentStatus from "@/components/PaymentStatus";
 import PaymentModal from "../../components/PaymentModal";
-import styles from "./pricing.module.scss";
+import PricingCardPlaceholder from "@/components/CardPlaceholder";
 import ChatGptPricingCard from "@/components/ChatGptPricingCard";
+import styles from "./pricing.module.scss";
 
 type PriceItem = {
   title: string;
@@ -194,59 +195,67 @@ const Results: React.FC = () => {
         )}
         <h2 className={styles.title}>Pricing</h2>
         <div className={styles.wrapper}>
-          {prices.map(
-            (
-              { title, PPP, pages, price, extra, isPrepaid, priceId },
-              index
-            ) => {
-              const monthlyMonthly =
-                userDetails?.plan === "monthly" &&
-                title?.toLowerCase() === "monthly";
+          {prices.length > 0 ? (
+            prices.map(
+              (
+                { title, PPP, pages, price, extra, isPrepaid, priceId },
+                index
+              ) => {
+                const monthlyMonthly =
+                  userDetails?.plan === "monthly" &&
+                  title?.toLowerCase() === "monthly";
 
-              const freeAndLoggedOut = !priceId && !userDetails?.email;
+                const freeAndLoggedOut = !priceId && !userDetails?.email;
 
-              let unblockButton = false;
+                let unblockButton = false;
 
-              if (isPrepaid && priceId) {
-                unblockButton = true;
+                if (isPrepaid && priceId) {
+                  unblockButton = true;
+                }
+
+                if (freeAndLoggedOut) {
+                  unblockButton = true;
+                }
+
+                if (monthlyMonthly) {
+                  unblockButton = false;
+                }
+
+                const discountedPPP =
+                  isPrepaid && userDetails?.plan === "yearly" ? PPP * 0.7 : PPP;
+
+                return (
+                  <React.Fragment key={index}>
+                    <PricingCard
+                      PPP={Number(discountedPPP.toFixed(2))}
+                      isUnblocked={unblockButton}
+                      title={title}
+                      pages={pages}
+                      price={price}
+                      extra={extra}
+                      priceId={priceId}
+                      isPrepaid={isPrepaid}
+                      buttonText={
+                        !priceId
+                          ? "Sign up"
+                          : isPrepaid
+                          ? "Top up"
+                          : unblockButton
+                          ? "Subscribe"
+                          : "Plan active"
+                      }
+                      handleCheckout={handleCheckout}
+                    />
+                  </React.Fragment>
+                );
               }
-
-              if (freeAndLoggedOut) {
-                unblockButton = true;
-              }
-
-              if (monthlyMonthly) {
-                unblockButton = false;
-              }
-
-              const discountedPPP =
-                isPrepaid && userDetails?.plan === "yearly" ? PPP * 0.7 : PPP;
-
-              return (
-                <React.Fragment key={index}>
-                  <PricingCard
-                    PPP={Number(discountedPPP.toFixed(2))}
-                    isUnblocked={unblockButton}
-                    title={title}
-                    pages={pages}
-                    price={price}
-                    extra={extra}
-                    priceId={priceId}
-                    isPrepaid={isPrepaid}
-                    buttonText={
-                      !priceId
-                        ? "Sign up"
-                        : isPrepaid
-                        ? "Top up"
-                        : unblockButton
-                        ? "Subscribe"
-                        : "Plan active"
-                    }
-                    handleCheckout={handleCheckout}
-                  />
-                </React.Fragment>
-              );
-            }
+            )
+          ) : (
+            <>
+              <PricingCardPlaceholder viewBox={"0 0 400 615"} />
+              <PricingCardPlaceholder viewBox={"0 0 400 615"} />
+              <PricingCardPlaceholder viewBox={"0 0 400 615"} />
+            </>
           )}
         </div>
         {prices.length > 0 && <ChatGptPricingCard />}

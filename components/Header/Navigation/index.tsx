@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import MobileMenu from "./MobileMenu";
 import styles from "./Navigation.module.scss";
 
@@ -22,6 +23,8 @@ const Navigation: React.FC<props> = ({
   isOpen,
   setIsOpen,
 }) => {
+  const router = useRouter();
+
   function markActive(href: string) {
     if (href === activePage) {
       return `${styles.link} ${styles.link_active}`;
@@ -41,7 +44,12 @@ const Navigation: React.FC<props> = ({
                     className={`${styles.link} ${markActive(link.href)}`}
                     key={link.id}
                   >
-                    <a href={link.href}>{link.title}</a>
+                    <span
+                      style={{ cursor: "pointer" }}
+                      onClick={() => router.push(link.href)}
+                    >
+                      {link.title}
+                    </span>
                   </li>
                 ))}
             </ul>

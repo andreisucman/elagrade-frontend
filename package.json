@@ -16,6 +16,7 @@
     "normalize.css": "^8.0.1",
     "outstatic": "^1.0.5",
     "react": "^18",
+    "react-content-loader": "^6.2.1",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
     "react-icons": "^4.12.0",

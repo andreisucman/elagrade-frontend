@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import PricingCardPlaceholder from "../CardPlaceholder";
 import Button from "../Button";
 import Alert from "../Alert";
 import styles from "./PricingCard.module.scss";
