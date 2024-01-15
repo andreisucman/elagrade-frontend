@@ -22,7 +22,6 @@ export const defaultUser: UserType = {
   plan: "",
   emailVerified: false,
   subscriptionId: null,
-  times: null;
 };
 
 const defaultSetUser: React.Dispatch<React.SetStateAction<UserType>> = () => {};

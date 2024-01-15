@@ -169,9 +169,22 @@ const Grading = () => {
         }. Please confirm it.`
       );
 
+    /* update upload times */
+    const processingTimes = await callTheServer({
+      endpoint: "getProcessingTime",
+      method: "GET",
+    });
+
+    let averageUploadTime = 60;
+    let averageGradingTime = 180;
+    if (processingTimes?.status === 200) {
+      averageUploadTime = processingTimes?.message.uploadTime / 1000;
+      averageGradingTime = processingTimes?.message.gradingTime / 1000;
+    }
+
     setShowGradingOverlay(true);
     setGradingStatus("preparing");
-    setProcessingTime(userDetails?.times?.uploadTime || 60);
+    setProcessingTime(averageUploadTime);
     const allFileBatches = students.map((student: any) => student.files);
     const allUrls = [];
 
@@ -236,7 +249,7 @@ const Grading = () => {
 
     /* grade if quota is ok */
     setGradingStatus("grading");
-    setProcessingTime(userDetails?.times?.gradingTime || 180);
+    setProcessingTime(averageGradingTime);
     const response = await callTheServer({
       endpoint: "gradePaper",
       method: "POST",
