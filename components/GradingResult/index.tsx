@@ -1,10 +1,10 @@
 import React from "react";
-import EmptyPlaceholder from "../EmptyPlaceholder";
 import convertSecondsToMinSec from "@/functions/convertSecondsToMinutes";
 import { TiDocumentText } from "react-icons/ti";
 import { LuBrainCog } from "react-icons/lu";
 import type { UserType } from "@/state/types";
 import prepareAndDownloadReport from "@/functions/prepareAndDownloadReport";
+import EmptyPlaceholder from "../EmptyPlaceholder";
 import styles from "./GradingResult.module.scss";
 
 type Props = {
@@ -23,7 +23,7 @@ const GradingResult = ({
   function getContent() {
     if (gradingStatus) {
       return {
-        text: `Your papers are processing and will appear on the results page after about ${convertSecondsToMinSec(
+        text: `Your latest submission is processing and should be ready after ${convertSecondsToMinSec(
           totalFiles * 12
         )}`,
         icon: <LuBrainCog style={{ minWidth: "2rem", minHeight: "2rem" }} />,
@@ -37,8 +37,10 @@ const GradingResult = ({
       const formattedTime = hours + ":" + minutes;
 
       return {
-        text: `Your papers are processing and should be ready by ${formattedTime} on the Results page`,
-        icon: <LuBrainCog style={{ minWidth: "1.5rem", minHeight: "1.5rem" }} />,
+        text: `Your latest submission is processing and should be ready by ${formattedTime} on the Results page`,
+        icon: (
+          <LuBrainCog style={{ minWidth: "1.5rem", minHeight: "1.5rem" }} />
+        ),
       };
     } else {
       return {
