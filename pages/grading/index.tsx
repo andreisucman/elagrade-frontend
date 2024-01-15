@@ -240,48 +240,35 @@ const Grading = () => {
       return;
     }
 
-    if (totalFilesRef.current > 40) {
-      setGradingStatus("processing");
+    /* grade if quota is ok */
+    setGradingStatus("grading");
+    const response = await callTheServer({
+      endpoint: "gradePaper",
+      method: "POST",
+      body: {
+        assignmentName:
+          assignmentName !== "" ? assignmentName : "Untitled assignment",
+      },
+    });
 
-      callTheServer({
-        endpoint: "gradePaper",
-        method: "POST",
-        body: {
-          assignmentName:
-            assignmentName !== "" ? assignmentName : "Untitled assignment",
-        },
-      });
-    } else {
-      /* grade if quota is ok */
-      setGradingStatus("grading");
-      const response = await callTheServer({
-        endpoint: "gradePaper",
-        method: "POST",
-        body: {
-          assignmentName:
-            assignmentName !== "" ? assignmentName : "Untitled assignment",
-        },
-      });
+    if (response?.status === 200) {
+      setGradingResults(response.message);
+      setOpenAccordion(3);
+      setUserDetails(
+        Object.assign({}, userDetails, {
+          pagesLeft: response.message.pagesLeft,
+        })
+      );
+      setGradingStatus(null);
+      setShowGradingOverlay(false);
+    } else if (response?.status === 400) {
+      setProblemPopupMessage(response?.message);
 
-      if (response?.status === 200) {
-        setGradingResults(response.message);
-        setOpenAccordion(3);
-        setUserDetails(
-          Object.assign({}, userDetails, {
-            pagesLeft: response.message.pagesLeft,
-          })
-        );
-        setGradingStatus(null);
-        setShowGradingOverlay(false);
-      } else if (response?.status === 400) {
-        setProblemPopupMessage(response?.message);
-
-        if (response.message.title === "Grading criteria missing") {
-          setOpenAccordion(2);
-        }
-        setGradingStatus(null);
-        setShowGradingOverlay(false);
+      if (response.message.title === "Grading criteria missing") {
+        setOpenAccordion(2);
       }
+      setGradingStatus(null);
+      setShowGradingOverlay(false);
     }
   }
 
@@ -358,7 +345,6 @@ const Grading = () => {
           gradingResults={gradingResults}
           totalFiles={totalFilesRef.current}
           gradingStatus={gradingStatus}
-          userDetails={userDetails}
         />
       ),
     },
@@ -384,7 +370,7 @@ const Grading = () => {
       />
       {showGradingOverlay && (
         <GradingOverlay
-          seconds={totalFilesRef.current * 12}
+          seconds={totalFilesRef.current * 10}
           gradingStatus={gradingStatus}
           setShowGradingOverlay={setShowGradingOverlay}
         />

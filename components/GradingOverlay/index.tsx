@@ -19,9 +19,7 @@ const GradingOverlay = ({
 
   useEffect(() => {
     if (gradingStatus === "preparing") {
-      setCountdown(Math.ceil(seconds));
-    } else if (gradingStatus === "processing") {
-      setCountdown(seconds);
+      setCountdown(Math.ceil(seconds / 5));
     } else if (gradingStatus === "grading") {
       setCountdown(seconds);
     }
@@ -60,32 +58,6 @@ const GradingOverlay = ({
             ) : (
               <p className={styles.paragraphs}>Finalizing...</p>
             )}
-          </div>
-        );
-      case "processing":
-        return (
-          <div className={styles.box}>
-            <b style={{ fontSize: "1.75rem" }}>Grading started</b>
-            <Loading
-              innerStyle={{
-                marginTop: "0.25rem",
-                color: "white",
-                width: "5rem",
-                height: "5rem",
-              }}
-            />
-            <p className={styles.paragraphs}>
-              It should be finished in {convertSecondsToMinSec(countdown)}
-            </p>
-            <p className={styles.paragraphs}>
-              Please check the results page after this time
-            </p>
-            <button
-              className={styles.button}
-              onClick={() => setShowGradingOverlay(false)}
-            >
-              Close
-            </button>
           </div>
         );
       case "grading":

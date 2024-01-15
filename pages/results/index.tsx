@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
-import { GeneralContext } from "@/state/GeneralContext";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { TbDownload } from "react-icons/tb";
-import { LuBrainCog } from "react-icons/lu";
 import callTheServer from "@/functions/callTheServer";
 import Pagination from "@/components/Pagination";
 import EmptyPlaceholder from "../../components/EmptyPlaceholder";
@@ -23,8 +21,6 @@ const Results: React.FC = () => {
     perPage: 10,
   });
   const [isLoading, setIsLoading] = useState(true);
-  const [inProgressNotice, setInProgressNotice] = useState<any>(<></>);
-  const { userDetails } = useContext(GeneralContext);
 
   useEffect(() => {
     callTheServer({
@@ -45,27 +41,6 @@ const Results: React.FC = () => {
       }
     });
   }, []);
-
-  useEffect(() => {
-    if (!userDetails?.inProgress) return;
-
-    const { count, _created_at } = userDetails?.inProgress || {};
-    const finishesAt = new Date(_created_at).getTime() + count * 12 * 1000;
-    const finishesAtDate = new Date(finishesAt);
-    const hours = finishesAtDate.getHours().toString().padStart(2, "0");
-    const minutes = finishesAtDate.getMinutes().toString().padStart(2, "0");
-    const formattedTime = hours + ":" + minutes;
-
-    setInProgressNotice(
-      <div className={styles.notice}>
-        <LuBrainCog style={{ minWidth: "1.5rem", minHeight: "1.5rem" }} />
-        <p>
-          Your latest submission is processing and should be ready by{" "}
-          {formattedTime}
-        </p>
-      </div>
-    );
-  }, [userDetails?.inProgress]);
 
   function loadNext({ page, perPage }: LoadNext) {
     callTheServer({
@@ -126,7 +101,6 @@ const Results: React.FC = () => {
       <main className={styles.container}>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>Results</h2>
-          {inProgressNotice}
           <div className={styles.content}>
             {assignments.length > 0 ? (
               assignments.map((assignmentResult: any, index: number) => {

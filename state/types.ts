@@ -6,11 +6,6 @@ type GradingCriteria = {
   isWholeFeedback: boolean;
 };
 
-type InProgress = {
-  count: number;
-  _created_at: string;
-}
-
 export type UserType = {
   gradingCriteria: GradingCriteria | null;
   gradingResultsList: any[] | null;
@@ -21,7 +16,6 @@ export type UserType = {
   customerId: string;
   subscriptionId: string | null;
   emailVerified: boolean;
-  inProgress: InProgress | null;
 } | null;
 
 export type UserContextType = {
