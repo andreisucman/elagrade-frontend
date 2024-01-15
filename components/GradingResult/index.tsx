@@ -38,13 +38,13 @@ const GradingResult = ({
 
       return {
         text: `Your papers are processing and should be ready by ${formattedTime} on the Results page`,
-        icon: <LuBrainCog style={{ minWidth: "2rem", minHeight: "2rem" }} />,
+        icon: <LuBrainCog style={{ minWidth: "1.5rem", minHeight: "1.5rem" }} />,
       };
     } else {
       return {
         text: "Your grading results will be here",
         icon: (
-          <TiDocumentText style={{ minWidth: "2rem", minHeight: "2rem" }} />
+          <TiDocumentText style={{ minWidth: "1.5rem", minHeight: "1.5rem" }} />
         ),
       };
     }
