@@ -358,6 +358,7 @@ const Grading = () => {
           gradingResults={gradingResults}
           totalFiles={totalFilesRef.current}
           gradingStatus={gradingStatus}
+          userDetails={userDetails}
         />
       ),
     },
@@ -383,7 +384,7 @@ const Grading = () => {
       />
       {showGradingOverlay && (
         <GradingOverlay
-          seconds={totalFilesRef.current * 10}
+          seconds={totalFilesRef.current * 12}
           gradingStatus={gradingStatus}
           setShowGradingOverlay={setShowGradingOverlay}
         />

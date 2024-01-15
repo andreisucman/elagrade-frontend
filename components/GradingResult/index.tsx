@@ -3,6 +3,7 @@ import EmptyPlaceholder from "../EmptyPlaceholder";
 import convertSecondsToMinSec from "@/functions/convertSecondsToMinutes";
 import { TiDocumentText } from "react-icons/ti";
 import { LuBrainCog } from "react-icons/lu";
+import type { UserType } from "@/state/types";
 import prepareAndDownloadReport from "@/functions/prepareAndDownloadReport";
 import styles from "./GradingResult.module.scss";
 
@@ -10,19 +11,33 @@ type Props = {
   gradingResults: { _id: string; results: any[] };
   gradingStatus: string | null;
   totalFiles: number;
+  userDetails: UserType;
 };
 
 const GradingResult = ({
-  totalFiles,
   gradingStatus,
   gradingResults,
+  userDetails,
+  totalFiles,
 }: Props) => {
   function getContent() {
-    if (gradingStatus === "processing") {
+    if (gradingStatus) {
       return {
         text: `Your papers are processing and will appear on the results page after about ${convertSecondsToMinSec(
-          totalFiles * 10
+          totalFiles * 12
         )}`,
+        icon: <LuBrainCog style={{ minWidth: "2rem", minHeight: "2rem" }} />,
+      };
+    } else if (userDetails?.inProgress) {
+      const { count, _created_at } = userDetails?.inProgress;
+      const finishesAt = new Date(_created_at).getTime() + count * 12 * 1000;
+      const finishesAtDate = new Date(finishesAt);
+      const hours = finishesAtDate.getHours().toString().padStart(2, "0");
+      const minutes = finishesAtDate.getMinutes().toString().padStart(2, "0");
+      const formattedTime = hours + ":" + minutes;
+
+      return {
+        text: `Your papers are processing and should be ready by ${formattedTime} on the Results page`,
         icon: <LuBrainCog style={{ minWidth: "2rem", minHeight: "2rem" }} />,
       };
     } else {
