@@ -27,6 +27,10 @@ const GradingOverlay = ({ seconds, gradingStatus }: Props) => {
         clearTimeout(timer);
       };
     }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [countdown]);
 
   const displayContent = useMemo(() => {
