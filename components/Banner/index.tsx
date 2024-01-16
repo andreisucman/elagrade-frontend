@@ -22,7 +22,8 @@ const Banner = ({ handleRoute }: Props) => {
           id={"home_upper_cta"}
           innerStyle={{ fontSize: "1.15rem", margin: "0" }}
           buttonText="Start grading free"
-          onClick={handleRoute}
+          // onClick={handleRoute}
+          onClick={() => {}}
         />
       </div>
       <div className={styles.brandLine} />
