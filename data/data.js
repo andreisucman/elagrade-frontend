@@ -9,7 +9,7 @@ export const faqs = [
     id: "faq_what_if_i_dont_like_the_results",
     question: "What If I Don't Like The Results?",
     answer:
-      "Elagrade offers a free plan with 100 pages (each 500 words) with no credit card required. If, for whatever reason, you decide not to use Elagrade, you can delete the work you've uploaded.",
+      "Elagrade offers a free plan with 50 pages (each 500 words) with no credit card required. If, for whatever reason, you decide not to use Elagrade, you can delete the work you've uploaded.",
   },
   {
     id: "faq_why_is_the_service_so_cheap",

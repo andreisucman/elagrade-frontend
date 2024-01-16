@@ -225,8 +225,6 @@ const Results: React.FC = () => {
                   unblockButton = false;
                 }
 
-                console.log("mm", freeAndLoggedOut);
-
                 return (
                   <React.Fragment key={index}>
                     <PricingCard
