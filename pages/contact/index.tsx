@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GeneralContext } from "@/state/GeneralContext";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Button from "../../components/Button";
 import styles from "./Contact.module.scss";
 
 const ContactPage: React.FC = () => {
+  const { userDetails } = useContext(GeneralContext);
   const router = useRouter();
+
+  function handleRoute() {
+    if (userDetails?.email !== "") {
+      router.push("/grading");
+    } else {
+      router.push("/sign-up");
+    }
+  }
+
   return (
     <>
       <Head>
@@ -25,7 +36,7 @@ const ContactPage: React.FC = () => {
           <p className={styles.email}>+1 323 540 57 18</p>
           <Button
             buttonText={"Start grading now"}
-            onClick={() => router.push("/grading")}
+            onClick={handleRoute}
             customStyle={{ margin: "1rem 0" }}
           />
         </div>

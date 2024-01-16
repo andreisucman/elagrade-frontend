@@ -16,7 +16,6 @@ const Banner = ({ handleRoute }: Props) => {
         </h3>
         <Button
           customStyle={{
-            maxWidth: "15rem",
             width: "100%",
             margin: 0,
           }}
