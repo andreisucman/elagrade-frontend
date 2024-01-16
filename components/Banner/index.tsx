@@ -1,7 +1,12 @@
 import React from "react";
+import Button from "../Button";
 import styles from "./Banner.module.scss";
 
-const Banner = () => {
+type Props = {
+  handleRoute: () => void;
+};
+
+const Banner = ({ handleRoute }: Props) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -9,6 +14,17 @@ const Banner = () => {
         <h3 className={styles.subtitle}>
           Automatic Grading Platform For ELA Teachers
         </h3>
+        <Button
+          customStyle={{
+            maxWidth: "15rem",
+            width: "100%",
+            margin: 0,
+          }}
+          id={"home_upper_cta"}
+          innerStyle={{ fontSize: "1.15rem" }}
+          buttonText="Start grading free"
+          onClick={handleRoute}
+        />
       </div>
     </div>
   );

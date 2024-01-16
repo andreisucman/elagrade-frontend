@@ -30,7 +30,7 @@ export default function Home() {
         <meta name="description" content={"Elagrade - Home Page"} />
       </Head>
       <div className={styles.container}>
-        <Banner />
+        <Banner handleRoute={handleRoute}/>
         <div className={styles.group} id="intro" style={{ maxWidth: "60rem" }}>
           <h3 className={styles.intro_title}>
             Embrace Teaching Without The Burden Of Grading
@@ -63,7 +63,7 @@ export default function Home() {
               width: "100%",
             }}
             id={"home_upper_cta"}
-            innerStyle={{ fontSize: "1.15rem", padding: "1.15rem" }}
+            innerStyle={{ fontSize: "1.15rem" }}
             buttonText="Start grading now"
             onClick={handleRoute}
           />
@@ -152,7 +152,7 @@ export default function Home() {
               marginTop: "0.5rem",
             }}
             id={"home_lower_cta"}
-            innerStyle={{ fontSize: "1.15rem", padding: "1.15rem" }}
+            innerStyle={{ fontSize: "1.15rem" }}
             buttonText="Start grading free"
             onClick={handleRoute}
           />
