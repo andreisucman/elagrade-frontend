@@ -8,19 +8,17 @@ type Props = {
 };
 
 export default function YoutubeEmbed({ videoId, title }: Props) {
-  const opts = {
-    playerVars: {
-      autoplay: 0,
-      rel: 0,
-      vq: "hd720",
-    },
-  };
-
   return (
     <div className={styles.container}>
       <YouTube
-        videoId={videoId}
-        opts={opts}
+        videoId={`${videoId}?enablejsapi=1`}
+        opts={{
+          playerVars: {
+            autoplay: 0,
+            rel: 0,
+            vq: "hd720",
+          },
+        }}
         title={title}
         className={styles.player}
       />
