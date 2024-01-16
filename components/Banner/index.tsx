@@ -25,6 +25,7 @@ const Banner = ({ handleRoute }: Props) => {
           onClick={handleRoute}
         />
       </div>
+      <div className={styles.brandLine} />
     </div>
   );
 };
