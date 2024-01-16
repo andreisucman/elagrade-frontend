@@ -35,7 +35,7 @@ const Navigation: React.FC<props> = ({
 
   function handleRedirect(route: any) {
     if (!router.isReady) return;
-    if (route?.protected && userDetails?.email === "") {
+    if (route?.protected && (userDetails?.email === "" || !userDetails?.email)) {
       router.push("/sign-in");
     } else {
       router.push(route.href);
