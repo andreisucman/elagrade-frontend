@@ -64,8 +64,7 @@ export default function Home() {
             id={"home_upper_cta"}
             innerStyle={{ fontSize: "1.15rem" }}
             buttonText="Start grading now"
-            // onClick={handleRoute}
-            onClick={() => {}}
+            onClick={handleRoute}
           />
         </div>
 
