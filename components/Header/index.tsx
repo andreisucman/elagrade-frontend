@@ -35,11 +35,13 @@ const Header: React.FC = () => {
       id: "1",
       href: "/grading",
       title: "Grading",
+      protected: true,
     },
     {
       id: "2",
       href: "/results",
       title: "Results",
+      protected: true,
     },
     {
       id: "3",
@@ -50,6 +52,7 @@ const Header: React.FC = () => {
       id: "4",
       href: "/account",
       title: "Account",
+      protected: true,
     },
     {
       id: "5",
@@ -84,6 +87,7 @@ const Header: React.FC = () => {
             links={links}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
+            userDetails={userDetails}
           />
           <Button
             customClass={buttonClass}

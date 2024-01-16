@@ -13,6 +13,7 @@ type link = {
 type props = {
   activePage: string;
   links: link[];
+  userDetails: any;
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
@@ -21,6 +22,7 @@ const Navigation: React.FC<props> = ({
   links,
   activePage,
   isOpen,
+  userDetails,
   setIsOpen,
 }) => {
   const router = useRouter();
@@ -28,6 +30,15 @@ const Navigation: React.FC<props> = ({
   function markActive(href: string) {
     if (href === activePage) {
       return `${styles.link} ${styles.link_active}`;
+    }
+  }
+
+  function handleRedirect(route: any) {
+    if (!router.isReady) return;
+    if (route?.protected && userDetails?.email === "") {
+      router.push("/sign-in");
+    } else {
+      router.push(route.href);
     }
   }
 
@@ -46,7 +57,7 @@ const Navigation: React.FC<props> = ({
                   >
                     <span
                       style={{ cursor: "pointer" }}
-                      onClick={() => router.push(link.href)}
+                      onClick={() => handleRedirect(link)}
                     >
                       {link.title}
                     </span>
