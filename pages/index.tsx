@@ -30,7 +30,7 @@ export default function Home() {
         <meta name="description" content={"Elagrade - Home Page"} />
       </Head>
       <div className={styles.container}>
-        <Banner handleRoute={handleRoute}/>
+        <Banner handleRoute={handleRoute} />
         <div className={styles.group} id="intro" style={{ maxWidth: "60rem" }}>
           <h3 className={styles.intro_title}>
             Embrace Teaching Without The Burden Of Grading
@@ -59,7 +59,6 @@ export default function Home() {
           </p>
           <Button
             customStyle={{
-              maxWidth: "15rem",
               width: "100%",
             }}
             id={"home_upper_cta"}
@@ -147,7 +146,6 @@ export default function Home() {
           </ul>
           <Button
             customStyle={{
-              maxWidth: "15rem",
               width: "100%",
               marginTop: "0.5rem",
             }}
