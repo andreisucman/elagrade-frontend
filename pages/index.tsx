@@ -91,17 +91,16 @@ export default function Home() {
             </li>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
-              Specify your personal rubrics you want the grading to be made on.
+              Specify your unique rubrics you want the grading to be made on.
             </li>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
-              Get a grade, explanation and unique feedback for every uploaded
-              paper.
+              Get a grade, explanation and feedback for every uploaded paper.
             </li>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
               Upload handwritten assignments by taking pictures and electronic
-              ones with PDF or text files.
+              ones with pdf, doc or txt files.
             </li>
             <li className={styles.item}>
               <IoIosCheckmarkCircle className={styles.icon} />
