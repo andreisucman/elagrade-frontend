@@ -15,7 +15,7 @@ export default function Index({ posts }: Props) {
   const [showUntil, setShowUntil] = useState(8);
   const hasMoreRef = useRef(false);
   hasMoreRef.current = posts.length > showUntil;
-  
+
   return (
     <>
       <Head>
@@ -67,14 +67,19 @@ export default function Index({ posts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const posts = getDocuments("posts", [
-    "title",
-    "content",
-    "author",
-    "coverImage",
-    "description",
-    "slug",
-  ]);
+  let posts = [];
+  try {
+    posts = getDocuments("posts", [
+      "title",
+      "content",
+      "author",
+      "coverImage",
+      "description",
+      "slug",
+    ]);
+  } catch (err) {
+    console.log("Error:", err);
+  }
   return {
     props: { posts },
   };
