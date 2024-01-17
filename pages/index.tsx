@@ -74,7 +74,7 @@ export default function Home() {
 
             <YoutubeEmbed
               videoId="xAVr28iKU4s"
-              title="Elagrade - Ai essay grader for ELA teachers"
+              title="Elagrade - AI essay grader for ELA teachers"
             />
           </div>
         </div>
