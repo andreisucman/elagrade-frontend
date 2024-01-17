@@ -67,7 +67,7 @@ export default function Index({ posts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  let posts = [];
+  let posts: any[] = [];
   try {
     posts = getDocuments("posts", [
       "title",
