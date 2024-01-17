@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import styles from "./BlogCard.module.scss";
 
 type Props = {
@@ -21,16 +20,22 @@ const BlogCard = ({
   slug,
 }: Props) => {
   const router = useRouter();
+  const finalUrl = `${process.env.NEXT_PUBLIC_FRONTEND_URL}${imageUrl}`;
+
   return (
-    <div className={styles.container} onClick={() => router.push(`/blog/${slug}`)}>
+    <div
+      className={styles.container}
+      onClick={() => router.push(`/blog/${slug}`)}
+    >
       <div className={styles.wrapper}>
         <div className={styles.image_wrapper}>
-          <Image
+          <img
             src={imageUrl}
             width={200}
             height={200}
             className={styles.image}
             alt={title}
+            loading="lazy"
           />
         </div>
         <h3>{title}</h3>

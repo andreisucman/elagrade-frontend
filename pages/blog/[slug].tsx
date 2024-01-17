@@ -1,6 +1,7 @@
 import { getDocumentBySlug, getDocumentPaths } from "outstatic/server";
 import Head from "next/head";
 import markdownToHtml from "../../functions/markdownToHtml";
+import SideComponent from "@/components/SideComponent";
 import BlogAnnouncement from "@/components/BlogAnnouncement";
 import styles from "./BlogPost.module.scss";
 
@@ -16,11 +17,12 @@ export default function BlogPost({ post }: Props) {
   return (
     <>
       <Head>
-        <title>Blog | {post.title}</title>
+        <title>{`Blog | ${post.title}`}</title>
         <meta name="description" content={post.description} />
       </Head>
       <BlogAnnouncement />
       <div className={styles.container}>
+        <SideComponent />
         <div
           className={styles.content}
           dangerouslySetInnerHTML={{ __html: post.content }}

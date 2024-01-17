@@ -11,10 +11,10 @@
   background-repeat: no-repeat;
 
   width: 100%;
-  min-height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
 
   display: flex;
-  margin: auto;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid var(--grey-light);
