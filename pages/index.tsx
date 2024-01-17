@@ -55,7 +55,7 @@ export default function Home() {
             With Elagrade, you can do just that - grade your whole class in
             minutes all while maintaining your personal style and providing
             feedback to each student. No more late nights buried in papers, no
-            more weekends lost to grading marathons.
+            more weekends lost on grading marathons.
           </p>
           <p className={styles.intro_body}>
             Embrace the freedom to relax and enjoy your free time, knowing that

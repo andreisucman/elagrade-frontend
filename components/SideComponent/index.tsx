@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import useHandleClickOutside from "@/functions/useHandleClickOutside";
+import imagine from "../../public/assets/imagine.svg";
 import styles from "./SideComponent.module.scss";
 
 const SideComponent = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
+
+  useHandleClickOutside({ ref: containerRef, setIsOpen: setIsOpen });
+
   return (
-    <div className={styles.container}>
-      <div className={styles.button}></div>
-      <div className={styles.wrapper}>
-        <h3>Imagine you had 2 days off every week</h3>
+    <div
+      className={
+        isOpen ? `${styles.container} ${styles.open}` : styles.container
+      }
+      ref={containerRef}
+    >
+      <div
+        className={styles.image_wrapper}
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
+        <Image src={imagine} className={styles.image} alt="" />
+      </div>
+      <div className={styles.content}>
+        <h3 className={styles.title}>Imagine there is a person</h3>
         <p>
-          That you could spend on anything you love. All while providing your
-          students with a grade the personal feedback - line-by-line.
+          Who does all of the grading for you so you have 30 more hours each month
+          for accomplishing your goals.
         </p>
+        <p>Elagrade can be that person. </p>
+        <Link className={styles.link} href="/">
+          Here's how.
+        </Link>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const Banner = ({ handleRoute }: Props) => {
       <div className={styles.wrapper}>
         <h1 className={styles.title}>Helping Teachers Love Grading</h1>
         <h3 className={styles.subtitle}>
-          Easy AI Essay Grader For ELA Teachers
+          AI Essay Grader For ELA Teachers
         </h3>
         <Button
           customStyle={{

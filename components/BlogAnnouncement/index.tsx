@@ -31,7 +31,7 @@ const BlogAnnouncement = () => {
   }, [headerHeight]);
 
   const combinedStyles = {
-    position: isSticky ? "fixed" : "static",
+    position: isSticky ? "sticky" : "static",
     top: isSticky ? "0px" : undefined,
   };
 
@@ -42,7 +42,7 @@ const BlogAnnouncement = () => {
       className={styles.container}
     >
       <IoTimeOutline style={{ width: "1.25rem", height: "1.25rem" }} />
-      Save time lost to grading
+      Save time lost on grading
     </div>
   );
 };

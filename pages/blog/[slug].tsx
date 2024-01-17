@@ -22,11 +22,16 @@ export default function BlogPost({ post }: Props) {
       </Head>
       <BlogAnnouncement />
       <div className={styles.container}>
-        <SideComponent />
-        <div
-          className={styles.content}
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className={styles.wrapper}>
+          <h2 className={styles.title}>{post.title}</h2>
+          <div className={styles.block}>
+            <div
+              className={styles.content}
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+            <SideComponent />
+          </div>
+        </div>
       </div>
     </>
   );
