@@ -174,8 +174,13 @@ const Results: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Pricing | Elagrade</title>
-        <meta name="description" content={"Elagrade - Pricing"} />
+        <title>Pricing | Elagrade - Ai Paper Checker For ELA Teachers</title>
+        <meta
+          name="description"
+          content={
+            "Grade your whole class in minutes. Get first 50 papers free and then pay as you go."
+          }
+        />
       </Head>
       <main className={styles.container}>
         {showPaymentStatus && (

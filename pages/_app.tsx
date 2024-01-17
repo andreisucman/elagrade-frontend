@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import fav from "../public/fav.svg";
@@ -17,6 +18,24 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     Hotjar.init(siteId, hotjarVersion);
   }, []);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "pageview",
+        page: url,
+      });
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <Layout>

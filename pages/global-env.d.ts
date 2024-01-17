@@ -1,9 +1,8 @@
 export declare global {
   interface Window {
-    pintrk: (...args: any[]) => void;
+    dataLayer: any[];
   }
 }
-
 declare module "*.scss" {
   const content: Record<string, string>;
   export default content;

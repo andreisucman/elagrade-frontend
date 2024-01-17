@@ -15,15 +15,14 @@ export default function Index({ posts }: Props) {
   const [showUntil, setShowUntil] = useState(8);
   const hasMoreRef = useRef(false);
   hasMoreRef.current = posts.length > showUntil;
+  
   return (
     <>
       <Head>
         <title>Blog | Main</title>
         <meta
           name="description"
-          content={
-            "Blog - Elagrade - Automated AI Essay Grading Tool For Teachers"
-          }
+          content={"AI grading tool that saves ELA teachers time"}
         />
       </Head>
       <BlogAnnouncement />

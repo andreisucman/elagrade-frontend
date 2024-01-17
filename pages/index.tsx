@@ -26,8 +26,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home | Elagrade</title>
-        <meta name="description" content={"Elagrade - Home Page"} />
+        <title>Home | Elagrade - AI Writing Grader For ELA Teachers</title>
+        <meta
+          name="description"
+          content={
+            "Grade 10, 50, or 100 papers in minutes, with your grading style and personalized feedback for each student."
+          }
+        />
       </Head>
       <div className={styles.container}>
         <Banner handleRoute={handleRoute} />
@@ -44,7 +49,7 @@ export default function Home() {
           <p className={styles.intro_body}>
             But imagine a different world, one where you have time for
             self-care, family, or professional development because you don't
-            lose it to grading.
+            lose it on grading.
           </p>
           <p className={styles.intro_body}>
             With Elagrade, you can do just that - grade your whole class in

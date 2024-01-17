@@ -12,7 +12,7 @@ const Banner = ({ handleRoute }: Props) => {
       <div className={styles.wrapper}>
         <h1 className={styles.title}>Helping Teachers Love Grading</h1>
         <h3 className={styles.subtitle}>
-          Automatic Grading Platform For ELA Teachers
+          Easy AI Essay Grader For ELA Teachers
         </h3>
         <Button
           customStyle={{
@@ -20,7 +20,7 @@ const Banner = ({ handleRoute }: Props) => {
             margin: 0,
           }}
           id={"home_upper_cta"}
-          innerStyle={{ fontSize: "1.15rem", margin: "0" }}
+          innerStyle={{ fontSize: "1.15rem", margin: "0.5rem 0 0 0" }}
           buttonText="Start grading free"
           onClick={handleRoute}
         />
