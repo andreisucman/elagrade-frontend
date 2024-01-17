@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../Button";
 import styles from "./Banner.module.scss";
 
@@ -7,13 +7,15 @@ type Props = {
 };
 
 const Banner = ({ handleRoute }: Props) => {
+  useEffect(() => {
+    window.scrollBy(0, 1); // Scrolls the page down by 1 pixel
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <h1 className={styles.title}>Helping Teachers Love Grading</h1>
-        <h3 className={styles.subtitle}>
-          AI Essay Grader For ELA Teachers
-        </h3>
+        <h3 className={styles.subtitle}>AI Essay Grader For ELA Teachers</h3>
         <Button
           customStyle={{
             width: "100%",
