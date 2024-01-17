@@ -12,6 +12,8 @@ publishedAt: '2024-01-17T09:49:39.237Z'
 
 To save time on grading using AI, you can automate the process by utilizing machine learning algorithms that can assess and provide feedback on student work. This allows for quicker evaluation and frees up time for other tasks.
 
+![](/images/grading-AwNT.webp)
+
 Additionally, AI can help identify patterns in student performance, allowing for targeted interventions and personalized feedback, further streamlining the grading process.
 
 By implementing AI, teachers can automate the grading process, freeing up time for other tasks. AI can also identify patterns in student performance, enabling targeted interventions and personalized feedback.
