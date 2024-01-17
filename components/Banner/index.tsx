@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Button from "../Button";
 import styles from "./Banner.module.scss";
 
@@ -7,10 +7,6 @@ type Props = {
 };
 
 const Banner = ({ handleRoute }: Props) => {
-  useEffect(() => {
-    window.scrollBy(0, 1); // Scrolls the page down by 1 pixel
-  }, []);
-
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
