@@ -31,12 +31,12 @@ const ChatGptPricingCard = () => {
                   Unlimited quota
                 </li>
                 <li className={styles.item}>
-                  <RxCross2 className={styles.icon} />
-                  No bulk grading
+                  <IoIosCheckmarkCircle className={styles.icon} />
+                  No need to retrype instructions
                 </li>
                 <li className={styles.item}>
-                  <RxCross2 className={styles.icon} />
-                  No bulk reports
+                  <IoIosCheckmarkCircle className={styles.icon} />
+                  Consistent formatting
                 </li>
               </ul>
               <Button
