@@ -28,12 +28,22 @@ const GradingFooter = ({
   return (
     <div className={styles.container}>
       {gradingResults && (
-        <Button
-          buttonText="Download all"
-          customStyle={{ minWidth: "17rem" }}
-          innerStyle={{ margin: "auto 0 0 auto", maxWidth: "unset" }}
-          onClick={() => handleDownload(gradingResults.assignmentReportUrl)}
-        />
+        <div className={styles.buttons}>
+          <Button
+            buttonText="Download all"
+            customStyle={{ width: "100%" }}
+            innerStyle={{
+              margin: "auto 0 0 auto",
+            }}
+            onClick={() => handleDownload(gradingResults.assignmentReportUrl)}
+          />
+          <button
+            className={styles.button}
+            onClick={() => window.location.reload()}
+          >
+            Start over
+          </button>
+        </div>
       )}
       {students.length > 0 && !gradingResults && (
         <Button

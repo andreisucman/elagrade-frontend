@@ -40,3 +40,48 @@
   margin-right: auto;
   text-align: left;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+
+  @include laptop {
+    flex-direction: row;
+  }
+}
+
+.button {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
+  color: var(--black);
+  opacity: 1;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 1.15rem;
+  width: 100%;
+  margin: auto;
+  border-radius: 1rem;
+  border: 1px solid var(--black);
+  background-color: transparent;
+  line-height: unset;
+
+  font-weight: 700;
+
+  &:hover {
+    border: 1px solid var(--primary-color) !important;
+    opacity: 0.9;
+  }
+
+  &:active {
+    transform: scale(1.05);
+  }
+
+  @include desktop {
+    max-width: 15rem;
+  }
+}
