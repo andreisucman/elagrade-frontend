@@ -32,11 +32,19 @@ const ChatGptPricingCard = () => {
                 </li>
                 <li className={styles.item}>
                   <IoIosCheckmarkCircle className={styles.icon} />
-                  No need to retrype instructions
+                  No retyping instructions
                 </li>
                 <li className={styles.item}>
                   <IoIosCheckmarkCircle className={styles.icon} />
                   Consistent formatting
+                </li>
+                <li className={styles.item}>
+                  <RxCross2 className={styles.icon} />
+                  No bulk grading
+                </li>
+                <li className={styles.item}>
+                  <RxCross2 className={styles.icon} />
+                  No class reports
                 </li>
               </ul>
               <Button
