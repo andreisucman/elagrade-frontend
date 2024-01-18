@@ -31,7 +31,7 @@ const SideComponent = () => {
           month for accomplishing your goals.
         </p>
         <p>Elagrade can be that person. </p>
-        <Link className={styles.link} href="/">
+        <Link className={styles.link} href="/#intro">
           Here's how.
         </Link>
       </div>
