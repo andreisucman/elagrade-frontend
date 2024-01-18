@@ -6,11 +6,30 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  TooltipProps,
   ResponsiveContainer,
 } from "recharts";
 
 type Props = {
   data: any;
+};
+
+const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
+  if (active && payload && payload.length) {
+    return (
+      <div
+        style={{
+          backgroundColor: "#fff",
+          padding: "5px",
+          border: "1px solid #ccc",
+        }}
+      >
+        <p>Pages: {payload[0].payload.pv.toFixed(2)}</p>
+      </div>
+    );
+  }
+
+  return null;
 };
 
 const UsageChart = ({ data }: Props) => {
@@ -40,8 +59,8 @@ const UsageChart = ({ data }: Props) => {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
-        <Tooltip cursor={{ fill: "#dfe3eb" }} />
-        <Bar dataKey="pv" fill="#04a8b7"/>
+        <Tooltip content={<CustomTooltip />} cursor={{ fill: "#dfe3eb" }} />
+        <Bar dataKey="pv" fill="#04a8b7" />
       </BarChart>
     </ResponsiveContainer>
   );

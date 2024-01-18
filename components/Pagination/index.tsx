@@ -21,23 +21,19 @@ const Pagination: React.FC<Props> = ({
       return Array.from({ length: totalPages }, (_, i) => i + 1);
     }
 
-    if (currentPage === 1) {
-      return [1, 2, 3];
+    if (currentPage <= 2) {
+      return Array.from({ length: Math.min(3, totalPages) }, (_, i) => i + 1);
     }
 
-    if (currentPage === totalPages) {
-      return [totalPages - 2, totalPages - 1, totalPages];
+    if (currentPage >= totalPages - 1) {
+      return Array.from({ length: 3 }, (_, i) => totalPages - 2 + i);
     }
 
-    if (currentPage === 2) {
-      return [1, 2, 3];
-    }
-
-    if (currentPage === totalPages - 1) {
-      return [totalPages - 2, totalPages - 1, totalPages];
-    }
-
-    return [currentPage - 1, currentPage, currentPage + 1];
+    return [
+      Number(currentPage) - 1,
+      Number(currentPage),
+      Number(currentPage) + 1,
+    ];
   };
 
   return (
