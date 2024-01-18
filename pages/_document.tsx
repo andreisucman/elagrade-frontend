@@ -4,16 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        ></link>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -25,6 +15,17 @@ export default function Document() {
             `,
           }}
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link rel="shortcut icon" href="/fav.ico" />
       </Head>
       <body>
         <noscript

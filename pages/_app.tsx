@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import Head from "next/head";
 import type { AppProps } from "next/app";
-import fav from "../public/fav.svg";
 import Layout from "../components/Layout";
 import GeneralContextProvider from "@/state/GeneralContext";
 import Hotjar from "@hotjar/browser";
@@ -41,9 +39,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Layout>
       <GeneralContextProvider>
         <Header />
-        <Head>
-          <link rel="shortcut icon" href={fav.src} type="image/svg" />
-        </Head>
         <Component {...pageProps} />
         <Footer />
       </GeneralContextProvider>
