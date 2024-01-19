@@ -20,7 +20,13 @@ const BlogCard = ({
   slug,
 }: Props) => {
   const router = useRouter();
-  const finalUrl = `${process.env.NEXT_PUBLIC_FRONTEND_URL}${imageUrl}`;
+
+  const rawDate = new Date(date);
+  const formattedDate = rawDate.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
 
   return (
     <div
@@ -39,11 +45,10 @@ const BlogCard = ({
           />
         </div>
         <h3>{title}</h3>
-        <p>
-          {description} <span>{date}</span>
-        </p>
-        <div className={styles.author}>
+        <p>{description}</p>
+        <div className={styles.meta}>
           <p>{author.name}</p>
+          <p>{formattedDate}</p>
         </div>
       </div>
     </div>

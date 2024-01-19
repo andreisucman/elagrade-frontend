@@ -32,13 +32,14 @@ export default function Index({ posts }: Props) {
           <div className={styles.content}>
             {posts.map((post: any, index: number) => {
               if (index > showUntil) return;
+
               return (
                 <React.Fragment key={index}>
                   <BlogCard
                     title={post.title}
                     imageUrl={post.coverImage}
                     description={post.description}
-                    date={post.date}
+                    date={post.publishedAt}
                     author={post.author}
                     slug={post.slug}
                   />

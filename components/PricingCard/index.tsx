@@ -72,7 +72,7 @@ const PricingCard = ({
         <p className={styles.totalPages}>
           Pages: {pagesRef.current.toFixed(0)}
         </p>
-        <p className={styles.totalPages}>PPP: ${PPP} USD</p>
+        <p>PPP: ${PPP} USD</p>
         <p className={styles.extra}>
           Extra: {isPrepaid ? "\u2500" : `$${extra} USD`}
         </p>
@@ -96,8 +96,8 @@ const PricingCard = ({
         )}
         {!priceId && <span style={{ fontSize: "1.25rem" }}>Free value</span>}
         <div className={styles.calculate}>
-          {pagesRef.current} assessments save you 5 min each, amounting to ~
-          {((Number(pagesRef.current) * 5) / 60).toFixed(0)} hour(s) in total.
+          {pagesRef.current} assessments save you 6 min each, amounting to ~
+          {((Number(pagesRef.current) * 6) / 60).toFixed(0)} hour(s) in total.
           Multiply this with your hourly wage to see how much you're saving.
         </div>
       </div>

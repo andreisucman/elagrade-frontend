@@ -14,6 +14,13 @@ type Params = {
 };
 
 export default function BlogPost({ post }: Props) {
+  const rawDate = new Date(post.publishedAt);
+  const formattedDate = rawDate.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+
   return (
     <>
       <Head>
@@ -24,6 +31,10 @@ export default function BlogPost({ post }: Props) {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>{post.title}</h2>
+          <div className={styles.meta}>
+          <p>{post.author.name}</p>
+          <p>{formattedDate}</p>
+          </div>
           <div className={styles.block}>
             <div
               className={styles.content}

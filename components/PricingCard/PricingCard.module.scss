@@ -26,7 +26,7 @@
 
 .title {
   padding: 0.5rem 0;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .range_label {
@@ -42,4 +42,9 @@
   background-color: var(--grey-light);
   border: 1px solid var(--grey);
   border-radius: 1rem;
+}
+
+.totalPages {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
