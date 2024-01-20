@@ -12,6 +12,7 @@ const GptAuth: React.FC = () => {
     callTheServer({ endpoint: "authorizeGoogleGpt", method: "GET" }).then(
       (response) => {
         if (response?.status === 200) {
+          console.log("LINK", response?.message);
           window.location.href = response?.message;
         }
       }
