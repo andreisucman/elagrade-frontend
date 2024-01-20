@@ -9,7 +9,10 @@ const GptAuth: React.FC = () => {
   const [showFields, setShowFields] = useState(false);
 
   function onGoogleButtonClick() {
-    callTheServer({ endpoint: "authorizeGoogleGpt", method: "GET" }).then(
+    const url = new URL(window.location.href);
+    const state = new URLSearchParams(url.search).get("state");
+
+    callTheServer({ endpoint: `authorizeGoogleGpt?state=${state}`, method: "GET" }).then(
       (response) => {
         if (response?.status === 200) {
           console.log("LINK", response?.message);
