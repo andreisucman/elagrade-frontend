@@ -28,13 +28,13 @@ const Button = ({
   return (
     <div
       style={customStyle ? customStyle : {}}
-      id={id}
       className={
         customClass ? `${styles.container} ${customClass}` : styles.container
       }
     >
       {upperText && <p className={styles.upper}>{upperText}</p>}
       <button
+        id={id}
         className={
           isDisabled ? `${styles.button} ${styles.disabled}` : styles.button
         }
