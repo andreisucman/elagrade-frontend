@@ -16,9 +16,9 @@ publishedAt: '2024-01-22T09:49:39.000Z'
 
 ELA teachers face an ever-increasing workload that can sometimes feel overwhelming.
 
-Between crafting engaging lesson plans, managing classrooms, and staying current with educational trends, there's a significant challenge that often keeps us up late into the night, and results in unpaid labor on weekends, or sick days: grading essays.
+Between crafting engaging lesson plans, managing classrooms, and staying current with educational trends, there's a significant challenge that often keeps them up late into the night, and results in unpaid labor on weekends, or sick days: grading essays.
 
-It's a crucial part of our job, yet it consumes so much of our time. The demand for timely and thorough feedback is not only a pedagogical necessity but also a hard-to-refuse requirement often emphasized by parents and school administrators.
+It's a crucial part of a teacher's job, yet it consumes so much of their time. The demand for timely and thorough feedback is not only a pedagogical necessity but also a hard-to-refuse requirement often emphasized by parents and school administrators.
 
 They seek tangible evidence of the kid's progress and learning outcomes, without taking into consideration the feasibility of such feedback and most importantly the compensation the teachers should be awarded for having to spend their personal time on weekends and sick days to meet those demands.
 
@@ -38,28 +38,34 @@ These mathematical relationships are key, as they allow the program to catch eve
 
 This aspect is particularly relevant for teachers who handle a large number of students and are tasked with grading dozens, if not hundreds, of written assignments and full-page essays that can really numb the mind, especially when there’s no chance of having a break due to the limited time allocated to this activity.
 
-In these situations the efficiency brought by AI in essay grading is transformative; it not only elevates the caliber of feedback but affords us the opportunity for much-needed self-care and quality time with our families, fostering a healthier work-life balance, and boosting motivation to work in the demanding world of education.
+In these situations the efficiency brought by AI in essay grading is transformative; it not only elevates the caliber of feedback but affords teachers the opportunity for much-needed self-care and quality time with our families, fostering a healthier work-life balance, and boosting motivation to work in the demanding world of education.
 
 ## What AI Essay Grading Solutions Are There
 
-There are two distinct ways in which English Language Arts essays can be graded: **using ChatGPT** or **specialized grading tools such as Elagrade**.
+There are two distinct ways in which English Language Arts essays can be graded: 
 
-![chatgpt and elagrade logos](/images/chatgpt-and-elagrade-logos-g5Mj.webp)
+1. **Using ChatGPT** 
+2. **Using specialized grading tools such as Elagrade**.
 
-1. When using ChatGPT you have two options - a free and a paid one. The free option while cost-effective, tends to produce inaccurate and inconsistent results. This inconsistency arises due to the free AI model that serves as the basis of the program being trained on a smaller dataset and using limited processing power that results in its poor ability to comprehend to follow instructions.
+![chatgpt and elagrade logos](/images/chatgpt-and-elagrade-logos-E4ND.webp)
 
-   Consequently, it often misses or misinterprets key arguments in essays, a phenomenon known as 'hallucination.' For instance, it might overlook critical points made in the text or falsely identify arguments that aren't present.
+When using ChatGPT you have two options - a free and a paid one. The free option while cost-effective, tends to produce inaccurate and inconsistent results. This inconsistency arises due to the free AI model that serves as the basis of the program being trained on a smaller dataset and using limited processing power that results in its poor ability to comprehend to follow instructions.
 
-   In contrast, the paid version of ChatGPT is notably more robust. It demonstrates a solid understanding of the text, almost entirely eliminating 'hallucinations.' This is a model you can truly entrust your grading to without being worried that it can add or remove something from the paper.
+Consequently, it often misses or misinterprets key arguments in essays, a phenomenon known as 'hallucination.' For instance, it might overlook critical points made in the text or falsely identify arguments that aren't present.
 
-   Regardless of which version of ChatGPT you're using, the process involves manually copying and pasting essays into the chat interface and then transferring the responses back.
+In contrast, the paid version of ChatGPT is notably more robust. It demonstrates a solid understanding of the text, almost entirely eliminating 'hallucinations.' This is a model you can truly entrust your grading to without being worried that it can add or remove something from the paper.
 
-   This method, while more efficient than grading each paper manually, is still time-consuming and prone to errors. For example, there's a risk of pasting incorrect feedback due to an accidental copy of the wrong conversation chat, requiring additional focus time and effort to ensure the accuracy of results.
-2. Another popular way to grade essays with AI is by using specialized AI grading platforms, such as Elagrade.com, that offer a more streamlined alternative. These platforms allow for bulk grading of essays, eliminating the laborious task of copying and pasting assignments.
+Regardless of which version of ChatGPT you're using, the process involves manually copying and pasting essays into the chat interface and then transferring the responses back.
 
-   This efficiency reduces the grading time from hours to minutes and removes the necessity of putting in extra effort for double-checking for manual errors often arising from distractions and daydreaming natural to humans. Additionally, the results are presented in a structured report that is easily downloadable with a single click as opposed to the results in ChatGPT that are scattered across multiple conversations.
+This method, while more efficient than grading each paper manually, is still time-consuming and prone to errors. For example, there's a risk of pasting incorrect feedback due to an accidental copy of the wrong conversation chat, requiring additional focus time and effort to ensure the accuracy of results.
 
-   Elagrade comes with a prepaid pricing plan, charging only for the amount of grading required which makes it a more practical, error-free, and cost-effective solution compared to the paid version of ChatGPT, which is only available as a monthly subscription service.
+Another popular way to grade essays with AI is by using specialized AI grading platforms, such as Elagrade.com, that offer a more streamlined alternative. These platforms allow for bulk grading of essays, eliminating the laborious task of copying and pasting assignments.
+
+This efficiency reduces the grading time from hours to minutes and removes the necessity of putting in extra effort for double-checking for manual errors often arising from distractions and daydreaming natural to humans. 
+
+Additionally, the results are presented in a structured report that is easily downloadable with a single click as opposed to the results in ChatGPT that are scattered across multiple conversations.
+
+Elagrade comes with a prepaid pricing plan, charging only for the amount of grading required which makes it a more practical, error-free, and cost-effective solution compared to the paid version of ChatGPT, which is only available as a monthly subscription service.
 
 ## A Practical Instruction To Grading Essays With AI
 
@@ -67,21 +73,21 @@ There are two distinct ways in which English Language Arts essays can be graded:
 
 To begin grading essays using ChatGPT, start by signing up at <https://chat.openai.com>
 
-![chatgpt login screen interface](/images/1-chagpt-main-screen-I3MD.webp)
+![chatgpt login screen interface](/images/1-chagpt-main-screen-gyND.webp)
 
 Once logged in, you'll navigate to the chat area where the actual interaction with AI takes place. If you're looking for enhanced capabilities, you'll notice the option to upgrade to the paid version in the bottom left corner of the chat. You can then select the Plus option and make a payment.
 
-![chatgpt main screen interface](/images/2-chatgpt-main-screen-interface-g0ND.webp)
+![chatgpt main screen interface](/images/2-chatgpt-main-screen-interface-g2Mj.webp)
 
 After upgrading, select the paid version from a dropdown menu at the top of the screen, ensuring that you have access to its advanced features. 
 
-![chatgpt select model interface](/images/3-chatgpt-select-model-dropdown-interface-A3MD.webp)
+![chatgpt select model interface](/images/3-chatgpt-select-model-dropdown-interface-MxNz.webp)
 
 To grade an essay, you'll copy and paste the text into the chat area, along with clear instructions for grading, specifying the criteria and which aspects to focus on.
 
 If the initial result is not satisfactory, you can provide additional feedback to ChatGPT to refine its analysis. This iterative process allows for a more tailored and accurate grading but takes more time and effort. Once you're satisfied with the result, copy and paste the feedback into a separate document.
 
-![chatgpt text in the input filed interface](/images/4-chatgpt-paste-essay-interface-gyMz.webp)
+![chatgpt text in the input filed interface](/images/4-chatgpt-paste-essay-interface-g1OD.webp)
 
 If you have multiple papers to grade, it's important to maintain consistency. Provide the exact same grading instructions for each paper to ensure uniform standards.
 
@@ -97,31 +103,37 @@ Under the hood, Elagrade uses the same premium version of the AI as ChatGPT Plus
 
 To start using Elagrade create a free account at <https://elagrade.com/sign-up>
 
-![elagrade sign up screen interface](/images/1-elagrade-signup-screen-g3ND.webp)
+![elagrade sign up screen interface](/images/1-elagrade-signup-screen-U2Mz.webp)
 
 Then, confirm your email and you’re good to go.
 
 Grading with Elagrade is pretty intuitive. You first give your assignment a name. Then, you upload the students' papers, which can be in various formats like photos of the hardcopies, as well as electronic PDF, DOC, or TXT documents.
 
-![](/images/3-elagrade-add-students-interface-I2Mz.webp)
+![](/images/3-elagrade-add-students-interface-UwND.webp)
 
 Next, you add your grading criteria and then grade your papers with it.
 
 Adding your grading criteria is crucial as it allows you to infuse your personal grading style into the AI to make grading truly yours.
 
-Describe what earns the highest and lowest grades, along with the key elements you consider important in the student's work and any rubrics you use, if you typically give feedback by rubrics. This tailored approach ensures that the grading reflects your unique perspective and standards and is practically indiscernible from your manual grading.
+Describe what earns the highest and lowest grades, along with the key elements you consider important in the student's work and any rubrics you use, if you typically give feedback by rubrics. 
 
-![elagrade add grading criteria](/images/4-elagrade-add-grading-criteria-kwNT.webp)
+This tailored approach ensures that the grading reflects your unique perspective and standards and is practically indiscernible from your manual grading.
 
-Once you set your criteria, click 'Save' followed by 'Grade'. Within a few minutes, you will get a single report in docx format that includes individual grades, detailed explanations for these grades, specific feedback for each student for each rubric line-by-line, and the original text that was graded.
+![elagrade add grading criteria](/images/4-elagrade-add-grading-criteria-IzNT.webp)
 
-![elagrade grading report](/images/5-elagrade-grading-report-k0MD.webp)
+Once you set your criteria, click 'Save' followed by 'Grade'. 
+
+Within a few minutes, you will get a single report in docx format that includes individual grades, detailed explanations for these grades, specific feedback for each student for each rubric line-by-line, and the original text that was graded.
+
+![elagrade grading report](/images/5-elagrade-grading-report-QwOT.webp)
 
 Additionally, the report will show the class average and median for the assignment, allowing you to easily compare groups of students or their performance between the assignments.
 
 ## Is It Ethical To Use AI For Grading
 
-Ever since AI started being used to grade papers, there have been debates on its ethical implications. A common viewpoint is that if students spend time writing an essay, teachers should put in the effort to read them. Even though this perspective seems sound at first glance it overlooks the fundamental difference in the objectives of writing and grading essays.
+Ever since AI started being used to grade papers, there have been debates on its ethical implications. 
+
+A common viewpoint is that if students spend time writing an essay, teachers should put in the effort to read them. Even though this perspective seems sound at first glance it overlooks the fundamental difference in the objectives of writing and grading essays.
 
 The act of writing an essay is an intellectual exercise for students, intended to develop their critical thinking and writing skills. The importance lies in the process of writing, not the essay itself. This process demands that students invest time and effort, as it is through this endeavor that they grow intellectually.
 
