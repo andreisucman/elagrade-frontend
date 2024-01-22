@@ -44,20 +44,25 @@ In these situations the efficiency brought by AI is transformative; it not only 
 
 There are two distinct ways in which ELA teachers can grade essays:
 
-1. **Using ChatGPT**
-2. **Using specialized grading tools such as Elagrade**.
+**1. Using ChatGPT**
+
+**2. Using specialized grading tools such as Elagrade**.
 
 ![chatgpt and elagrade logos](/images/chatgpt-and-elagrade-logos-E4ND.webp)
 
-1\. When using ChatGPT you have two options - a free and a paid one. The free option while cost-effective, produces inaccurate and inconsistent results. The reason for this is that the AI model serving as the basis of the free program is trained on a small dataset and uses limited processing power, which results in its poor ability to comprehend and follow instructions.
+1\. When using ChatGPT you have two options - a free and a paid one. The free option while cost-effective, produces inaccurate and inconsistent results. 
+
+The reason for this is that the AI model serving as the basis of the free program is trained on a small dataset and uses limited processing power, which results in its poor ability to comprehend and follow instructions.
 
 That's why it often misses or misinterprets information, which is called 'hallucination.' For instance, it might overlook critical points or falsely identify arguments that don't exist.
 
 In contrast, the paid version of ChatGPT is notably more robust. It deeply understands the meaning, almost entirely eliminating 'hallucinations.' This is a model you can truly entrust your grading to without being worried that it can add or remove something from the paper.
 
-But regardless of which version of ChatGPT you're using, grading with ChatGPT involves manually copying and pasting essays into the chat and then transferring the responses back.
+But regardless of which version of AI you're using, grading with ChatGPT involves manually copying and pasting essays into the chat and then transferring the responses back.
 
-This method, while more efficient than grading manually, is still time-consuming and prone to errors. For example, there's a risk of accidentally copying the wrong feedback from the chat when grading multiple papers, which is why it requires additional focus and effort to ensure the accuracy of results.
+This method, while more efficient than grading manually, is still time-consuming and prone to errors. 
+
+For example, there's a risk of accidentally copying the wrong feedback from the chat when grading multiple papers, which is why it requires additional focus and effort to ensure the accuracy of results.
 
 2\. Another popular way to grade essays with AI is by using specialized grading platforms, such as elagrade.com that offer a more streamlined way of uploading papers and downloading the results. For instance, Elagrade allows for bulk grading, eliminating the task of copying and pasting assignments.
 
