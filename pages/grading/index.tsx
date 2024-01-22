@@ -250,7 +250,7 @@ const Grading = () => {
 
     /* grade if quota is ok */
     setGradingStatus("grading");
-    setProcessingTime(averageGradingTime * allUrls.length);
+    setProcessingTime(averageGradingTime);
     const response = await callTheServer({
       endpoint: "gradePaper",
       method: "POST",
