@@ -44,7 +44,7 @@ const BlogCard = ({
             loading="lazy"
           />
         </div>
-        <h3>{title}</h3>
+        <h3 className={styles.title}>{title}</h3>
         <p>{description}</p>
         <div className={styles.meta}>
           <p>{author.name}</p>
