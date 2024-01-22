@@ -40,12 +40,18 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ isSignIn }) => {
 
   async function onEmailAuthClick() {
     if (!router.isReady) return;
+    const trimmedEmail = email.trim();
+    const trimmedPassword = password.trim();
 
-    if (isSignIn && (email.length === 0 || password.length === 0)) {
+    if (trimmedEmail.length === 0 || trimmedPassword.length === 0) {
       return setAlertMessage("Email and password can't be empty");
     }
 
-    const response = await emailAuth({ isSignIn, email, password });
+    const response = await emailAuth({
+      isSignIn,
+      email: trimmedEmail,
+      password: trimmedPassword,
+    });
 
     if (response?.status !== 200) return setAlertMessage(response?.message);
 
