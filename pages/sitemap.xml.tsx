@@ -1,42 +1,7 @@
 import { getDocuments } from "outstatic/server";
+import { getServerSideSitemapLegacy, ISitemapField } from "next-sitemap";
 
-function generateSiteMap(posts: any) {
-  return `<?xml version="1.0" encoding="UTF-8"?>
-   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <url>
-       <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog</loc>
-     </url>
-     <url>
-       <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/contact</loc>
-     </url>
-     <url>
-       <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}</loc>
-     </url>
-     <url>
-       <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/sign-in</loc>
-     </url>
-     <url>
-       <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/sign-up</loc>
-     </url>
-     <url>
-       <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/pricing</loc>
-     </url>
-     ${posts
-       .map(({ slug }: { slug: string }) => {
-         return `
-       <url>
-           <loc>${`${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog/${slug}`}</loc>
-       </url>
-     `;
-       })
-       .join("")}
-   </urlset>
- `;
-}
-
-function SiteMap() {}
-
-export async function getServerSideProps({ res }: { res: any }) {
+export async function getServerSideProps(ctx: any) {
   const posts = getDocuments("posts", [
     "title",
     "content",
@@ -46,15 +11,41 @@ export async function getServerSideProps({ res }: { res: any }) {
     "slug",
   ]);
 
-  const sitemap = generateSiteMap(posts);
+  const fields: ISitemapField[] = posts.map((post) => ({
+    loc: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog/${post.slug}`,
+    lastmod: new Date().toISOString(),
+  }));
 
-  res.setHeader("Content-Type", "text/xml");
-  res.write(sitemap);
-  res.end();
+  const staticPages = [
+    {
+      loc: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog`,
+      lastmod: new Date().toISOString(),
+    },
+    {
+      loc: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/contact`,
+      lastmod: new Date().toISOString(),
+    },
+    {
+      loc: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/sign-in`,
+      lastmod: new Date().toISOString(),
+    },
+    {
+      loc: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/sign-up`,
+      lastmod: new Date().toISOString(),
+    },
+    {
+      loc: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/pricing`,
+      lastmod: new Date().toISOString(),
+    },
+  ];
 
-  return {
-    props: {},
-  };
+  fields.push(...staticPages);
+
+  return getServerSideSitemapLegacy(ctx, fields);
+}
+
+function SiteMap() {
+  return <div>This is a placeholder for the sitemap.</div>;
 }
 
 export default SiteMap;
