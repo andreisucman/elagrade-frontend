@@ -1,7 +1,6 @@
 module.exports = {
   siteUrl: process.env.NEXT_PUBLIC_FRONTEND_URL,
   generateRobotsTxt: true,
-  exclude: ["/server-sitemap.xml"],
   robotsTxtOptions: {
     policies: [
       { userAgent: "*", allow: "/" },
@@ -10,6 +9,6 @@ module.exports = {
       { userAgent: "*", disallow: "/results" },
       { userAgent: "*", disallow: "/gpt-auth" },
     ],
-    additionalSitemaps: [`${process.env.NEXT_PUBLIC_FRONTEND_URL}/server-sitemap.xml`],
+    additionalSitemaps: [`${process.env.NEXT_PUBLIC_FRONTEND_URL}/sitemap.xml`],
   },
 };
