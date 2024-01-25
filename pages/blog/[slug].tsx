@@ -48,7 +48,7 @@ export default function BlogPost({ post }: Props) {
           </div>
           <Button
             buttonText="Start grading with AI Free"
-            customStyle={{ marginBottom: "3rem", marginTop: "2rem" }}
+            customStyle={{ marginBottom: "1rem", marginTop: "2rem" }}
             innerStyle={{ maxWidth: "unset" }}
             onClick={() => router.push("/sign-up")}
           />
