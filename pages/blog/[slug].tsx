@@ -1,6 +1,8 @@
 import { getDocumentBySlug, getDocumentPaths } from "outstatic/server";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import markdownToHtml from "../../functions/markdownToHtml";
+import Button from "@/components/Button";
 import SideComponent from "@/components/SideComponent";
 import BlogAnnouncement from "@/components/BlogAnnouncement";
 import styles from "./BlogPost.module.scss";
@@ -21,6 +23,8 @@ export default function BlogPost({ post }: Props) {
     year: "numeric",
   });
 
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -32,8 +36,8 @@ export default function BlogPost({ post }: Props) {
         <div className={styles.wrapper}>
           <h2 className={styles.title}>{post.title}</h2>
           <div className={styles.meta}>
-          <p>{post.author.name}</p>
-          <p>{formattedDate}</p>
+            <p>{post.author.name}</p>
+            <p>{formattedDate}</p>
           </div>
           <div className={styles.block}>
             <div
@@ -42,6 +46,12 @@ export default function BlogPost({ post }: Props) {
             />
             <SideComponent />
           </div>
+          <Button
+            buttonText="Start grading with AI Free"
+            customStyle={{ marginBottom: "3rem", marginTop: "2rem" }}
+            innerStyle={{ maxWidth: "unset" }}
+            onClick={() => router.push("/sign-up")}
+          />
         </div>
       </div>
     </>
