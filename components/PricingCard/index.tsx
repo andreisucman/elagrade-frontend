@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import PricingCardPlaceholder from "../CardPlaceholder";
 import Button from "../Button";
 import Alert from "../Alert";
 import styles from "./PricingCard.module.scss";
@@ -39,7 +38,9 @@ const PricingCard = ({
       case "Monthly":
         return "For teachers seeking better value.";
       case "Free":
-        return "Get 50 pages free. No credit card required.";
+        return `${pagesRef.current.toFixed(
+          0
+        )} pages / month free. No credit card required.`;
     }
   }
 

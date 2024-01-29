@@ -53,7 +53,7 @@ const GradingCriteriaExamples = ({ setShowGradingCriteriaExamples }: Props) => {
           />
           <RadioGroup isWholeFeedback={false} />
           <DescriptionBox
-            title={"What are the feedback rubrics?"}
+            title={"What are the evaluation rubrics?"}
             text={"Focus, clarity, logical reasoning."}
           />
         </div>

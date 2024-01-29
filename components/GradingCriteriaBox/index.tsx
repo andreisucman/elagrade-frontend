@@ -126,7 +126,7 @@ const GradingCriteriaBox = ({
           />
           {!isWholeFeedback && (
             <DescriptionBox
-              title={"What are the feedback rubrics?"}
+              title={"What are the evaluation rubrics?"}
               text={rubrics}
               placeholder={"Example: Focus, clarity, grammar, etc..."}
               setText={setRubrics}

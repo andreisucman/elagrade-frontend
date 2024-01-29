@@ -22,8 +22,7 @@ const ChatGptPricingCard = () => {
           <div className={styles.container}>
             <div className={styles.wrapper}>
               <p className={styles.about}>
-                If you have ChatGPT <b>Plus</b> plan you can use the basic
-                version of Elagrade free.
+                If you have ChatGPT <b>Plus</b> plan you can use Elagrade free.
               </p>
               <ul className={styles.list}>
                 <li className={styles.item}>
