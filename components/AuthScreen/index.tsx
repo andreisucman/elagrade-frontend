@@ -27,12 +27,11 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ isSignIn }) => {
     if (router?.query?.code) {
       finalizeOauth({
         code: router.query.code as string,
-        state: router.query.state as string,
-      }).then((data) => {
-        if (data?.state) {
-          router.push(`/pricing?state=${data?.state}`);
+      }).then(() => {
+        if (router.query.state) {
+          window.location.href = `/pricing?state=${router.query.state}`;
         } else {
-          router.push("/grading");
+          window.location.href = "/grading";
         }
       });
     }

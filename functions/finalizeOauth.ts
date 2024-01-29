@@ -1,15 +1,11 @@
 import callTheServer from "./callTheServer";
 
-type Props = { code: string; state: string };
+type Props = { code: string };
 
-export default async function finalizeOauth({ code, state }: Props) {
-  const response = await callTheServer({
+export default async function finalizeOauth({ code }: Props) {
+  await callTheServer({
     endpoint: "authenticate",
     method: "POST",
     body: { code },
   });
-
-  if (response?.status === 200) {
-    return { userData: response?.message, state };
-  }
 }
