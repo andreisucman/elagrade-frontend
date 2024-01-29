@@ -17,6 +17,7 @@ export default function YoutubeEmbed({ videoId, title }: Props) {
             autoplay: 0,
             rel: 0,
             vq: "hd720",
+            origin: process.env.NEXT_PUBLIC_FRONTEND_URL,
           },
         }}
         title={title}
