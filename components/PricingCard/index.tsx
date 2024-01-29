@@ -98,6 +98,7 @@ const PricingCard = ({
         <div className={styles.calculate}>
           {pagesRef.current} assessments save you 6 min each, amounting to ~
           {((Number(pagesRef.current) * 6) / 60).toFixed(0)} hour(s) in total.
+        </div>
       </div>
       <Button
         customClass={isUnblocked ? "" : "disabled"}
