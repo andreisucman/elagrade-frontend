@@ -76,9 +76,7 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ isSignIn }) => {
     }
   }
 
-  function onSocialSignUpClick(e: Event) {
-    e.stopPropagation();
-
+  function onSocialSignUpClick() {
     const queryExists = Object.keys(router.query).length > 0;
 
     const orderPayload = queryExists ? JSON.stringify(router.query) : null;

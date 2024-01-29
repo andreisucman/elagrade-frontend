@@ -24,18 +24,22 @@ const SocialRow: React.FC<SocialRowProps> = ({
       : router.push({ pathname: "/sign-in", query: router.query });
   }
 
+  const handleAreaClick = (event: React.MouseEvent) => {
+    event.stopPropagation();
+  };
+
   return (
-    <div className={containerStyle}>
+    <div className={containerStyle} onClick={handleAreaClick}>
       <div className={styles.wrapper}>
         {isSignIn && (
           <p className={"link"} onClick={() => setShowRecoverPassword(true)}>
             Forgot password?
           </p>
         )}
-        <button className={styles.button} onClick={onSocialSignUpClick}>
+        <div className={styles.button} onClick={onSocialSignUpClick}>
           <div className="icon icon__google icon_xs" />
           {isSignIn ? "Google sign in" : "Google sign up"}
-        </button>
+        </div>
       </div>
       <p onClick={handleRouter} className={styles.link}>
         {isSignIn ? "Sign up instead" : "Sign in instead"}
