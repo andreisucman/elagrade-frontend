@@ -34,7 +34,7 @@ const ChatGptPricingCard = () => {
                   No retyping instructions
                 </li>
                 <li className={styles.item}>
-                  <IoIosCheckmarkCircle className={styles.icon} />
+                  <RxCross2 className={styles.icon} />
                   Consistent formatting
                 </li>
                 <li className={styles.item}>
