@@ -22,11 +22,11 @@ const ChatGptPricingCard = () => {
           <div className={styles.container}>
             <div className={styles.wrapper}>
               <p className={styles.about}>
-                If you have ChatGPT <b>Plus</b> plan you can use the Elagrade App free.
+                If you have ChatGPT <b>Plus</b> plan you can use the Elagrade
+                App free.
               </p>
               <p className={styles.about_desc}>
-                (ChatGPT Plus is a $20/Month subscription service offered by
-                OpenAi)
+                (ChatGPT Plus is a $20 / month subscription offered by OpenAi)
               </p>
               <ul className={styles.list}>
                 <li className={styles.item}>
