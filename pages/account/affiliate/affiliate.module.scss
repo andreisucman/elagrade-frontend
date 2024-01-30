@@ -1,51 +1,63 @@
-@import "../../styles/helpers/mixins.scss";
-@import "../../styles/helpers/animations.scss";
+@import "../../../styles/helpers/animations.scss";
+@import "../../../styles/helpers/mixins.scss";
 
 .container {
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+  gap: 1rem;
+
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
   animation: fadeIn 0.5s ease-in-out;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
   width: 100%;
-  border-radius: 1rem;
-  gap: 1.5rem;
-}
 
-.about {
-}
-
-.list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  padding: 0.5rem 1rem;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--black);
+}
+
+.title {
+  text-align: left;
+}
+
+.link_wrapper {
+  cursor: pointer;
+  position: relative;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  gap: 1rem;
+  padding: 1rem;
+  padding-right: 2.5rem;
   background-color: var(--grey-light);
   border-radius: 1rem;
-  border: 1px solid var(--grey);
+  transition: all 0.3s;
 
-  @include laptop {
-    flex-direction: row;
+  &:active {
+    transform: scale(1.025);
   }
 }
 
-.item {
-  display: flex;
-  gap: 0.5rem;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-}
-
 .icon {
-  width: 2rem;
-  height: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .accordionItem {
@@ -79,6 +91,9 @@
 }
 
 .accordionAnswer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   color: var(--black);
   font-size: 1rem;
   line-height: 1.4;
