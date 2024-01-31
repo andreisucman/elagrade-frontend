@@ -5,8 +5,7 @@ author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
 slug: 'how-accurate-and-reliable-is-an-ai-paper-grader'
-description: '
-How good is the quality of grading with AI? Here we explore the advantages and disadvantages of using ChatGPT and the 4 advantages Elagrade has over ChatGPT for grading papers.'
+description: ' How good is the quality of grading with AI? Here we explore the advantages and disadvantages of using ChatGPT and the 4 advantages Elagrade has over ChatGPT for grading papers.'
 coverImage: '/images/how-accurate-and-reliable-is-an-ai-paper-grader-U1Nz.webp'
 publishedAt: '2024-01-31T17:16:30.000Z'
 ---
@@ -69,17 +68,17 @@ That's why a much better option for AI grading essays would be to use a service 
 
 A good example is Elagrade.
 
-An Alternative To ChatGPT for AI Paper Grading
+## An Alternative To ChatGPT for AI Paper Grading
 
 Elagrade offers several advantages over ChatGPT.
 
-First, you can save your personal grading criteria. This means that you don't have to retype (or paste) it tens or hundreds of times in the interface.
+1\. First, you can save your personal grading criteria. This means that you don't have to retype (or paste) it tens or hundreds of times in the interface.
 
 You give your criteria once, save it, and it's used for grading your papers until you decide to change it.
 
 ![Elagrade add criteria grading interface](/images/elagrade-add-grading-criteria-AwNz.webp)
 
-Second, with Elagrade you can check many papers at the same time. Like tens and even hundreds of them.
+2\. Second, with Elagrade you can check many papers at the same time. Like tens and even hundreds of them.
 
 That's not possible with ChatGPT.
 
@@ -95,7 +94,7 @@ No need to wait for each paper. No need to copy and paste the text.
 
 ![Elagrade ai grading essays in bulk](/images/elagrade-add-students-interface-A5NT.webp)
 
-The third advantage of Elagrade over ChatGPT is subtle but important.
+3\. The third advantage of Elagrade over ChatGPT is subtle but important.
 
 When you copy tens of papers from ChatGPT into your Google or Word doc, there is a chance of messing up.
 
@@ -107,7 +106,7 @@ No need for copy-pasting. No room for errors.
 
 ## The Biggest Advantage Of Elagrade Over ChatGPT
 
-Lastly, the biggest advantage of Elagrade over ChatGPT is price.
+4\. Lastly, the biggest advantage of Elagrade over ChatGPT is price.
 
 While ChatGPT Plus is only available as a monthly subscription, Elagrade gives you a free plan, and if you need more, you can take advantage of the pay-as-you-go model.
 
