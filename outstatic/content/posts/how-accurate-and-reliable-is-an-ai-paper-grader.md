@@ -4,8 +4,8 @@ status: 'draft'
 author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
-slug: 'how-good-is-ai-paper-grader-in-terms-of-accuracy-and-reliability'
-description: ''
+slug: 'how-accurate-and-reliable-is-an-ai-paper-grader'
+description: 'How good is the quality of grading with ai? Here we explore the advantages and disadvantages of using ChatGPT and 4 advantages Elagrade has over ChatGPT for grading papers.'
 coverImage: ''
 publishedAt: '2024-01-31T17:16:30.190Z'
 ---
