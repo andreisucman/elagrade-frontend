@@ -1,14 +1,17 @@
 ---
-title: 'How Accurate and Reliable is an AI Paper Grader?'
+title: 'How Accurate and Reliable is an AI Paper Grader'
 status: 'published'
 author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
 slug: 'how-accurate-and-reliable-is-an-ai-paper-grader'
-description: 'How good is the quality of grading with ai? Here we explore the advantages and disadvantages of using ChatGPT and 4 advantages Elagrade has over ChatGPT for grading papers.'
-coverImage: ''
+description: '
+How good is the quality of grading with AI? Here we explore the advantages and disadvantages of using ChatGPT and the 4 advantages Elagrade has over ChatGPT for grading papers.'
+coverImage: '/images/how-accurate-and-reliable-is-an-ai-paper-grader-U1Nz.webp'
 publishedAt: '2024-01-31T17:16:30.000Z'
 ---
+
+![English teacher is supervising a robot that is grading a paper](/images/how-accurate-and-reliable-is-an-ai-paper-grader-M0Nz.webp)
 
 AI grading is becoming the new norm in education. The reason is simple - less effort, better results.
 
@@ -74,6 +77,8 @@ First, you can save your personal grading criteria. This means that you don't ha
 
 You give your criteria once, save it, and it's used for grading your papers until you decide to change it.
 
+![Elagrade add criteria grading interface](/images/elagrade-add-grading-criteria-AwNz.webp)
+
 Second, with Elagrade you can check many papers at the same time. Like tens and even hundreds of them.
 
 That's not possible with ChatGPT.
@@ -87,6 +92,8 @@ This slows down the process quite a bit, especially for teachers with many stude
 On the other hand, with Elagrade, you just drop all of the papers in bulk, and click "Grade".
 
 No need to wait for each paper. No need to copy and paste the text.
+
+![Elagrade ai grading essays in bulk](/images/elagrade-add-students-interface-A5NT.webp)
 
 The third advantage of Elagrade over ChatGPT is subtle but important.
 
@@ -120,10 +127,10 @@ That's because 'hallucinations' are only a problem when grading, but they're ent
 
 That's why using the free version of ChatGPT for brainstorming (like coming up with lesson plans) and Elagrade for grading will give you the best of two worlds: the cheapest service - with the best quality.
 
-If you want to learn more about how to get started with ChatGPT or Elagrade check out our other article called How ELA Teachers Can Embrace AI Essay Grading.
+If you want to learn more about how to get started with ChatGPT or Elagrade check out [How ELA Teachers Can Embrace AI Essay Grading](how-ela-teachers-can-embrace-ai-essay-grading).
 
-Alternatively, you can watch a quick start video here.
+Alternatively, you can watch our [ai grading quick start video here](https://elagrade.com/#quickstart).
 
 Whichever setup you end up choosing AI will save you a lot of time and energy. Depending on your schedule this could mean better work-life balance or more free time for the activities you love.
 
-Whatever the positive effect ends up being, one thing is sure. It wouldn't have been possible without the AI transformation.
+Whatever the positive effect ends up being for you, one thing is sure. It wouldn't have been possible without the AI transformation.
