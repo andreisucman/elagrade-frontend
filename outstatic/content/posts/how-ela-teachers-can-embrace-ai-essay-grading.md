@@ -1,6 +1,6 @@
 ---
-title: 'How English Language Arts Teachers Can Embrace AI Essay Grading to Meet Educational Demands'
-status: 'published'
+title: 'How ELA Teachers Can Embrace AI Essay Grading to Meet Educational Demands'
+status: 'draft'
 author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
@@ -11,8 +11,6 @@ publishedAt: '2024-01-22T09:49:39.000Z'
 ---
 
 ![English teacher grading essays with AI](/images/how-english-language-arts--teachers-can-embrace-ai-essay-grading-to-meet-educational-demands-QyMz.png)
-
-## The Problems Of Grading Without AI
 
 ELA teachers face an overwhelming workload.
 
@@ -50,7 +48,7 @@ There are two distinct ways in which ELA teachers can grade essays:
 
 ![chatgpt and elagrade logos](/images/chatgpt-and-elagrade-logos-E4ND.webp)
 
-1\. When using ChatGPT you have two options - a free and a paid one. The free option while cost-effective, produces inaccurate and inconsistent results. 
+1\. When using ChatGPT you have two options - a free and a paid one. The free option while cost-effective, produces inaccurate and inconsistent results.
 
 The reason for this is that the AI model serving as the basis of the free program is trained on a small dataset and uses limited processing power, which results in its poor ability to comprehend and follow instructions.
 
@@ -60,7 +58,7 @@ In contrast, the paid version of ChatGPT is notably more robust. It deeply under
 
 But regardless of which version of AI you're using, grading with ChatGPT involves manually copying and pasting essays into the chat and then transferring the responses back.
 
-This method, while more efficient than grading manually, is still time-consuming and prone to errors. 
+This method, while more efficient than grading manually, is still time-consuming and prone to errors.
 
 For example, there's a risk of accidentally copying the wrong feedback from the chat when grading multiple papers, which is why it requires additional focus and effort to ensure the accuracy of results.
 
@@ -90,13 +88,13 @@ After upgrading, select the premium version of the AI called GPT4 from the dropd
 
 To grade an essay, you'll copy and paste the text into the chat area, along with your instructions for grading, specifying the criteria and which aspects to focus on.
 
-If the result is poor, you can provide additional feedback and ask to refine the analysis. This iterative process usually ends in an accurate grading but takes time and effort to implement. 
+If the result is poor, you can provide additional feedback and ask to refine the analysis. This iterative process usually ends in an accurate grading but takes time and effort to implement.
 
 Once you're satisfied with the result, copy and paste the feedback into a separate document.
 
 ![chatgpt text in the input filed interface](/images/4-chatgpt-paste-essay-interface-g1OD.webp)
 
-If you have multiple papers to grade, it's important to maintain consistency. Provide the exact same grading instructions for each paper to ensure uniform standards for all students. 
+If you have multiple papers to grade, it's important to maintain consistency. Provide the exact same grading instructions for each paper to ensure uniform standards for all students.
 
 You should also start a separate conversation each time you grade a new paper to prevent the AI from mixing the text or feedback from a previous student's essay.
 
@@ -114,25 +112,25 @@ To start using Elagrade create a free account at <https://elagrade.com/sign-up>
 
 ![elagrade sign up screen interface](/images/1-elagrade-signup-screen-U2Mz.webp)
 
-Then, confirm your email and you’re good to go. Grading with Elagrade is pretty intuitive. 
+Then, confirm your email and you’re good to go. Grading with Elagrade is pretty intuitive.
 
 You first give your assignment a name. After that, upload the students' papers, which can be in various formats like photos of the hardcopies, and PDF, DOC, or TXT documents.
 
 ![](/images/3-elagrade-add-students-interface-UwND.webp)
 
-Each student is represented by a box. If you have multiple pages of a hard copy just take a photo of each page and upload it in the box. 
+Each student is represented by a box. If you have multiple pages of a hard copy just take a photo of each page and upload it in the box.
 
 Next, you add your grading criteria and then grade your papers based on it.
 
-Adding your grading criteria is important as it allows you to infuse your personal style to make grading personal. 
+Adding your grading criteria is important as it allows you to infuse your personal style to make grading personal.
 
-Setting the criteria is easy. Write a short sentence about what earns the highest and lowest grades. Then tell what you consider important, and finally add a few rubrics that you want the AI to use for feedback. 
+Setting the criteria is easy. Write a short sentence about what earns the highest and lowest grades. Then tell what you consider important, and finally add a few rubrics that you want the AI to use for feedback.
 
 This tailored approach makes the AI adapt your grading style making it practically indiscernible from your manual grading.
 
 ![elagrade add grading criteria](/images/4-elagrade-add-grading-criteria-IzNT.webp)
 
-Once you've set your criteria, click 'Save' followed by 'Grade'. 
+Once you've set your criteria, click 'Save' followed by 'Grade'.
 
 Within a few minutes, you will get a report in the docx format that includes grades, detailed explanations, and specific feedback for each student according to the rubrics line-by-line.
 
