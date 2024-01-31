@@ -29,11 +29,12 @@
 
 .block {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .title {
   padding: 1rem 0 1rem;
+  max-width: 50rem;
   text-align: left;
   align-self: flex-start;
 }
