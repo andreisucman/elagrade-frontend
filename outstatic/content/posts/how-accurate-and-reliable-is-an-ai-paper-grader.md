@@ -1,6 +1,6 @@
 ---
 title: 'How Accurate and Reliable is an AI Paper Grader?'
-status: 'draft'
+status: 'published'
 author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
