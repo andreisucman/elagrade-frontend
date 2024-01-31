@@ -73,9 +73,9 @@ export default function Home() {
           />
         </div>
 
-        <div className={styles.full_width}>
+        <div className={styles.full_width} id="quickstart">
           <div className={styles.group} style={{ gap: "1.5rem" }}>
-            <h3 className={styles.how_title}>End The Unpaid After-Hours</h3>
+            <h3 className={styles.how_title} >End The Unpaid After-Hours</h3>
 
             <YoutubeEmbed
               videoId="xAVr28iKU4s"
