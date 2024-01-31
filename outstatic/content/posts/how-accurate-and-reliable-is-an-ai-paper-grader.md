@@ -7,7 +7,7 @@ author:
 slug: 'how-accurate-and-reliable-is-an-ai-paper-grader'
 description: 'How good is the quality of grading with ai? Here we explore the advantages and disadvantages of using ChatGPT and 4 advantages Elagrade has over ChatGPT for grading papers.'
 coverImage: ''
-publishedAt: '2024-01-31T17:16:30.190Z'
+publishedAt: '2024-01-31T17:16:30.000Z'
 ---
 
 AI grading is becoming the new norm in education. The reason is simple - less effort, better results.
