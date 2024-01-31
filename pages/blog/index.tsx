@@ -28,7 +28,7 @@ export default function Index({ posts }: Props) {
       <BlogAnnouncement />
       <div className={styles.container}>
         <h2>Blog</h2>
-        {posts.length > 0 ? (
+        {posts?.length > 0 ? (
           <div className={styles.content}>
             {posts.map((post: any, index: number) => {
               if (index > showUntil) return;
