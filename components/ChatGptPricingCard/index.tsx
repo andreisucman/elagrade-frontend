@@ -26,7 +26,7 @@ const ChatGptPricingCard = () => {
                 App free.
               </p>
               <p className={styles.about_desc}>
-                (ChatGPT Plus is a $20 / month subscription offered by OpenAi)
+                (ChatGPT Plus is a $20 / month subscription offered by OpenAI)
               </p>
               <ul className={styles.list}>
                 <li className={styles.item}>
