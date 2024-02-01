@@ -12,7 +12,7 @@ publishedAt: '2024-01-27T19:17:41.000Z'
 
 ![](/images/what-ai-essay-grader-for-teachers-is-easy-to-use-and-provides-feedback-i2ot-A5Nj.webp)
 
-The ai essay grading is getting increasingly popular among ELA teachers.
+The AI essay grading is getting increasingly popular among ELA teachers.
 
 There was an initial hesitancy due to the common fear of AI taking over everyone's jobs, but more and more people started realizing that AI can not just take jobs, but also help retain them.
 
