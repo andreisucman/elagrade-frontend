@@ -1,13 +1,13 @@
 ---
-title: 'How ELA Teachers Can Embrace AI Essay Grading to Meet Educational Demands'
-status: 'published'
+title: "How ELA Teachers Can Embrace AI Essay Grading to Meet Educational Demands"
+status: "published"
 author:
-  name: 'Andrei Sucman'
-  picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
-slug: 'how-ela-teachers-can-embrace-ai-essay-grading'
-description: 'Grading essays is a time-consuming task, often extending into personal hours, weekends and sick days, making it a significant challenge in the education sector. AI essay grading using ChatGPT and Elagrade, presents an innovative solution to streamline this process, ensuring timely, detailed feedback for students while respecting teachers'' work-life balance'
-coverImage: '/images/how-english-language-arts--teachers-can-embrace-ai-essay-grading-to-meet-educational-demands-k3Mz.png'
-publishedAt: '2024-01-22T09:49:39.000Z'
+  name: "Andrei Sucman"
+  picture: "https://avatars.githubusercontent.com/u/67225216?v=4"
+slug: "how-ela-teachers-can-embrace-ai-essay-grading"
+description: "AI essay grading using ChatGPT and Elagrade, presents an innovative solution to streamline this process, ensuring timely, detailed feedback for students while respecting teachers' work-life balance"
+coverImage: "/images/how-english-language-arts--teachers-can-embrace-ai-essay-grading-to-meet-educational-demands-k3Mz.png"
+publishedAt: "2024-01-22T09:49:39.000Z"
 ---
 
 ![English teacher grading essays with AI](/images/how-english-language-arts--teachers-can-embrace-ai-essay-grading-to-meet-educational-demands-QyMz.png)

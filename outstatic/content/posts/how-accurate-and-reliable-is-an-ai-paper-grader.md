@@ -5,7 +5,7 @@ author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
 slug: 'how-accurate-and-reliable-is-ai-essay-grading'
-description: ' How good is the quality of grading with AI? Here we explore the advantages and disadvantages of using ChatGPT and the 4 advantages Elagrade has over ChatGPT for grading papers.'
+description: 'How good is the quality of grading with AI? Here we explore the advantages and disadvantages of using ChatGPT and the 4 advantages Elagrade has over ChatGPT for grading papers.'
 coverImage: '/images/how-accurate-and-reliable-is-an-ai-paper-grader-U1Nz.webp'
 publishedAt: '2024-01-31T17:16:30.000Z'
 ---
