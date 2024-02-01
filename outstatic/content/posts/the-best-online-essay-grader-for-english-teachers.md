@@ -5,7 +5,7 @@ author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
 slug: 'the-best-online-essay-grader-for-english-teachers'
-description: 'What online essay grader is best for ELA teachers and why? In this article we compare the AI essay grading software and discuss their strengths and weaknesses'
+description: 'What online essay grader is best for ELA teachers and why? In this article we compare the AI essay grading software and discuss their strengths and weaknesses.'
 coverImage: '/images/the-best-online-essay-grader-for-english-teachers-izod-Q2NT.webp'
 publishedAt: '2024-02-01T18:44:51.775Z'
 ---
