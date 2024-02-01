@@ -18,6 +18,9 @@ export async function getServerSideProps(ctx: any) {
 
   const staticPages = [
     {
+      loc: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog/the-best-online-essay-grader-for-english-teachers`,
+    },
+    {
       loc: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog/how-accurate-and-reliable-is-an-ai-paper-grader`,
     },
     {
