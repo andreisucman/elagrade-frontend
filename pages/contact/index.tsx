@@ -25,7 +25,7 @@ const ContactPage: React.FC = () => {
       </Head>
       <main className={styles.container}>
         <div className={styles.wrapper}>
-          <h2 className={styles.title}>Contact</h2>
+          <h1 className={styles.title}>Contact</h1>
           <p className={styles.paragraph}>
             Reclaim your time for self-care, family, and personal development.
             Relieve stress and feel happier every day!

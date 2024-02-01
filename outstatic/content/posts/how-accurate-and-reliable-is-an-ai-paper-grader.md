@@ -4,7 +4,7 @@ status: 'published'
 author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
-slug: 'how-accurate-and-reliable-is-an-ai-paper-grader'
+slug: 'how-accurate-and-reliable-is-ai-essay-grading'
 description: ' How good is the quality of grading with AI? Here we explore the advantages and disadvantages of using ChatGPT and the 4 advantages Elagrade has over ChatGPT for grading papers.'
 coverImage: '/images/how-accurate-and-reliable-is-an-ai-paper-grader-U1Nz.webp'
 publishedAt: '2024-01-31T17:16:30.000Z'
@@ -12,7 +12,7 @@ publishedAt: '2024-01-31T17:16:30.000Z'
 
 ![English teacher is supervising a robot that is grading a paper](/images/how-accurate-and-reliable-is-an-ai-paper-grader-M0Nz.webp)
 
-AI grading is becoming the new norm in education. The reason is simple - less effort, better results.
+AI essay grading is becoming the new norm in education. The reason is simple - less effort, better results.
 
 Not that long ago a teacher had to spend 5-10 minutes to grade one written assignment (typically 500 words).
 
@@ -24,7 +24,7 @@ But how reliable is grading essays with AI? Can you just hand the result to the 
 
 The answer is: "It depends". In particular, it depends on the model of the AI that you're using.
 
-## The Best AI Paper Grader
+## The Best AI Essay Grader
 
 Just like with everything, there are many models of AI out there. Some are free, most - not.
 

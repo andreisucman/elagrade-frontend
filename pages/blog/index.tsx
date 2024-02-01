@@ -27,7 +27,7 @@ export default function Index({ posts }: Props) {
       </Head>
       <BlogAnnouncement />
       <div className={styles.container}>
-        <h2>Blog</h2>
+        <h1 className={styles.title}>Blog</h1>
         {posts?.length > 0 ? (
           <div className={styles.content}>
             {posts.map((post: any, index: number) => {

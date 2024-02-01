@@ -11,7 +11,7 @@ const Terms = () => {
       </Head>
       <div className={styles.container}>
         <div className={styles.wrapper}>
-          <h2 className={styles.title}>Terms Of Service</h2>
+          <h1 className={styles.title}>Terms Of Service</h1>
           <h3>Acceptance of Terms</h3>
           <p>
             By accessing or using the <b>elagrade.com</b> website (the

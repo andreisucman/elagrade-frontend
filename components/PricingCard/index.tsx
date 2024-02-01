@@ -71,13 +71,14 @@ const PricingCard = ({
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.totalPrice}>${priceRef.current.toFixed(2)} USD</p>
         <p className={styles.totalPages}>
-          Pages: {pagesRef.current.toFixed(0)}
+          Pages: {pagesRef.current.toFixed(0)} (500 words)
         </p>
         <p>PPP: ${PPP} USD</p>
         <p className={styles.extra}>
           Extra: {isPrepaid ? "\u2500" : `$${extra} USD`}
         </p>
         <p className={styles.explanation}>{getExplanation(title)}</p>
+        <p className={styles.explanation}>Email and phone support</p>
         {isPrepaid && priceId && (
           <label className={styles.range_label}>
             <input

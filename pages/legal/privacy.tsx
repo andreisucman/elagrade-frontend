@@ -11,7 +11,7 @@ const Privacy = () => {
       </Head>
       <div className={styles.container}>
         <div className={styles.wrapper}>
-          <h2 className={styles.title}>Privacy Policy</h2>
+          <h1 className={styles.title}>Privacy Policy</h1>
           <h3>Introduction</h3>
           <p>
             This Privacy Policy outlines the practices of Elagrade (PURRMA LLC)
