@@ -1,0 +1,52 @@
+@import "../../styles/helpers/animations.scss";
+
+.icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  &_s {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &_m {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  &_b {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  &__google {
+    background-image: url("../../public/assets/google.svg");
+  }
+
+  &__sleep {
+    background-image: url("../../public/assets/sleep.svg");
+  }
+
+  &__workout {
+    background-image: url("../../public/assets/workout.svg");
+  }
+
+  &__money {
+    background-image: url("../../public/assets/money.svg");
+  }
+
+  &__game {
+    background-image: url("../../public/assets/game.svg");
+  }
+
+  &__eye {
+    background-image: url("../../public/assets/eye.svg");
+  }
+  
+  &__eye_crossed {
+    background-image: url("../../public/assets/eye_crossed.svg");
+  }
+}

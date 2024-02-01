@@ -1,0 +1,62 @@
+@import "../../../styles/helpers/mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 0 0.25rem;
+
+  &__signup {
+    width: 100%;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.button {
+  cursor: pointer;
+  
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--grey);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: var(--grey-light);
+  }
+}
+
+.link {
+  cursor: pointer;
+  color: var(--black);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+
+  &_active {
+    font-weight: 700;
+    position: relative;
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+}

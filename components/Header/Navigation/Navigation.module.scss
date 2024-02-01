@@ -1,0 +1,74 @@
+@import "../../../styles/helpers/mixins.scss";
+
+.container {
+  width: 100%;
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+}
+
+.desktop_list {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    gap: 2rem;
+    width: 100%;
+    max-width: 40rem;
+    padding-right: 1rem;
+    list-style: none;
+  }
+}
+
+.link {
+  @include desktop {
+    cursor: pointer;
+    color: var(--black);
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      opacity: 0.9;
+    }
+
+    &_active {
+      font-weight: 700;
+      position: relative;
+
+      &:hover {
+        color: var(--black);
+      }
+    }
+  }
+}
+
+.link {
+  cursor: pointer;
+  color: var(--black);
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+
+  &_active {
+    font-weight: 700;
+    position: relative;
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+}

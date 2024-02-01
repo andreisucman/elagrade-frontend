@@ -1,0 +1,38 @@
+@import "../../styles/helpers/animations.scss";
+
+.container {
+  animation: fadeIn 0.5s ease-in-out;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto;
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+.paragraph {
+  &:last-of-type {
+    margin-bottom: 1rem;
+  }
+}
+
+.title {
+  align-self: flex-start;
+  font-size: 2rem;
+}
+
+.email {
+  padding: 2rem;
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey);
+  width: 100%;
+  text-align: center;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+

@@ -1,0 +1,13 @@
+.container {
+  cursor: pointer;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: white;
+  z-index: 3;
+  width: 100%;
+  border: 1px solid var(--grey-light);
+}

@@ -1,0 +1,51 @@
+@import "../../../../styles/helpers/mixins.scss";
+
+.container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  min-width: 24px;
+  min-height: 24px;
+  width: 24px;
+  height: 24px;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.stick {
+  height: 2px;
+  width: 100%;
+  background-color: var(--black);
+  border-radius: 20%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.topStick {
+  transform: translateY(0);
+}
+
+.middleStick {
+  opacity: 1;
+}
+
+.bottomStick {
+  transform: translateY(0);
+}
+
+.container.open .topStick {
+  transform: translateY(8px) rotate(45deg);
+  opacity: 0;
+}
+
+.container.open .middleStick {
+  opacity: 0;
+}
+
+.container.open .bottomStick {
+  transform: translateY(-8px) rotate(-45deg);
+  opacity: 0;
+}

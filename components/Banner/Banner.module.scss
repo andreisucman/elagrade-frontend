@@ -1,0 +1,90 @@
+@import "../../styles/helpers/mixins.scss";
+@import "../../styles/helpers/animations.scss";
+
+.container {
+  position: relative;
+
+  background-image: url("../../public/assets/banner.webp");
+  background-size: cover;
+  background-position: 50% 25%;
+
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: calc(100vh - var(--header-height) - var(--address-bar-height));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--grey-light);
+  border-top: 1px solid var(--grey-light);
+
+  animation: fadeIn 1s ease-in-out forwards;
+
+  @include laptop {
+    height: calc(100vh - var(--header-height));
+    height: calc(100dvh - var(--header-height));
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  @include laptop {
+    position: absolute;
+    margin-top: unset;
+    border-radius: 1rem;
+
+    top: 55%;
+    left: 2rem;
+    transform: translateY(-75%);
+
+    padding: 2rem;
+  }
+
+  @include desktop {
+    left: 5rem;
+  }
+}
+
+.title {
+  line-height: 140%;
+
+  @include laptop {
+    font-size: 2.5rem;
+  }
+
+  @include desktop {
+    font-size: 2.75rem;
+  }
+}
+
+.subtitle {
+  line-height: 140%;
+
+  @include laptop {
+    font-size: 1.65rem;
+  }
+
+  @include desktop {
+    font-size: 1.8rem;
+  }
+}
+
+.brandLine {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-top: auto;
+  background-image: url("../../public/assets/brand_line.webp");
+  background-color: var(--grey-light);
+  height: 4.75rem;
+  width: 100%;
+}
