@@ -1,16 +1,16 @@
 ---
-title: "The Best Online Essay Grader For English Teachers"
-status: "published"
+title: 'The Best Online Essay Grader For English Teachers'
+status: 'draft'
 author:
-  name: "Andrei Sucman"
-  picture: "https://avatars.githubusercontent.com/u/67225216?v=4"
-slug: "the-best-online-essay-grader-for-english-teachers"
-description: "What online essay grader is best for ELA teachers and why? In this article we compare the AI essay grading software and discuss their strengths and weaknesses."
-coverImage: "/images/the-best-online-essay-grader-for-english-teachers-gxMD.webp"
-publishedAt: "2024-02-01T15:23:45.439Z"
+  name: 'Andrei Sucman'
+  picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
+slug: 'the-best-online-essay-grader-for-english-teachers'
+description: 'What online essay grader is best for ELA teachers and why? In this article we compare the AI essay grading software and discuss their strengths and weaknesses'
+coverImage: '/images/the-best-online-essay-grader-for-english-teachers-izod-Q2NT.webp'
+publishedAt: '2024-02-01T18:44:51.775Z'
 ---
 
-![](/images/the-best-online-essay-grader-for-english-teachers-IzOD.webp)
+![](/images/the-best-online-essay-grader-for-english-teachers-gxmd-kyNj.webp)
 
 AI essay grading is a new trend that makes life easier for English language teachers.
 
@@ -30,13 +30,13 @@ You might think it's the same thing, but it isn't. Here's why.
 
 An essay grading tool has a few critical differences that set it apart from the tools that just help write better.
 
-First is their focus on analysis vs improvement.
+1\. First is their focus on analysis vs improvement.
 
 The primary aim of an online essay grader is to grade, not improve the paper.
 
 Improvement is what the student will have to do themselves after they get their feedback. Therefore, the interface should clearly display the grade instead of focusing on how to improve the paper.
 
-Second is the ability to set your grading criteria (custom rubrics)
+2\. Second is the ability to set your grading criteria (custom rubrics)
 
 A good online essay grader must support personal grading criteria. You should be able to tell it how you grade your papers so that it mirrors your personal grading style.
 
@@ -44,7 +44,7 @@ This is important when you need to assign more weight to some aspect of the writ
 
 As a fact, tools for helping write better essays don't support this as this is out of their scope.
 
-Third is the ability to provide targeted feedback
+3\. Third is the ability to provide targeted feedback
 
 Students and parents often expect specific feedback. If the teacher's remarks are broad and lack references they may hurt the credibility and turn into unnecessary Q&A sessions with parents.
 
@@ -52,43 +52,41 @@ That's why an AI essay grader for teachers should provide detailed feedback with
 
 Again, a general essay improvement tool does not have this feature.
 
-Fourth is the focus on meaning, not just structure.
+4\. Fourth is the focus on meaning, not just structure.
 
 Grading essays is more than just checking grammar and sentence structure. A good tool must understand the meaning and how different parts of the text relate to each other.
 
 This involves using AI for text analysis, and more often than not is out of the scope of the general essay improvement tools.
 
-## The Best Online Essay Grader
+## Identifying The Best Online Essay Grader
 
-With these criteria in mind, let's filter out the tools that are not related to the teaching profession and compare those that are.
-
-The essay grading software that is not meant for teachers
+With these criteria in mind, let's filter out the tools that are not related to grading and compare those that are.
 
 The following tools are great options to improve writing, but not grading essays.
 
-They either lack the ability to set grading criteria, don't provide references to the lines of the text, or focus on the structure and word combination rather than meaning.
+They either lack the ability to set grading criteria, don't provide references to the lines of the text, or focus on the structure and word combination rather than the whole meaning of the text.
 
-### AI Essay Tools Not For Grading
+### Tools That Aren't Meant For Grading
 
-[ProWritingAid Essay Checker](https://prowritingaid.com/essay-checker) - doesn't support grading and meaning analysis
+[ProWritingAid Essay Checker](https://prowritingaid.com/essay-checker)
 
-[QuillBot Essay Checker](https://quillbot.com/essay-checker) - doesn't support grading and meaning analysis
+[QuillBot Essay Checker](https://quillbot.com/essay-checker)
 
-[Grammarly Essay Checker](https://www.grammarly.com/essay-checker) - doesn't support grading and meaning analysis
+[Grammarly Essay Checker](https://www.grammarly.com/essay-checker)
 
-[Online Essay Grader](https://www.onlineessaygrader.com/) - doesn't support grading and meaning analysis (this is a wrapper of Grammarly)
+[Online Essay Grader](https://www.onlineessaygrader.com/)
 
-[Edu Birdie Writing Tool](https://edubirdie.com/birdiedon-writingtool) - doesn't support meaning analysis
+[Edu Birdie Writing Tool](https://edubirdie.com/birdiedon-writingtool)
 
-[Paperrater](https://www.paperrater.com/proofreader) - doesn't support meaning analysis
+[Paperrater](https://www.paperrater.com/proofreader)
 
-These tools are excellent aids for writing text.
+These tools are excellent aids for writing.
 
-As for the grading, the options we discuss further down are specifically designed for this task and provide a better value to the teachers.
+As for the grading, the options we discuss further down are specifically designed for this task and provide a better value for the teachers.
 
-## The AI Essay Grading Tools For Teachers
+### The AI Essay Grading Tools For Teachers
 
-[1.Elagrade.com](http://1.Elagrade.com)
+1\. [Elagrade.com](Elagrade.com)
 
 **Benefits:**
 
@@ -106,7 +104,7 @@ As for the grading, the options we discuss further down are specifically designe
 
 - Does not have AI detection
 
-  2.[EssayGrader.ai](essaygrader.ai)
+2\. [EssayGrader.ai](EssayGrader.ai)
 
 **Benefits:**
 
@@ -132,7 +130,7 @@ Otherwise the free version of ChatGPT is famous for making things up, a.k.a 'hal
 
 In addition ChatGPT being a versatile tool, requires some setup, fine tuning and quite a bit of manual work.
 
-To learn more about about grading papers with ChatGPT read How [ELA Teachers Can Use AI Essay Grading to Meet Educational Demands.](https://elagrade.com/blog/how-ela-teachers-can-embrace-ai-essay-grading)
+To learn more about about grading papers with ChatGPT read [How ELA Teachers Can Use AI Essay Grading to Meet Educational Demands](https://elagrade.com/blog/how-ela-teachers-can-embrace-ai-essay-grading)
 
 ## Which Online Essay Grader Is Best?
 
@@ -140,13 +138,13 @@ As you can see, both Elagrade and EssayGrader support the critical requirements 
 
 These are:
 
-1. custom grading criteria,
+1\. custom grading criteria,
 
-2. detailed feedback with line references,
+2\. detailed feedback with line references,
 
-3. meaning analysis, and
+3\. meaning analysis, and
 
-4. bulk grading
+4\. bulk grading
 
 They also both offer free plans.
 
