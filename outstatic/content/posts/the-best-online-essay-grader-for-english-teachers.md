@@ -14,45 +14,33 @@ publishedAt: '2024-02-01T18:44:51.775Z'
 
 AI essay grading is a new trend that makes life easier for English language teachers.
 
-Grading essays can now be done automatically, saving educators many hours of work and energy.
-
-There are many tools for essay analysis and in this article, I explore the best options designed specifically for grading.
-
-First, it's important to emphasize that we're talking about AI Essay Graders for teachers here.
-
-These are the tools designed to aid you in your grading work - not help write better essays.
-
-Therefore, many of the online essay analysis tools are irrelevant for our comparison as they're geared towards helping write better essays, not grading essays.
-
-You might think it's the same thing, but it isn't. Here's why.
+These are the tools designed to aid English teachers in their grading work - helping them meet educational demands and avoid unpaid labor on weekends and sick days.
 
 ## What Is Special About An Online Essay Grader For Teachers
 
-An essay grading tool has a few critical differences that set it apart from the tools that just help write better.
+An essay grading tool has a few critical differences that set it apart from the programs that just help write better.
 
-**1. First is their focus on analysis vs improvement.**
+**1. It focuses on analysis vs improvement**
 
 The primary aim of an online essay grader is to grade, not improve the paper.
 
 Improvement is what the student will have to do themselves after they get their feedback. Therefore, the interface should clearly display the grade instead of focusing on how to improve the paper.
 
-**2. Second is the ability to set your grading criteria (custom rubrics)**
+**2. It lets you set your grading criteria (custom rubrics)**
 
 A good online essay grader must support personal grading criteria. You should be able to tell it how you grade your papers so that it mirrors your personal grading style.
 
 This is important when you need to assign more weight to some aspect of the writing, such as clarity or focus or maybe the student's ability to use the tenses correctly.
 
-As a fact, tools for helping write better essays don't support this as this is out of their scope.
+**3. It provides targeted feedback**
 
-**3. Third is the ability to provide targeted feedback**
+Students and parents expect specific feedback. If the teacher's remarks are broad and lack references they may hurt the credibility and turn into unnecessary Q&A sessions.
 
-Students and parents often expect specific feedback. If the teacher's remarks are broad and lack references they may hurt the credibility and turn into unnecessary Q&A sessions with parents.
+That's why a good AI essay grader for teachers should provide detailed feedback with direct references to the lines of text that it relates to.
 
-That's why an AI essay grader for teachers should provide detailed feedback with direct references to the lines of text that it relates to.
+A general essay improvement tool does not typically have this feature.
 
-Again, a general essay improvement tool does not have this feature.
-
-**4. Fourth is the focus on meaning, not just structure.**
+**4. It focuses on meaning, not only structure.**
 
 Grading essays is more than just checking grammar and sentence structure. A good tool must understand the meaning and how different parts of the text relate to each other.
 
@@ -62,9 +50,9 @@ This involves using AI for text analysis, and more often than not is out of the 
 
 With these criteria in mind, let's filter out the tools that are not related to grading and compare those that are.
 
-The following tools are great options to improve writing, but not grading essays.
+The following tools are great options for improving writing, but not grading essays.
 
-They either lack the ability to set grading criteria, don't provide references to the lines of the text, or focus on the structure and word combination rather than the whole meaning of the text.
+They either lack the ability to set grading criteria, don't provide references to the lines of the text, or focus on the structure and word combination rather than the whole meaning of the paper.
 
 ### Tools That Aren't Meant For Grading
 
@@ -90,11 +78,15 @@ As for the grading, the options we discuss further down are specifically designe
 
 **Benefits:**
 
+\+ Has a free plan
+
+\+ There are no additional limitations on the free plan
+
 \+ Supports custom grading criteria (rubrics)
 
-\+ Supports meaning analysis
-
 \+ Provides detailed feedback with references to lines
+
+\+ Supports meaning analysis
 
 \+ Supports handwritten text (photos), pdf, doc, and txt
 
@@ -103,10 +95,6 @@ As for the grading, the options we discuss further down are specifically designe
 \+ Supports grading papers in bulk on all plans
 
 \+ The class report is available in a .doc file
-
-\+ Provides a free plan
-
-\+ There are no additional limitations on the free plan
 
 **Limitations:**
 
