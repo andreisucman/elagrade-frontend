@@ -30,13 +30,13 @@ You might think it's the same thing, but it isn't. Here's why.
 
 An essay grading tool has a few critical differences that set it apart from the tools that just help write better.
 
-1\. First is their focus on analysis vs improvement.
+**1. First is their focus on analysis vs improvement.**
 
 The primary aim of an online essay grader is to grade, not improve the paper.
 
 Improvement is what the student will have to do themselves after they get their feedback. Therefore, the interface should clearly display the grade instead of focusing on how to improve the paper.
 
-2\. Second is the ability to set your grading criteria (custom rubrics)
+**2. Second is the ability to set your grading criteria (custom rubrics)**
 
 A good online essay grader must support personal grading criteria. You should be able to tell it how you grade your papers so that it mirrors your personal grading style.
 
@@ -44,7 +44,7 @@ This is important when you need to assign more weight to some aspect of the writ
 
 As a fact, tools for helping write better essays don't support this as this is out of their scope.
 
-3\. Third is the ability to provide targeted feedback
+**3. Third is the ability to provide targeted feedback**
 
 Students and parents often expect specific feedback. If the teacher's remarks are broad and lack references they may hurt the credibility and turn into unnecessary Q&A sessions with parents.
 
@@ -52,7 +52,7 @@ That's why an AI essay grader for teachers should provide detailed feedback with
 
 Again, a general essay improvement tool does not have this feature.
 
-4\. Fourth is the focus on meaning, not just structure.
+**4. Fourth is the focus on meaning, not just structure.**
 
 Grading essays is more than just checking grammar and sentence structure. A good tool must understand the meaning and how different parts of the text relate to each other.
 
@@ -68,17 +68,17 @@ They either lack the ability to set grading criteria, don't provide references t
 
 ### Tools That Aren't Meant For Grading
 
-[ProWritingAid Essay Checker](https://prowritingaid.com/essay-checker)
+[- ProWritingAid Essay Checker](https://prowritingaid.com/essay-checker)
 
-[QuillBot Essay Checker](https://quillbot.com/essay-checker)
+[- QuillBot Essay Checker](https://quillbot.com/essay-checker)
 
-[Grammarly Essay Checker](https://www.grammarly.com/essay-checker)
+[- Grammarly Essay Checker](https://www.grammarly.com/essay-checker)
 
-[Online Essay Grader](https://www.onlineessaygrader.com/)
+[- Online Essay Grader](https://www.onlineessaygrader.com/)
 
-[Edu Birdie Writing Tool](https://edubirdie.com/birdiedon-writingtool)
+[- Edu Birdie Writing Tool](https://edubirdie.com/birdiedon-writingtool)
 
-[Paperrater](https://www.paperrater.com/proofreader)
+[- Paperrater](https://www.paperrater.com/proofreader)
 
 These tools are excellent aids for writing.
 
@@ -90,47 +90,63 @@ As for the grading, the options we discuss further down are specifically designe
 
 **Benefits:**
 
-- Supports custom grading criteria (rubrics)
-- Supports meaning analysis
-- Provides detailed feedback with references to lines
-- Supports handwritten text (photos), pdf, doc, and txt
-- Provides prepaid payment option
-- Supports grading papers in bulk on all plans
-- The class report is available in a .doc file
-- Provides a free plan with 20 pages/month (500 words each)
-- There are no additional limitations on the free plan
+\+ Supports custom grading criteria (rubrics)
+
+\+ Supports meaning analysis
+
+\+ Provides detailed feedback with references to lines
+
+\+ Supports handwritten text (photos), pdf, doc, and txt
+
+\+ Provides prepaid payment option
+
+\+ Supports grading papers in bulk on all plans
+
+\+ The class report is available in a .doc file
+
+\+ Provides a free plan
+
+\+ There are no additional limitations on the free plan
 
 **Limitations:**
 
-- Does not have AI detection
+\- Does not have AI detection
 
 2\. [EssayGrader.ai](EssayGrader.ai)
 
 **Benefits:**
 
-- Provides a free plan with 10 essays/month (1000 words each)
-- Offers AI detection starting from the pro plan ($19.99)
-- Supports grading in bulk starting from the pro plan ($19.99)
-- Provides detailed feedback with references to lines
-- You can set your custom grading criteria (rubrics)
-- Supports saving grading criteria to avoid retyping
+\+ Provides a free plan with 10 essays/month (1000 words each)
+
+\+ Offers AI detection starting from the pro plan ($19.99)
+
+\+ Supports grading in bulk starting from the pro plan ($19.99)
+
+\+ Provides detailed feedback with references to lines
+
+\+ You can set your custom grading criteria (rubrics)
+
+\+ Supports saving grading criteria to avoid retyping
 
 **Limitations:**
 
-- The plans are limited by word count, the ability for bulk grading, and support
-- The support is only available starting from the lite plan ($8.99)
-- Doesn't support handwritten text
-- Does not offer prepaid top-up options
+\- The plans are limited by word count, the ability for bulk grading
+
+\- Customer support is only available starting from the lite plan ($8.99)
+
+\- Doesn't grade handwritten text
+
+\- Does not offer a prepaid plan
 
 ### What about the elephant in the room?
 
-Yes you can use the ChatGPT for grading. But it requires having a premium (Plus) subscription for good results.
+Yes, you can use the ChatGPT for grading. But it requires having a premium (Plus) subscription for good results.
 
 Otherwise the free version of ChatGPT is famous for making things up, a.k.a 'hallucinating', which can quickly turn into an embarrassing situation.
 
 In addition ChatGPT being a versatile tool, requires some setup, fine tuning and quite a bit of manual work.
 
-To learn more about about grading papers with ChatGPT read [How ELA Teachers Can Use AI Essay Grading to Meet Educational Demands](https://elagrade.com/blog/how-ela-teachers-can-embrace-ai-essay-grading)
+To learn more about about grading papers with ChatGPT read [**How ELA Teachers Can Use AI Essay Grading to Meet Educational Demands**](https://elagrade.com/blog/how-ela-teachers-can-embrace-ai-essay-grading)
 
 ## Which Online Essay Grader Is Best?
 
@@ -162,8 +178,8 @@ Ultimately, the best decision would be to test both products and see which reson
 
 ## You may also like:
 
-[How Accurate and Reliable is AI Essay Grading](https://elagrade.com/blog/how-accurate-and-reliable-is-an-ai-paper-grader)
+[**How Accurate and Reliable is AI Essay Grading**](https://elagrade.com/blog/how-accurate-and-reliable-is-an-ai-paper-grader)
 
-[What AI Essay Grader For Teachers Is Easy To Use And Provides Feedback](https://elagrade.com/blog/what-ai-essay-grader-for-teachers-is-easy-to-use-and-provides-feedback)
+[**What AI Essay Grader For Teachers Is Easy To Use And Provides Feedback**](https://elagrade.com/blog/what-ai-essay-grader-for-teachers-is-easy-to-use-and-provides-feedback)
 
-[How ELA Teachers Can Use AI Essay Grading to Meet Educational Demands](https://elagrade.com/blog/how-ela-teachers-can-embrace-ai-essay-grading)
+[**How ELA Teachers Can Use AI Essay Grading to Meet Educational Demands**](https://elagrade.com/blog/how-ela-teachers-can-embrace-ai-essay-grading)
