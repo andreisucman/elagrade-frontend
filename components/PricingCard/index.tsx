@@ -71,7 +71,7 @@ const PricingCard = ({
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.totalPrice}>${priceRef.current.toFixed(2)} USD</p>
         <p className={styles.totalPages}>
-          Pages: {pagesRef.current.toFixed(0)} (500 words)
+          Pages: {pagesRef.current.toFixed(0)} (500 words each)
         </p>
         <p>PPP: ${PPP} USD</p>
         <p className={styles.extra}>
