@@ -3,7 +3,7 @@ import styles from "./AnnouncementBar.module.scss";
 
 type Props = {
   message: string;
-  onClick: () => any;
+  onClick?: () => any;
   icon: any;
   customClass?: string;
   customStyle?: { [key: string]: string };

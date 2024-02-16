@@ -382,15 +382,8 @@ const Grading = () => {
 
       <AnnouncementBar
         icon={<FaRegLightbulb />}
-        customStyle={{ backgroundColor: "unset" }}
+        customStyle={{ backgroundColor: "unset", cursor: "default" }}
         message="The free quota updates every month"
-        onClick={() =>
-          setAlertMessage(
-            `We've sent a verification email to ${
-              userDetails?.email ? userDetails.email : "your email"
-            }. Please confirm it.`
-          )
-        }
       />
       {showGradingOverlay && (
         <GradingOverlay
