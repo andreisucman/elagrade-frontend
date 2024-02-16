@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home | Elagrade - AI Writing Grader For ELA Teachers</title>
+        <title>Elagrade - AI Writing Grader For ELA Teachers</title>
         <meta
           name="description"
           content={

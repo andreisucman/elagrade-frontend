@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext, useRef } from "react";
 import Head from "next/head";
 import { v4 } from "uuid";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaRegLightbulb } from "react-icons/fa6";
 import { GeneralContext } from "@/state/GeneralContext";
 import callTheServer from "@/functions/callTheServer";
 import GradingHeader from "@/components/GradingHeader";
@@ -368,8 +369,21 @@ const Grading = () => {
       </Head>
       <AnnouncementBar
         icon={<BsExclamationDiamond />}
-        message="Verify your email"
+        message="Please verify your email"
         customClass={announcementBarClass}
+        onClick={() =>
+          setAlertMessage(
+            `We've sent a verification email to ${
+              userDetails?.email ? userDetails.email : "your email"
+            }. Please confirm it.`
+          )
+        }
+      />
+
+      <AnnouncementBar
+        icon={<FaRegLightbulb />}
+        customStyle={{ backgroundColor: "unset" }}
+        message="The free quota updates every month"
         onClick={() =>
           setAlertMessage(
             `We've sent a verification email to ${
