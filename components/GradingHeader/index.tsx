@@ -11,7 +11,7 @@ const GradingHeader = () => {
     <div className={styles.container}>
       <h2 className={styles.title}>Grading</h2>
       <p className={styles.left} onClick={() => router.push("/pricing")}>
-        {userDetails?.pagesLeft?.toFixed(1)} pages left
+        {userDetails?.pagesLeft?.toFixed(1)} pages
       </p>
     </div>
   );
