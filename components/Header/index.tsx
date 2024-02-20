@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import { GeneralContext } from "@/state/GeneralContext";
-import Image from "next/image";
 import logo from "../../public/logo.svg";
 import Burger from "./Navigation/Burger";
 import Navigation from "./Navigation";
@@ -73,6 +72,8 @@ const Header: React.FC = () => {
       <div className={styles.wrapper}>
         <div className={styles.rectangle} onClick={() => router.push("/")}>
           <img
+            rel="preload"
+            fetchPriority="high"
             src={logo.src}
             alt="logo"
             width={300}
