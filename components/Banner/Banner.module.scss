@@ -18,10 +18,12 @@
   align-items: center;
   border-bottom: 1px solid var(--grey-light);
   border-top: 1px solid var(--grey-light);
+  max-height: 50rem;
 
   animation: fadeIn 1s ease-in-out forwards;
 
   @include laptop {
+    max-height: unset;
     height: calc(100dvh - var(--header-height));
   }
 }
@@ -67,6 +69,8 @@
 
 .subtitle {
   line-height: 140%;
+  font-weight: 600;
+  font-size: 1.5rem;
 
   @include laptop {
     font-size: 1.65rem;
