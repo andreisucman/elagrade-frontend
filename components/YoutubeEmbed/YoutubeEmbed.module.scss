@@ -7,7 +7,6 @@
   border-radius: 1rem;
 
   position: relative;
-  padding-top: 56.25%;
 }
 
 .player {
@@ -28,4 +27,26 @@
     height: 100%;
     clip-path: inset(1px 1px);
   }
+}
+
+.play_wrapper {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4rem;
+  pointer-events: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba($color: #000000, $alpha: 0.25);
+}
+
+.play {
+  width: 2rem;
+  height: 2rem;
 }
