@@ -11,6 +11,12 @@ import Button from "@/components/Button";
 import Banner from "@/components/Banner";
 import styles from "./Index.module.scss";
 
+export function getStaticProps() {
+  return {
+    props: {},
+  };
+}
+
 export default function Home() {
   const { userDetails } = useContext(GeneralContext);
   const router = useRouter();
