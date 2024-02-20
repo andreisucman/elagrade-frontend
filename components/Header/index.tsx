@@ -13,7 +13,6 @@ const PreloadLogo = () => {
     link.rel = "preload";
     link.as = "image";
     link.href = `${process.env.NEXT_PUBLIC_FRONTEND_URL}/${logo.src}`;
-    link.fetchPriority = "high";
     document.head.appendChild(link);
 
     return () => {
