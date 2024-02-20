@@ -7,6 +7,23 @@ import Navigation from "./Navigation";
 import Button from "../Button";
 import styles from "./Header.module.scss";
 
+const PreloadLogo = () => {
+  React.useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = `${process.env.NEXT_PUBLIC_FRONTEND_URL}/${logo.src}`;
+    link.fetchPriority = "high";
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
+  return <img src={logo.src} alt="logo" width="200" height="36" />;
+};
+
 const Header: React.FC = () => {
   const router = useRouter();
   const [activePage, setActivePage] = useState("/");
@@ -71,14 +88,7 @@ const Header: React.FC = () => {
     <header className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.rectangle} onClick={() => router.push("/")}>
-          <img
-            rel="preload"
-            src={logo.src}
-            alt="logo"
-            width={300}
-            height={54}
-            className={styles.logo}
-          />
+          <PreloadLogo />
         </div>
         <div className={styles.nav_wrapper}>
           <Navigation
