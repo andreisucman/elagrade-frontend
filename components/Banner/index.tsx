@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import styles from "./Banner.module.scss";
 
@@ -7,11 +7,23 @@ type Props = {
 };
 
 const Banner = ({ handleRoute }: Props) => {
+  const [containerStyle, setContainerStyle] = useState<any>();
+
+  useEffect(() => {
+    setContainerStyle({
+      height: "calc(100dvh - 4.625rem)",
+    });
+  }, []);
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={containerStyle ? containerStyle : {}}
+    >
       <div className={styles.wrapper}>
         <h1 className={styles.title}>Helping Teachers Love Grading</h1>
-        <h3 className={styles.subtitle}>Free AI Essay Grader For ELA Teachers</h3>
+        <h3 className={styles.subtitle}>
+          Free AI Essay Grader For ELA Teachers
+        </h3>
         <Button
           customStyle={{
             width: "100%",
