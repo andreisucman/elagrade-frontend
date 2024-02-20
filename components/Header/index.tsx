@@ -73,7 +73,6 @@ const Header: React.FC = () => {
         <div className={styles.rectangle} onClick={() => router.push("/")}>
           <img
             rel="preload"
-            fetchPriority="high"
             src={logo.src}
             alt="logo"
             width={300}

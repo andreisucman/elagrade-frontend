@@ -26,11 +26,7 @@ export default function YoutubeEmbed({ videoId, title }: Props) {
         title={title} // a11y, always provide a title for iFrames: https://dequeuniversity.com/tips/provide-iframe-titles Help the web be accessible ;)
         noCookie={true} // Default false, connect to YouTube via the Privacy-Enhanced Mode using https://www.youtube-nocookie.com
       />
-      {showPlay && (
-        <div className={styles.play_wrapper}>
-          <FaPlay className={styles.play} />
-        </div>
-      )}
+      {showPlay && <FaPlay className={styles.play} />}
     </div>
   );
 }
