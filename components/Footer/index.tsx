@@ -39,13 +39,13 @@ const Footer: React.FC = () => {
     <section className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.socials}>
-          <a href="https://www.reddit.com/user/elagrade_com">
+          <a href="https://www.reddit.com/user/elagrade_com" aria-label="Elagrade reddit link">
             <PiRedditLogoLight className={styles.icon} />
           </a>
-          <a href="https://www.facebook.com/elagrade">
+          <a href="https://www.facebook.com/elagrade" aria-label="Elagrade facebook link">
             <PiFacebookLogo className={styles.icon} />
           </a>
-          <a href="https://pinterest.com/elagrade/">
+          <a href="https://pinterest.com/elagrade/" aria-label="Elagrade pinterest link">
             <PiPinterestLogo className={styles.icon} />
           </a>
         </div>

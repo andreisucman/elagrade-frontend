@@ -66,7 +66,7 @@ export default function Home() {
             customStyle={{
               width: "100%",
             }}
-            id={"home_upper_cta"}
+            id={"home_middle_cta"}
             innerStyle={{ fontSize: "1.15rem" }}
             buttonText="Start grading now"
             onClick={handleRoute}
@@ -75,7 +75,7 @@ export default function Home() {
 
         <div className={styles.full_width} id="quickstart">
           <div className={styles.group} style={{ gap: "1.5rem" }}>
-            <h3 className={styles.how_title} >End The Unpaid After-Hours</h3>
+            <h3 className={styles.how_title}>End The Unpaid After-Hours</h3>
 
             <YoutubeEmbed
               videoId="xAVr28iKU4s"
