@@ -75,8 +75,8 @@ const Header: React.FC = () => {
           <Image
             src={logo.src}
             alt="logo"
-            width={logo.width}
-            height={logo.height}
+            width={300}
+            height={54}
             className={styles.logo}
             quality={100}
           />
