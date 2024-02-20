@@ -10,7 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@hotjar/browser": "^1.0.9",
     "@stripe/react-stripe-js": "^2.4.0",
     "@stripe/stripe-js": "^2.2.2",
     "next": "14.1.0",

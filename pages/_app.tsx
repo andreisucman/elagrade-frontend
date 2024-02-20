@@ -3,20 +3,12 @@ import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
 import Layout from "../components/Layout";
 import GeneralContextProvider from "@/state/GeneralContext";
-import Hotjar from "@hotjar/browser";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./global-env.d.ts";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    const siteId = 3805467;
-    const hotjarVersion = 6;
-
-    Hotjar.init(siteId, hotjarVersion);
-  }, []);
-
   const router = useRouter();
 
   useEffect(() => {
