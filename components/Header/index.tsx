@@ -72,13 +72,12 @@ const Header: React.FC = () => {
     <header className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.rectangle} onClick={() => router.push("/")}>
-          <Image
+          <img
             src={logo.src}
             alt="logo"
             width={300}
             height={54}
             className={styles.logo}
-            quality={100}
           />
         </div>
         <div className={styles.nav_wrapper}>
