@@ -28,7 +28,7 @@ In other words, editing is easier than writing.
 
 And so, if doing some work seems okay, this guide is for you.
 
-If, however, you want a done-for-you solution, with superior quality without having to lose time on manual copy-pasting and double-checking, check out our [best online essay grader article,](https://elagrade.com/blog/the-best-online-essay-grader-for-english-teachers) where we discuss the different features of the specialized essay graders and how they're better than general LLMs like ChatGPT.
+If, however, you want a done-for-you solution, with superior quality without having to lose time on manual copy-pasting and double-checking, check out our [**best online essay grader article**,](https://elagrade.com/blog/the-best-online-essay-grader-for-english-teachers) where we discuss the different features of the specialized essay graders and how they're better than general LLMs like ChatGPT.
 
 Back to the main subject.
 
@@ -46,17 +46,17 @@ After registering, you'll find yourself on the chat interface that looks somethi
 
 The colors of your screen might be white if you use the light theme in your browser.
 
-From now on, the process is simple.
+**From now on, the process is simple.**
 
-1. You write an instruction where you tell the AI how you want it to grade the paper.
+1\. You write an instruction where you tell the AI how you want it to grade the paper.
 
-2. Then you add the text of the essay to the instruction and paste the whole thing into the chat.
+2\. Then you add the text of the essay to the instruction and paste the whole thing into the chat.
 
-3. The AI reads everything and tries its best to follow your instructions and give you the result you want.
+3\. The AI reads everything and tries its best to follow your instructions and give you the result you want.
 
-4. You check the result, and if the bot missed anything you ask it to correct it.
+4\. You check the result, and if the bot missed anything you ask it to correct it.
 
-5. You then combine all feedback and copy and paste it into a separate file for reference.
+5\. You then combine all feedback and copy and paste it into a separate file for reference.
 
 The steps #4 and #5 take the most of time.
 
@@ -78,7 +78,7 @@ The result will look something like this:
 
 ![chatgpt essay grading interface](/images/chatgpt-interface-essay-grading-Y1MT.webp)
 
-And even though it sounds credible I strongly encourage you to read it and ask for clarification.
+And even though it looks credible I strongly encourage you to read it and ask for clarification.
 
 The free ChatGPT model is notorious for making lies look very trustworthy, so you never know it unless you fact-check it.
 
@@ -98,7 +98,7 @@ That's why considering the cost of time and energy, it might be a better investm
 
 Or even better, use a specialized tool such as Elagrade that can grade multiple papers in bulk and save them in a doc file for you, decreasing the amount of time required for grading the whole class to mere minutes.
 
-We cover this in more detail in another article called [how accurate and reliable the AI graders are](https://elagrade.com/blog/how-accurate-and-reliable-is-an-ai-paper-grader).
+We cover this in more detail in another article called [**how accurate and reliable the AI graders are**](https://elagrade.com/blog/how-accurate-and-reliable-is-an-ai-paper-grader).
 
 Check it out if you want to learn more.
 
