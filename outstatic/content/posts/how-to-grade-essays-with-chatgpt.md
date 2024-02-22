@@ -1,6 +1,6 @@
 ---
 title: 'How To Grade Essays With ChatGPT'
-status: 'draft'
+status: 'published'
 author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
@@ -12,11 +12,11 @@ publishedAt: '2024-02-22T17:22:20.641Z'
 
 ![essay grading with ai free using chatgpt](/images/chatgpt_banner-EyNj.webp)
 
-Grading essays with ChatGPT is a great way to save 20-30 hours of time each month. 
+Grading essays with ChatGPT is a great way to save 20-30 hours of time each month.
 
 Given the constraints and high expectations placed on teachers today, automated grading is actually the only way to fulfill these obligations to the fullest.
 
-In this guide, we'll cover how to do it for free using ChatGPT. It's a more manual method, but yeah, it's free. 
+In this guide, we'll cover how to do it for free using ChatGPT. It's a more manual method, but yeah, it's free.
 
 Therefore, it's perfect for those who are willing to spend no more than 0 dollars on this activity.
 
@@ -24,7 +24,7 @@ The downside obviously is that the results have to be checked, which means you'l
 
 And even though this setup kind of defeats the purpose of automated grading, it still saves you the effort of having to understand the convoluted text and come up with meaningful feedback from scratch.
 
-In other words, editing is easier than writing. 
+In other words, editing is easier than writing.
 
 And so, if doing some work seems okay, this guide is for you.
 
@@ -46,25 +46,25 @@ After registering, you'll find yourself on the chat interface that looks somethi
 
 The colors of your screen might be white if you use the light theme in your browser.
 
-From now on, the process is simple. 
+From now on, the process is simple.
 
-1) You write an instruction where you tell the AI how you want it to grade the paper. 
+1. You write an instruction where you tell the AI how you want it to grade the paper.
 
-2) Then you add the text of the essay to the instruction and paste the whole thing into the chat.
+2. Then you add the text of the essay to the instruction and paste the whole thing into the chat.
 
-3) The AI reads everything and tries its best to follow your instructions and give you the result you want.
+3. The AI reads everything and tries its best to follow your instructions and give you the result you want.
 
-4) You check the result, and if the bot missed anything you ask it to correct it.
+4. You check the result, and if the bot missed anything you ask it to correct it.
 
-5) You then combine all feedback and copy and paste it into a separate file for reference.
+5. You then combine all feedback and copy and paste it into a separate file for reference.
 
-The steps #4 and #5 take the most of time. 
+The steps #4 and #5 take the most of time.
 
 That's because the free ChatGPT model often gets things wrong. But we've already said we're doing it for free, so we're sticking with it.
 
-Now, we've said step #1 is giving instructions. 
+Now, we've said step #1 is giving instructions.
 
-Here is a good template to get you started. 
+Here is a good template to get you started.
 
 Replace the text within the \[square brackets\] with your own criteria:
 
@@ -80,19 +80,19 @@ The result will look something like this:
 
 And even though it sounds credible I strongly encourage you to read it and ask for clarification.
 
-The free ChatGPT model is notorious for making lies look very trustworthy, so you never know it unless you fact-check it. 
+The free ChatGPT model is notorious for making lies look very trustworthy, so you never know it unless you fact-check it.
 
 A good idea is to at least ask the "Are you sure?" question a few times. If the answers don't differ much, chances are that the bot is not lying.
 
 ![chatgpt essay grading interface fine tuting](/images/chatgpt-interface-essay-grading-fine-turning-cwOT.webp)
 
-After you've checked the result copy it into a separate doc and keep it for your reference. 
+After you've checked the result copy it into a separate doc and keep it for your reference.
 
 Since you're not grading the papers manually you want to keep the feedback you provide at hand to familiarize yourself in case the student or parents have questions.
 
-This is exactly how you mark essays with AI, using ChatGPT. 
+This is exactly how you mark essays with AI, using ChatGPT.
 
-As you can see it might get really tedious really fast because of the amount of copy-pasting and reading it involves. 
+As you can see it might get really tedious really fast because of the amount of copy-pasting and reading it involves.
 
 That's why considering the cost of time and energy, it might be a better investment to use the paid ChatGPT plan (called ChatGPT plus) to avoid having to check feedback for 'hallucinations'.
 
