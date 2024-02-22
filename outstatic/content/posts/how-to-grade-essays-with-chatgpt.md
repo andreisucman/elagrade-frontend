@@ -74,9 +74,11 @@ Replace the text within the \[square brackets\] with your own criteria:
 
 Then paste the filled-in prompt into the chat and hit Enter.
 
+![chatgpt essay grading interface](/images/chatgpt-interface-essay-grading-Y1MT.webp)
+
 The result will look something like this:
 
-![chatgpt essay grading interface](/images/chatgpt-interface-essay-grading-Y1MT.webp)
+![chatgpt interface with essay grading result](/images/chatgpt-iterface-essay-grading-result-I2ND.webp)
 
 And even though it looks credible I strongly encourage you to read it and ask for clarification.
 
