@@ -76,3 +76,10 @@
   cursor: pointer;
   white-space: nowrap;
 }
+
+.namesCheckboxLabel {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 0.5rem 0.5rem 0;
+}

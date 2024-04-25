@@ -41,6 +41,7 @@ const Grading = () => {
   const [gradingStatus, setGradingStatus] = useState<string | null>(null);
   const [showGradingOverlay, setShowGradingOverlay] = useState<boolean>(false);
   const [processingTime, setProcessingTime] = useState(0);
+  const [studentNamesInFileNames, setStudentNamesInFileNames] = useState(false);
 
   const disableSavingCriteria = useRef(true);
   disableSavingCriteria.current =
@@ -259,6 +260,7 @@ const Grading = () => {
         files: payload,
         assignmentName:
           assignmentName !== "" ? assignmentName : "Untitled assignment",
+        studentNamesInFileNames,
       },
     });
 
@@ -320,13 +322,25 @@ const Grading = () => {
     {
       title: "Upload papers",
       html: (
-        <StudentsArea
-          students={students}
-          onAddStudentCard={onAddStudentCard}
-          onRemoveStudentCard={onRemoveStudentCard}
-          onAddStudentFiles={onAddStudentFiles}
-          onRemoveStudentFile={onRemoveStudentFile}
-        />
+        <>
+          <label className={styles.namesCheckboxLabel}>
+            <input
+              type="checkbox"
+              checked={studentNamesInFileNames}
+              onChange={(e) =>
+                setStudentNamesInFileNames(e.currentTarget.checked)
+              }
+            />
+            Student names are in the file names
+          </label>
+          <StudentsArea
+            students={students}
+            onAddStudentCard={onAddStudentCard}
+            onRemoveStudentCard={onRemoveStudentCard}
+            onAddStudentFiles={onAddStudentFiles}
+            onRemoveStudentFile={onRemoveStudentFile}
+          />
+        </>
       ),
     },
     {
