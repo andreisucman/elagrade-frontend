@@ -34,6 +34,9 @@ const ContactPage: React.FC = () => {
           <p className={styles.email}>info@elagrade.com</p>
           <p>or call this number:</p>
           <p className={styles.email}>+1 323 540 57 18</p>
+          <p style={{ textAlign: "center" }}>
+            Purrma LLC, 30N Gould St Ste R Sheridan WY 82801, US
+          </p>
           <Button
             buttonText={"Start grading now"}
             onClick={handleRoute}
