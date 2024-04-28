@@ -164,12 +164,12 @@ const Grading = () => {
   }
 
   async function handleGrade() {
-    if (!userDetails?.emailVerified)
-      return setAlertMessage(
-        `We've sent a verification email to ${
-          userDetails?.email ? userDetails.email : "your email"
-        }. Please confirm it.`
-      );
+    // if (!userDetails?.emailVerified)
+    //   return setAlertMessage(
+    //     `We've sent a verification email to ${
+    //       userDetails?.email ? userDetails.email : "your email"
+    //     }. Please confirm it.`
+    //   );
 
     /* update upload times */
     const processingTimes = await callTheServer({
@@ -381,7 +381,7 @@ const Grading = () => {
         <title>Grading | Elagrade</title>
         <meta name="description" content={"Elagrade - Grading"} />
       </Head>
-      <AnnouncementBar
+      {/*<AnnouncementBar
         icon={<BsExclamationDiamond />}
         message="Please verify your email"
         customClass={announcementBarClass}
@@ -392,7 +392,7 @@ const Grading = () => {
             }. Please confirm it.`
           )
         }
-      />
+      />*/}
 
       <AnnouncementBar
         icon={<FaRegLightbulb />}
