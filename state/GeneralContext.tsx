@@ -43,20 +43,14 @@ const GeneralContextProvider: React.FC<UserContextProviderProps> = ({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const userLoggedIn =
-      window.location.href.includes("grading") ||
-      window.location.href.includes("results") ||
-      window.location.href.includes("account");
-    if (userLoggedIn) {
-      callTheServer({ endpoint: "getUserData", method: "GET" }).then(
-        (response) => {
-          if (response?.status === 200) {
-            setUserDetails(response.message);
-          }
-          setIsLoading(false);
+    callTheServer({ endpoint: "getUserData", method: "GET" }).then(
+      (response) => {
+        if (response?.status === 200) {
+          setUserDetails(response.message);
         }
-      );
-    }
+        setIsLoading(false);
+      }
+    );
   }, []);
 
   return (
