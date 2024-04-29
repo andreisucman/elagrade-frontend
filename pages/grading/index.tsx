@@ -42,9 +42,7 @@ const Grading = () => {
     null
   );
   const [alertMessage, setAlertMessage] = useState<string | null>(null);
-  const [resendEmailText, setResendEmailText] = useState(
-    ""
-  );
+  const [resendEmailText, setResendEmailText] = useState("");
   const [announcementBarClass, setAnnouncementBarClass] = useState("hidden");
   const { userDetails, setUserDetails, isLoading } = useContext(GeneralContext);
 
@@ -158,6 +156,20 @@ const Grading = () => {
       ...students,
       { name: `Student ${students.length + 1}`, id: v4(), files: [] },
     ]);
+  }
+
+  function addStudentsInBulk(files: FileList | null) {
+    if (!files) return;
+
+    const filesArray = Array.from(files);
+
+    const students: any[] = filesArray.map((file, index) => ({
+      name: `Student ${index + 1}`,
+      id: v4(),
+      files: [file],
+    }));
+
+    setStudents(students);
   }
 
   function onRemoveStudentCard(studentToRemove: any) {
@@ -365,18 +377,31 @@ const Grading = () => {
       title: "Upload papers",
       html: (
         <>
-          <label className={styles.namesCheckboxLabel}>
-            <input
-              type="checkbox"
-              checked={studentNamesInFileNames}
-              onChange={(e) => {
-                const result = e.currentTarget.checked;
-                saveToLocalStorage("studentNamesInFileNames", result);
-                setStudentNamesInFileNames(result);
-              }}
-            />
-            Student names are in the file names
-          </label>
+          <div className={styles.upperRowUpload}>
+            <label className={styles.namesCheckboxLabel}>
+              <input
+                type="checkbox"
+                checked={studentNamesInFileNames}
+                onChange={(e) => {
+                  const result = e.currentTarget.checked;
+                  saveToLocalStorage("studentNamesInFileNames", result);
+                  setStudentNamesInFileNames(result);
+                }}
+              />
+              Student names are in the file names
+            </label>
+            <label className={styles.namesCheckboxLabel}>
+              <input
+                type="file"
+                onChange={(e) => {
+                  addStudentsInBulk(e.currentTarget.files);
+                }}
+                hidden
+                multiple
+              />
+              Bulk upoad
+            </label>
+          </div>
           <StudentsArea
             students={students}
             onAddStudentCard={onAddStudentCard}
