@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button";
+import { deleteAllFromIndexedDb } from "@/functions/indexedDb";
 import styles from "./GradingFooter.module.scss";
 
 type Props = {
@@ -39,7 +40,10 @@ const GradingFooter = ({
           />
           <button
             className={styles.button}
-            onClick={() => window.location.reload()}
+            onClick={async () => {
+              await deleteAllFromIndexedDb();
+              window.location.reload();
+            }}
           >
             Start over
           </button>

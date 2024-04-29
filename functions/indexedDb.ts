@@ -43,7 +43,7 @@ export async function deleteAllFromIndexedDb() {
     const allKeys = await keys();
 
     for (const key of allKeys) {
-      await del(key);
+      if (key) await del(key);
     }
     return true;
   } catch (err) {

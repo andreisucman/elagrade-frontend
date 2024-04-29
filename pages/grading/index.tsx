@@ -13,7 +13,7 @@ import GradingResult from "@/components/GradingResult";
 import { resizeImage } from "@/functions/resizeImage";
 import {
   getAllFromIndexedDb,
-  getFromIndexedDb,
+  deleteAllFromIndexedDb,
   deleteFromIndexedDb,
   saveToIndexedDb,
 } from "@/functions/indexedDb";
