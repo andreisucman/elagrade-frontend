@@ -11,7 +11,16 @@ import GradingFooter from "@/components/GradingFooter";
 import StudentsArea from "@/components/StudentsArea";
 import GradingResult from "@/components/GradingResult";
 import { resizeImage } from "@/functions/resizeImage";
-import { BsExclamationDiamond } from "react-icons/bs";
+import {
+  getAllFromIndexedDb,
+  getFromIndexedDb,
+  deleteFromIndexedDb,
+  saveToIndexedDb,
+} from "@/functions/indexedDb";
+import {
+  getFromLocalStorage,
+  saveToLocalStorage,
+} from "@/functions/localStorage";
 import DescriptionBox from "@/components/DescriptionBox";
 import GradingOverlay from "@/components/GradingOverlay";
 import AnnouncementBar from "@/components/AnnouncementBar";
@@ -29,10 +38,12 @@ const Grading = () => {
   const [gradingResults, setGradingResults] = useState<any>(null);
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
   const [assignmentName, setAssignmentName] = useState("");
-  const [problemPopupMessage, setProblemPopupMessage] = useState(null);
+  const [problemPopupMessage, setProblemPopupMessage] = useState<string | null>(
+    null
+  );
   const [alertMessage, setAlertMessage] = useState<string | null>(null);
   const [resendEmailText, setResendEmailText] = useState(
-    "(Click to resend the email)"
+    ""
   );
   const [announcementBarClass, setAnnouncementBarClass] = useState("hidden");
   const { userDetails, setUserDetails, isLoading } = useContext(GeneralContext);
@@ -58,6 +69,15 @@ const Grading = () => {
     .map((student: any) => student.files)
     .flat().length;
 
+  const savedStudentsNamesInFileNames = getFromLocalStorage(
+    "studentNamesInFileNames",
+    false
+  );
+
+  useEffect(() => {
+    setStudentNamesInFileNames(savedStudentsNamesInFileNames);
+  }, [savedStudentsNamesInFileNames]);
+
   useEffect(() => {
     callTheServer({ endpoint: "getGradingCriteria", method: "GET" }).then(
       async (response: any) => {
@@ -81,24 +101,35 @@ const Grading = () => {
   }, []);
 
   useEffect(() => {
+    getAllFromIndexedDb().then((res) => {
+      if (res) {
+        setStudents(res.reverse());
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     if (!isLoading) {
       if (!userDetails?.emailVerified) setAnnouncementBarClass("");
     }
   }, [isLoading]);
 
   function onAddStudentFiles(studentId: string, newFiles: File[]) {
-    setStudents(
-      students.map((student: any) => {
-        if (student.id === studentId) {
-          return {
-            ...student,
-            files: [...student.files, ...newFiles],
-          };
-        }
+    const newStudents = students.map((student: any) => {
+      if (student.id === studentId) {
+        const record = {
+          ...student,
+          files: [...student.files, ...newFiles],
+        };
 
-        return student;
-      })
-    );
+        saveToIndexedDb({ key: `Elagrade - ${studentId}`, data: record });
+        return record;
+      }
+
+      return student;
+    });
+
+    setStudents(newStudents);
   }
 
   function onRemoveStudentFile(studentId: string, fileName: string) {
@@ -108,10 +139,14 @@ const Grading = () => {
           const updatedFiles = student.files.filter(
             (file: File) => file.name !== fileName
           );
-          return {
+
+          const record = {
             ...student,
             files: updatedFiles,
           };
+
+          saveToIndexedDb({ key: `Elagrade - ${studentId}`, data: record });
+          return record;
         }
         return student;
       })
@@ -131,6 +166,8 @@ const Grading = () => {
     const newStudents = students.filter(
       (student: any) => student.id !== studentToRemove.id
     );
+
+    deleteFromIndexedDb({ key: `Elagrade - ${studentToRemove.id}` });
     setStudents(newStudents);
   }
 
@@ -179,6 +216,7 @@ const Grading = () => {
 
     let averageUploadTime = 60;
     let averageGradingTime = 180;
+
     if (processingTimes?.status === 200) {
       averageUploadTime = processingTimes?.message.uploadTime / 1000;
       averageGradingTime = processingTimes?.message.gradingTime / 1000;
@@ -282,6 +320,10 @@ const Grading = () => {
       }
       setGradingStatus(null);
       setShowGradingOverlay(false);
+    } else {
+      setAlertMessage(response?.message);
+      setGradingStatus(null);
+      setShowGradingOverlay(false);
     }
   }
 
@@ -327,9 +369,11 @@ const Grading = () => {
             <input
               type="checkbox"
               checked={studentNamesInFileNames}
-              onChange={(e) =>
-                setStudentNamesInFileNames(e.currentTarget.checked)
-              }
+              onChange={(e) => {
+                const result = e.currentTarget.checked;
+                saveToLocalStorage("studentNamesInFileNames", result);
+                setStudentNamesInFileNames(result);
+              }}
             />
             Student names are in the file names
           </label>
