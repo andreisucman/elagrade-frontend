@@ -3,3 +3,4 @@ Disallow: /grading
 Disallow: /account
 Disallow: /results
 Disallow: /gpt-auth
+Disallow: /404
