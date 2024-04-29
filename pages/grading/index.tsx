@@ -163,11 +163,16 @@ const Grading = () => {
 
     const filesArray = Array.from(files);
 
-    const students: any[] = filesArray.map((file, index) => ({
-      name: `Student ${index + 1}`,
-      id: v4(),
-      files: [file],
-    }));
+    const students: any[] = filesArray.map((file, index) => {
+      const record = {
+        name: `Student ${index + 1}`,
+        id: v4(),
+        files: [file],
+      };
+
+      saveToIndexedDb({ key: `Elagrade - ${record.id}`, data: record });
+      return record;
+    });
 
     setStudents(students);
   }
