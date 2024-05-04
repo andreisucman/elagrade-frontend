@@ -260,7 +260,7 @@ const Results: React.FC = () => {
             </>
           )}
         </div>
-        {prices.length > 0 && <ChatGptPricingCard />}
+        {/* {prices.length > 0 && <ChatGptPricingCard />} */}
       </main>
     </>
   );
