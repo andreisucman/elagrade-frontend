@@ -132,8 +132,6 @@ const Results: React.FC = () => {
       if (orderData) {
         setOrderData(Object.assign({}, orderData, { prepaidPages }));
       }
-
-      router.push({ pathname: router.pathname, query: {} });
     }
   }
 
