@@ -164,8 +164,6 @@ const Results: React.FC = () => {
         orderData.subscriptionId = subscriptionId;
         setOrderData(orderData);
       }
-
-      router.push({ pathname: router.pathname, query: {} });
     }
   }
 
