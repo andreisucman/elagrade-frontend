@@ -70,7 +70,7 @@ const Results: React.FC = () => {
   useEffect(() => {
     if (!router.isReady) return;
     if (!router.query?.priceId) return;
-    if (!userDetails) return;
+    if (!userDetails?.email) return;
 
     handleCheckout({
       prepaidPages: router?.query?.prepaidPages as string | null,
@@ -108,6 +108,14 @@ const Results: React.FC = () => {
   }) {
     const payload: Payload = { priceId };
     if (prepaidPages) payload.prepaidPages = prepaidPages;
+
+    if (!userDetails?.email) {
+      router.push({
+        pathname: "/sign-in",
+        query: payload,
+      });
+      return;
+    }
 
     const response = await callTheServer({
       endpoint: "createPaymentIntent",
