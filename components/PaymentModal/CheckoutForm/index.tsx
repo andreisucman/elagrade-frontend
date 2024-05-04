@@ -143,7 +143,7 @@ export default function CheckoutForm({
 
   const notReady = isButtonLoading || !stripe || !elements;
 
-  const { isPrepaid, price, pages, prepaidPages, PPP } = orderData;
+  const { isPrepaid, price, pages, prepaidPages, PPP } = orderData || {};
 
   return (
     <form className={styles.form} id="payment-form" onSubmit={handleSubmit}>

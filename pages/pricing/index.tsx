@@ -109,14 +109,6 @@ const Results: React.FC = () => {
     const payload: Payload = { priceId };
     if (prepaidPages) payload.prepaidPages = prepaidPages;
 
-    if (!userDetails?.email) {
-      router.push({
-        pathname: "/sign-in",
-        query: payload,
-      });
-      return;
-    }
-
     const response = await callTheServer({
       endpoint: "createPaymentIntent",
       method: "POST",
