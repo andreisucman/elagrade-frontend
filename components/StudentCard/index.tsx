@@ -95,7 +95,7 @@ const StudentCard = ({
         </div>
         {student.files.length === 0 && (
           <div className={styles.paragraph}>
-            Drop the file here (images, PDF, Doc, TXT)
+            Drop one assignment here (images, PDF, Doc, TXT)
             <i>(of a single student)</i>
           </div>
         )}
