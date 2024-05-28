@@ -372,7 +372,7 @@ const Grading = () => {
       title: "Assignment name",
       html: (
         <DescriptionBox
-          placeholder={"Example: Essay on the importance of sleeping"}
+          placeholder={"Example: Importance of sleep (24 Apr 24)"}
           text={assignmentName}
           setText={setAssignmentName}
         />
