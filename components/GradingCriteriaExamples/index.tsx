@@ -36,19 +36,19 @@ const GradingCriteriaExamples = ({ setShowGradingCriteriaExamples }: Props) => {
           <DescriptionBox
             title={"What do you give the highest grade to?"}
             text={
-              "I give the highest grade to a paper that contains no grammatical errors, has a logical structure with introduction, body, and conclusion, proper citations, and demonstration of critical reasoning."
+              "(80 - 100%) - demonstrates thorough understanding of the material read -makes inferences response with a high degree of effectiveness -establishes voice with a high degree of effectiveness -uses proofreading strategies with a high degree of effectiveness -uses sentence craft with a high degree of effectiveness"
             }
           />
           <DescriptionBox
             title={"What do you give the lowest grade to?"}
             text={
-              "I give the lowest grade to a paper that contains multiple grammatical errors, lacks citations, has off-topic text, and demonstrates lack of preparation."
+              "(50 - 59%) - demonstrates limited understanding of the material read -makes inferences with limited effectiveness -establishes voice with limited effectiveness -uses proofreading strategies with limited effectiveness -uses sentence craft with limited effectiveness"
             }
           />
           <DescriptionBox
             title={"What is the most important for the student to demonstrate?"}
             text={
-              "The student must demonstrate that they have done their research and structured their ideas logically."
+              "This must be a reflection essay about what the student has learnt in Poetry. It's important that the student clearly articulates what they have learned in Poetry."
             }
           />
           <RadioGroup isWholeFeedback={false} />
