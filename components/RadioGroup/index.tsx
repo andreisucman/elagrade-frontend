@@ -2,14 +2,18 @@ import React from "react";
 import styles from "./RadioGroup.module.scss";
 
 type Props = {
-  isWholeFeedback: boolean;
-  toggleIsWholeFeedback?: (result: boolean) => void;
+  textIsChecked: string;
+  textIsNotChecked: string;
+  isChecked: boolean;
+  setIsChecked?: (result: boolean) => void;
   customStyles?: React.CSSProperties;
 };
 
 export default function RadioGroup({
-  isWholeFeedback,
-  toggleIsWholeFeedback,
+  textIsChecked,
+  textIsNotChecked,
+  isChecked,
+  setIsChecked,
   customStyles,
 }: Props) {
   return (
@@ -17,24 +21,20 @@ export default function RadioGroup({
       <label className={styles.label}>
         <input
           type="radio"
-          checked={!isWholeFeedback}
+          checked={!isChecked}
           value="subsectionFeedback"
-          onChange={() =>
-            toggleIsWholeFeedback ? toggleIsWholeFeedback(false) : () => {}
-          }
+          onChange={() => (setIsChecked ? setIsChecked(false) : () => {})}
         />
-        I give feedback for each rubric
+        {textIsNotChecked}
       </label>
       <label className={styles.label}>
         <input
           type="radio"
-          checked={isWholeFeedback}
+          checked={isChecked}
           value="wholeFeedback"
-          onChange={() =>
-            toggleIsWholeFeedback ? toggleIsWholeFeedback(true) : () => {}
-          }
+          onChange={() => (setIsChecked ? setIsChecked(true) : () => {})}
         />
-        I give feedback as a whole
+        {textIsChecked}
       </label>
     </div>
   );

@@ -13,9 +13,11 @@ type Props = {
   important: string;
   rubrics: string;
   isWholeFeedback: boolean;
+  isLongFeedback: boolean;
   disableSaveButton: boolean;
   saveCriteria: () => Promise<boolean>;
   setIsWholeFeedback: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsLongFeedback: React.Dispatch<React.SetStateAction<boolean>>;
   setAge: React.Dispatch<React.SetStateAction<string>>;
   setHighest: React.Dispatch<React.SetStateAction<string>>;
   setLowest: React.Dispatch<React.SetStateAction<string>>;
@@ -30,6 +32,7 @@ const GradingCriteriaBox = ({
   rubrics,
   important,
   isWholeFeedback,
+  isLongFeedback,
   disableSaveButton,
   setAge,
   setHighest,
@@ -37,6 +40,7 @@ const GradingCriteriaBox = ({
   setRubrics,
   setImportant,
   setIsWholeFeedback,
+  setIsLongFeedback,
   saveCriteria,
 }: Props) => {
   const [buttonText, setButtonText] = useState<string>("Save");
@@ -63,6 +67,9 @@ const GradingCriteriaBox = ({
 
   function toggleIsWholeFeedback(result: boolean) {
     setIsWholeFeedback(result);
+  }
+  function toggleIsLongFeedback(result: boolean) {
+    setIsLongFeedback(result);
   }
 
   function setDefaults() {
@@ -128,14 +135,20 @@ const GradingCriteriaBox = ({
           <DescriptionBox
             title={"What is the age of the students? (optional)"}
             text={age}
-            placeholder={
-              "Example: 15 y.o. (10th grade)"
-            }
+            placeholder={"Example: 15 y.o. (10th grade)"}
             setText={setAge}
           />
           <RadioGroup
-            isWholeFeedback={isWholeFeedback}
-            toggleIsWholeFeedback={toggleIsWholeFeedback}
+            textIsChecked={"Give feedback as a whole"}
+            textIsNotChecked={"Give feedback for each rubric"}
+            isChecked={isWholeFeedback}
+            setIsChecked={toggleIsWholeFeedback}
+          />
+          <RadioGroup
+            textIsChecked={"Longer feedback (3-5 sentences)"}
+            textIsNotChecked={"Shorter feedback (2-3 sentences)"}
+            isChecked={isLongFeedback}
+            setIsChecked={toggleIsLongFeedback}
           />
           {!isWholeFeedback && (
             <DescriptionBox
