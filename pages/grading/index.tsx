@@ -32,6 +32,7 @@ const Grading = () => {
   const [students, setStudents] = useState<any>([]);
   const [highest, setHighest] = useState("");
   const [lowest, setLowest] = useState("");
+  const [age, setAge] = useState("");
   const [rubrics, setRubrics] = useState("");
   const [important, setImportant] = useState("");
   const [fieldsSnapshot, setFieldsSnapshot] = useState("");
@@ -55,8 +56,8 @@ const Grading = () => {
   const disableSavingCriteria = useRef(true);
   disableSavingCriteria.current =
     (isWholeFeedback
-      ? highest + lowest + important + isWholeFeedback
-      : highest + lowest + important + isWholeFeedback + rubrics) ===
+      ? highest + lowest + important + isWholeFeedback + age
+      : highest + lowest + important + isWholeFeedback + rubrics + age) ===
     fieldsSnapshot;
 
   const studentsExist = useRef(false);
@@ -80,17 +81,18 @@ const Grading = () => {
     callTheServer({ endpoint: "getGradingCriteria", method: "GET" }).then(
       async (response: any) => {
         if (response?.status === 200) {
-          const { highest, lowest, important, isWholeFeedback, rubrics } =
+          const { highest, lowest, important, isWholeFeedback, rubrics, age } =
             response.message;
           setHighest(highest);
           setLowest(lowest);
           setImportant(important);
           setIsWholeFeedback(isWholeFeedback);
           setRubrics(rubrics);
+          setAge(age);
 
           const criteria = isWholeFeedback
-            ? highest + lowest + important + isWholeFeedback
-            : highest + lowest + important + isWholeFeedback + rubrics;
+            ? highest + lowest + important + isWholeFeedback + age
+            : highest + lowest + important + isWholeFeedback + rubrics + age;
 
           setFieldsSnapshot(criteria);
         }
@@ -191,6 +193,7 @@ const Grading = () => {
   async function saveCriteria() {
     const payload = {
       jsonCriteria: {
+        age,
         highest,
         lowest,
         important,
@@ -207,8 +210,8 @@ const Grading = () => {
 
     if (response?.status === 200) {
       const criteria = isWholeFeedback
-        ? highest + lowest + important + isWholeFeedback
-        : highest + lowest + important + isWholeFeedback + rubrics;
+        ? highest + lowest + important + isWholeFeedback + age
+        : highest + lowest + important + isWholeFeedback + rubrics + age;
       setFieldsSnapshot(criteria);
 
       return true;
@@ -427,7 +430,9 @@ const Grading = () => {
           highest={highest}
           rubrics={rubrics}
           lowest={lowest}
+          age={age}
           important={important}
+          setAge={setAge}
           setIsWholeFeedback={setIsWholeFeedback}
           setHighest={setHighest}
           setRubrics={setRubrics}

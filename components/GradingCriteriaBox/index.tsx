@@ -6,6 +6,7 @@ import Button from "../Button";
 import styles from "./GradingCriteriaBox.module.scss";
 
 type Props = {
+  age: string;
   title: string;
   highest: string;
   lowest: string;
@@ -15,6 +16,7 @@ type Props = {
   disableSaveButton: boolean;
   saveCriteria: () => Promise<boolean>;
   setIsWholeFeedback: React.Dispatch<React.SetStateAction<boolean>>;
+  setAge: React.Dispatch<React.SetStateAction<string>>;
   setHighest: React.Dispatch<React.SetStateAction<string>>;
   setLowest: React.Dispatch<React.SetStateAction<string>>;
   setRubrics: React.Dispatch<React.SetStateAction<string>>;
@@ -22,12 +24,14 @@ type Props = {
 };
 
 const GradingCriteriaBox = ({
+  age,
   highest,
   lowest,
   rubrics,
   important,
   isWholeFeedback,
   disableSaveButton,
+  setAge,
   setHighest,
   setLowest,
   setRubrics,
@@ -62,6 +66,7 @@ const GradingCriteriaBox = ({
   }
 
   function setDefaults() {
+    setAge("15 y.o. (10th grade)");
     setHighest(
       "To a cohesive paper without grammatical errors that has introduction, body, and conclusion"
     );
@@ -119,6 +124,14 @@ const GradingCriteriaBox = ({
               "Example: The student must demonstrate logical thinking and support their claims with argumentation"
             }
             setText={setImportant}
+          />
+          <DescriptionBox
+            title={"What is the age of the students? (optional)"}
+            text={age}
+            placeholder={
+              "Example: 15 y.o. (10th grade)"
+            }
+            setText={setAge}
           />
           <RadioGroup
             isWholeFeedback={isWholeFeedback}

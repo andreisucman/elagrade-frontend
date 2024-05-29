@@ -51,6 +51,10 @@ const GradingCriteriaExamples = ({ setShowGradingCriteriaExamples }: Props) => {
               "This must be a reflection essay about what the student has learnt in Poetry. It's important that the student clearly articulates what they have learned in Poetry."
             }
           />
+          <DescriptionBox
+            title={"What is the age of the students? (optional)"}
+            text={"Example: 15 y.o. (10th grade)"}
+          />
           <RadioGroup isWholeFeedback={false} />
           <DescriptionBox
             title={"What are the evaluation rubrics?"}
