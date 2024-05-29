@@ -55,7 +55,16 @@ const GradingCriteriaExamples = ({ setShowGradingCriteriaExamples }: Props) => {
             title={"What is the age of the students? (optional)"}
             text={"Example: 15 y.o. (10th grade)"}
           />
-          <RadioGroup isWholeFeedback={false} />
+          <RadioGroup
+            isChecked={false}
+            textIsChecked="Provide feedback for each rubric"
+            textIsNotChecked="Provide feedback as a whole"
+          />
+          <RadioGroup
+            isChecked={false}
+            textIsChecked="Shorter feedback (2-3 sentences)"
+            textIsNotChecked="Longer feedback (3-5 sentences)"
+          />
           <DescriptionBox
             title={"What are the evaluation rubrics?"}
             text={"Focus, clarity, logical reasoning."}
