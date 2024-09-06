@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button";
+import { BiShowAlt } from "react-icons/bi";
 import { deleteAllFromIndexedDb } from "@/functions/indexedDb";
 import styles from "./GradingFooter.module.scss";
 
@@ -38,21 +39,26 @@ const GradingFooter = ({
             }}
             onClick={() => handleDownload(gradingResults.assignmentReportUrl)}
           />
-          <button
-            className={styles.button}
+          <Button
+            buttonText="Clear"
+            customStyle={{ width: "100%" }}
+            innerStyle={{
+              backgroundColor: "unset",
+              color: "#303030",
+              border: "1px solid #303030",
+            }}
             onClick={async () => {
               await deleteAllFromIndexedDb();
               window.location.reload();
             }}
-          >
-            Start over
-          </button>
+          />
         </div>
       )}
       {students.length > 0 && !gradingResults && (
         <Button
           isDisabled={gradingStatus !== null}
           buttonText="Grade"
+          icon={<BiShowAlt />}
           customStyle={{ minWidth: "10rem" }}
           innerStyle={{ margin: "auto 0 0 auto" }}
           onClick={handleGrade}

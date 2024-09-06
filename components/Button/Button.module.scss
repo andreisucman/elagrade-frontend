@@ -12,10 +12,11 @@
 }
 
 .button {
+  display: flex;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   color: white;
   opacity: 1;
   transition: all 0.3s ease;
@@ -26,6 +27,9 @@
   border-radius: 1rem;
   border: 1px solid transparent;
   line-height: unset;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
 
   background-color: var(--primary-color);
   font-weight: 700;

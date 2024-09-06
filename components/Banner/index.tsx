@@ -11,9 +11,9 @@ const Banner = ({ handleRoute }: Props) => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <h1 className={styles.title}>Helping Teachers Love Grading</h1>
-        <h2 className={styles.subtitle}>
+        <p className={styles.subtitle}>
           Free AI Essay Grader For ELA Teachers
-        </h2>
+        </p>
         <Button
           customStyle={{
             width: "100%",

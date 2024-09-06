@@ -6,6 +6,7 @@ type props = {
   setShowAlert?: React.Dispatch<React.SetStateAction<boolean>>;
   message: string;
   customStyles?: any;
+  innerStyles?: any;
   msgStyles?: any;
   onClickText?: string;
   onClick?: (email: any) => Promise<void>;
@@ -15,6 +16,7 @@ type props = {
 export default function Alert({
   setShowAlert,
   message,
+  innerStyles,
   customStyles,
   msgStyles,
   onClickText,
@@ -38,7 +40,11 @@ export default function Alert({
 
   return (
     <div className={styles.container} style={customStyles && customStyles}>
-      <div className={styles.wrapper} ref={modalRef}>
+      <div
+        className={styles.wrapper}
+        style={innerStyles && innerStyles}
+        ref={modalRef}
+      >
         <div
           className="close"
           onClick={

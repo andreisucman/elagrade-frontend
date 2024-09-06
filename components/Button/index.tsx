@@ -9,9 +9,9 @@ type Props = {
   isDisabled?: boolean;
   customClass?: string;
   id?: string;
+  icon?: React.ReactNode;
   onClick?: () => void;
 };
-
 
 const Button = ({
   upperText,
@@ -20,6 +20,7 @@ const Button = ({
   customClass,
   innerStyle,
   isDisabled,
+  icon,
   id,
   onClick,
 }: Props) => {
@@ -43,7 +44,7 @@ const Button = ({
         style={innerStyle ? innerStyle : {}}
         onClick={handleClick}
       >
-        {buttonText}
+        {icon && icon} {buttonText}
       </button>
     </div>
   );

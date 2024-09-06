@@ -48,7 +48,7 @@ const GradingCriteriaExamples = ({ setShowGradingCriteriaExamples }: Props) => {
           <DescriptionBox
             title={"What is the most important for the student to demonstrate?"}
             text={
-              "This must be a reflection essay about what the student has learnt in Poetry. It's important that the student clearly articulates what they have learned in Poetry."
+              "This must be a reflection essay. It's important that the student clearly articulates what they have learned."
             }
           />
           <DescriptionBox

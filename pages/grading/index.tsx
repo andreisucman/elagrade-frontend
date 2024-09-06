@@ -9,14 +9,15 @@ import GradingHeader from "@/components/GradingHeader";
 import GradingCriteriaBox from "@/components/GradingCriteriaBox";
 import GradingFooter from "@/components/GradingFooter";
 import StudentsArea from "@/components/StudentsArea";
+import SelfCheckQuestionsBox from "@/components/SelfCheckQuestionsBox";
 import GradingResult from "@/components/GradingResult";
 import { resizeImage } from "@/functions/resizeImage";
 import {
   getAllFromIndexedDb,
-  deleteAllFromIndexedDb,
   deleteFromIndexedDb,
   saveToIndexedDb,
 } from "@/functions/indexedDb";
+import GradingStyleButton from "@/components/GradingStyleButton";
 import {
   getFromLocalStorage,
   saveToLocalStorage,
@@ -46,6 +47,7 @@ const Grading = () => {
   const [resendEmailText, setResendEmailText] = useState("");
   const [announcementBarClass, setAnnouncementBarClass] = useState("hidden");
   const { userDetails, setUserDetails, isLoading } = useContext(GeneralContext);
+  const [withProofGrading, setWithProofGrading] = useState(false);
 
   const [isWholeFeedback, setIsWholeFeedback] = useState(false);
   const [isLongFeedback, setIsLongFeedback] = useState(false);
@@ -79,9 +81,16 @@ const Grading = () => {
     false
   );
 
+  const savedWithProofGrading = getFromLocalStorage("withProofGrading", false);
+
   useEffect(() => {
     setStudentNamesInFileNames(savedStudentsNamesInFileNames);
   }, [savedStudentsNamesInFileNames]);
+
+  useEffect(() => {
+    if (!savedWithProofGrading) return;
+    setWithProofGrading(savedWithProofGrading);
+  }, [savedWithProofGrading]);
 
   useEffect(() => {
     callTheServer({ endpoint: "getGradingCriteria", method: "GET" }).then(
@@ -138,6 +147,12 @@ const Grading = () => {
       if (!userDetails?.emailVerified) setAnnouncementBarClass("");
     }
   }, [isLoading]);
+
+  function handleSaveSelectedGradingStyle(withProofGrading: boolean) {
+    setWithProofGrading(withProofGrading);
+    setGradingResults(null);
+    saveToLocalStorage("withProofGrading", withProofGrading);
+  }
 
   function onAddStudentFiles(studentId: string, newFiles: File[]) {
     const newStudents = students.map((student: any) => {
@@ -262,7 +277,9 @@ const Grading = () => {
 
     /* update upload times */
     const processingTimes = await callTheServer({
-      endpoint: "getProcessingTime",
+      endpoint: `getProcessingTime?${
+        withProofGrading ? "withProofGrading=true" : "withProofGrading=false"
+      }`,
       method: "GET",
     });
 
@@ -337,6 +354,7 @@ const Grading = () => {
       method: "POST",
       body: {
         uploadTime: (uploadEnded - uploadStarted) / allUrls.length,
+        withProofGrading,
       },
     });
 
@@ -351,12 +369,13 @@ const Grading = () => {
         assignmentName:
           assignmentName !== "" ? assignmentName : "Untitled assignment",
         studentNamesInFileNames,
+        withProofGrading,
       },
     });
 
     if (response?.status === 200) {
       setGradingResults(response.message);
-      setOpenAccordion(3);
+      setOpenAccordion(withProofGrading ? 4 : 3);
       setUserDetails(
         Object.assign({}, userDetails, {
           pagesLeft: response.message.pagesLeft,
@@ -402,9 +421,11 @@ const Grading = () => {
     }
   }
 
-  const parts = [
+  const parts = [];
+
+  parts.push(
     {
-      title: "Assignment name",
+      title: "Name the assignment",
       html: (
         <DescriptionBox
           placeholder={"Example: Importance of sleep (24 Apr 24)"}
@@ -414,7 +435,7 @@ const Grading = () => {
       ),
     },
     {
-      title: "Upload papers",
+      title: "Upload the papers",
       html: (
         <>
           <div className={styles.upperRowUpload}>
@@ -430,7 +451,15 @@ const Grading = () => {
               />
               Student names are in the file names
             </label>
-            <label className={styles.namesCheckboxLabel}>
+            <label
+              className={styles.namesCheckboxLabel}
+              style={{
+                padding: "0 1rem",
+                margin: "0.5rem 0.5rem 0.5rem auto",
+                border: "1px solid #303030",
+                borderRadius: "1rem",
+              }}
+            >
               <input
                 type="file"
                 onChange={(e) => {
@@ -439,7 +468,7 @@ const Grading = () => {
                 hidden
                 multiple
               />
-              Bulk upoad
+              Bulk upload
             </label>
           </div>
           <StudentsArea
@@ -475,18 +504,26 @@ const Grading = () => {
           saveCriteria={saveCriteria}
         />
       ),
-    },
-    {
-      title: "Grading result",
-      html: (
-        <GradingResult
-          gradingResults={gradingResults}
-          totalFiles={totalFilesRef.current}
-          gradingStatus={gradingStatus}
-        />
-      ),
-    },
-  ];
+    }
+  );
+
+  if (withProofGrading) {
+    parts.push({
+      title: "Set self-check questions",
+      html: <SelfCheckQuestionsBox />,
+    });
+  }
+
+  parts.push({
+    title: "Grading result",
+    html: (
+      <GradingResult
+        gradingResults={gradingResults}
+        totalFiles={totalFilesRef.current}
+        gradingStatus={gradingStatus}
+      />
+    ),
+  });
 
   return (
     <>
@@ -537,12 +574,27 @@ const Grading = () => {
           )}
 
           <GradingHeader />
+          <div className={styles.gradingStyleBlock}>
+            <p style={{ fontWeight: 600 }}>Grading methods</p>
+            <div className={styles.gradingStyleButtons}>
+              <GradingStyleButton
+                withProofGradingType={false}
+                withProofGrading={withProofGrading}
+                selectType={handleSaveSelectedGradingStyle}
+              />
+              <GradingStyleButton
+                withProofGradingType={true}
+                withProofGrading={withProofGrading}
+                selectType={handleSaveSelectedGradingStyle}
+              />
+            </div>
+          </div>
           {parts.map((part: any, index: number) => {
             const showDonwloadAll =
               part.title === "Grading result" &&
               gradingResults?.assignmentReportUrl;
             const showPapersToGrade =
-              part.title === "Upload papers" && students.length > 0;
+              part.title === "Upload the papers" && students.length > 0;
 
             return (
               <div key={index} className={styles.accordionItem}>

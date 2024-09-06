@@ -19,5 +19,5 @@ export default function useHandleClickOutside({ ref, setIsOpen }: Props) {
     return () => {
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
-  }, []);
+  }, [ref, setIsOpen]);
 }

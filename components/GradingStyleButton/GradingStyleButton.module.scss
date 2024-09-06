@@ -1,0 +1,36 @@
+.button {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid #303030;
+  flex: 1;
+  white-space: nowrap;
+}
+
+.selected {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  color: white;
+  opacity: 1;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  line-height: unset;
+
+  background-color: var(--primary-color);
+
+  &:hover {
+    background-color: var(--primary-color-dark);
+    border: 1px solid var(--primary-color) !important;
+  }
+}
+
+.questionIcon {
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  cursor: pointer;
+}

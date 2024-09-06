@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  width: 100%;
+  flex-basis: 40%;
+
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.title {
+  font-size: 0.8rem;
+}
+
+.input {
+  min-height: 2rem;
+  line-height: unset;
+  flex: 1;
+}

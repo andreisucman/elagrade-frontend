@@ -6,6 +6,7 @@ type Props = {
   placeholder?: string;
   text?: string;
   setText?: React.Dispatch<React.SetStateAction<string>>;
+  onChange?: (value: string) => void;
 };
 
 const DescriptionBox: React.FC<Props> = ({
@@ -13,12 +14,15 @@ const DescriptionBox: React.FC<Props> = ({
   title,
   placeholder,
   setText,
+  onChange,
 }) => {
   function handleSetText(e: any) {
     if (e.target.value) {
       if (setText) setText(e.target.value);
+      if (onChange) onChange(e.target.value);
     } else {
       if (setText) setText("");
+      if (onChange) onChange("");
     }
   }
 
