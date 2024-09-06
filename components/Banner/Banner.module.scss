@@ -35,7 +35,7 @@
   gap: 1rem;
   margin-top: 8rem;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: rgba(255, 255, 255, 0.5);
 
   @include laptop {
@@ -56,7 +56,7 @@
 }
 
 .title {
-  line-height: 140%;
+  font-size: 1.75rem;
 
   @include laptop {
     font-size: 2rem;
@@ -68,7 +68,6 @@
 }
 
 .subtitle {
-  line-height: 140%;
   font-weight: 500;
   font-size: 1.25rem;
 
