@@ -38,7 +38,7 @@ const ContactPage: React.FC = () => {
             Purrma LLC, 30N Gould St Ste R Sheridan WY 82801, US
           </p>
           <Button
-            buttonText={"Start grading now"}
+            buttonText={"Back to grading"}
             onClick={handleRoute}
             customStyle={{ margin: "1rem 0" }}
           />
