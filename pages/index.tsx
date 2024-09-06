@@ -73,7 +73,7 @@ export default function Home() {
               width: "100%",
             }}
             id={"home_middle_cta"}
-            innerStyle={{ fontSize: "1.15rem" }}
+            innerStyle={{ fontSize: "1rem" }}
             buttonText="Start grading now"
             onClick={handleRoute}
           />
@@ -161,7 +161,7 @@ export default function Home() {
               marginTop: "0.5rem",
             }}
             id={"home_lower_cta"}
-            innerStyle={{ fontSize: "1.15rem" }}
+            innerStyle={{ fontSize: "1rem" }}
             buttonText="Start grading free"
             onClick={handleRoute}
           />

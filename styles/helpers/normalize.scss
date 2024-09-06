@@ -13,13 +13,15 @@ h4,
 textarea {
   padding: 0;
   margin: 0;
-  line-height: 180%;
 }
 
 h1,
 h2,
 h3 {
-  line-height: 120%;
+  letter-spacing: -0.5px;
+  line-height: 1.2em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 h1 {

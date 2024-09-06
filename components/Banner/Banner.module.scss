@@ -59,25 +59,25 @@
   line-height: 140%;
 
   @include laptop {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   @include desktop {
-    font-size: 2.75rem;
+    font-size: 2.25rem;
   }
 }
 
 .subtitle {
   line-height: 140%;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 
   @include laptop {
-    font-size: 1.65rem;
+    font-size: 1.5rem;
   }
 
   @include desktop {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 
