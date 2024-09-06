@@ -41,7 +41,7 @@ export default function GradingStyleButton({
       {buttonText}
       <AiOutlineQuestionCircle
         className={styles.quesitonIcon}
-        onClick={(e) => {
+        onClick={(e: any) => {
           e.stopPropagation();
           setShowExplanation(true);
         }}
