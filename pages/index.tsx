@@ -84,7 +84,7 @@ export default function Home() {
             <h3 className={styles.how_title}>End The Unpaid After-Hours</h3>
 
             <YoutubeEmbed
-              videoId="xAVr28iKU4s"
+              videoId="vCNm5joZVeA"
               title="Elagrade - Free AI essay grader for ELA teachers"
             />
           </div>
