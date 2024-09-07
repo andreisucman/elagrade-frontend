@@ -26,8 +26,8 @@ export default function GradingStyleButton({
     <BiMessageRoundedCheck className={styles.quesitonIcon} />
   );
   const explanation = withProofGradingType
-    ? "The bot grades the paper using your grading criteria. It is then asked a number of questions to ensure that it didn't miss anything. See the details in the 'Set self-check questions' tab."
-    : "The bot grades the paper in one go using your grading criteria only.";
+    ? "The AI grades the paper using your grading criteria. It is then asked a number of questions to ensure that it didn't miss anything. See the details in the 'Set self-check questions' tab. This mode consumes twice as many credits (pages) as the AI has to check the paper more than once."
+    : "The AI grades the paper in one go using your grading criteria only.";
 
   const isSelected = withProofGradingType === withProofGrading;
   return (

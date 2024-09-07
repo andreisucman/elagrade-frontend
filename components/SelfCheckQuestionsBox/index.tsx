@@ -21,15 +21,15 @@ const defaultQuestions = [
   },
   {
     id: v4(),
-    question: `Did the student demonstrate in this paper what is important based on the grading criteria? Why?`,
+    question: `Did the student demonstrate what is important based on the grading criteria? Why?`,
   },
   {
     id: v4(),
-    question: `Which paragraphs you have found to be the most satisfactory based on the grading criteria? Why?`,
+    question: `Which paragraphs are the most satisfactory based on the grading criteria? Why?`,
   },
   {
     id: v4(),
-    question: `Which paragraphs you have found to be the least satisfactory based on the grading criteria? Why?`,
+    question: `Which paragraphs are the least satisfactory based on the grading criteria? Why?`,
   },
   {
     id: v4(),
@@ -37,11 +37,7 @@ const defaultQuestions = [
   },
   {
     id: v4(),
-    question: `Are there any areas that the student should improve on based on the grading criteria?`,
-  },
-  {
-    id: v4(),
-    question: `If the student has to improve anything, bring specific examples from the text.`,
+    question: `What makes you think that this grade is appropriate or not?`,
   },
 ];
 
