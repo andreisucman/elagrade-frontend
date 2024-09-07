@@ -117,7 +117,10 @@ const Results: React.FC = () => {
             loadNext={loadNext}
           />
           <div className={styles.balance}>
-            <p>Your plan is <b>{userDetails?.plan}</b></p>
+            <p>{userDetails?.email}</p>
+            <p>
+              Your plan is <b>{userDetails?.plan}</b>
+            </p>
             <p>Pages left: {pagesLeft}</p>
             <Button
               buttonText="Top up"
