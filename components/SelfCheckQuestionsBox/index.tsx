@@ -48,8 +48,8 @@ const SelfCheckQuestionsBox = () => {
   const [buttonText, setButtonText] = useState<string>("Save");
   const [showGradingCriteriaExamples, setShowGradingCriteriaExamples] =
     useState(false);
-  const [questions, setQuestions] = useState<Question[]>(defaultQuestions);
-  const [fieldsSnapshot, setFieldsSnapshot] = useState(defaultQuestions);
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [fieldsSnapshot, setFieldsSnapshot] = useState<Question[]>([]);
   const [showAlert, setShowAlert] = useState(false);
 
   const disableSaveQuestions = useRef(true);
@@ -65,8 +65,6 @@ const SelfCheckQuestionsBox = () => {
             const isArray = Array.isArray(response.message);
             setQuestions(isArray ? response.message : defaultQuestions);
             setFieldsSnapshot(isArray ? response.message : []);
-          } else {
-            setFieldsSnapshot(defaultQuestions);
           }
         }
       }

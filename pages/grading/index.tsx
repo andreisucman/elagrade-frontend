@@ -268,13 +268,6 @@ const Grading = () => {
   }
 
   async function handleGrade() {
-    // if (!userDetails?.emailVerified)
-    //   return setAlertMessage(
-    //     `We've sent a verification email to ${
-    //       userDetails?.email ? userDetails.email : "your email"
-    //     }. Please confirm it.`
-    //   );
-
     /* update upload times */
     const processingTimes = await callTheServer({
       endpoint: `getProcessingTime?${
@@ -388,6 +381,10 @@ const Grading = () => {
 
       if (response.message.title === "Grading criteria missing") {
         setOpenAccordion(2);
+      }
+
+      if (response.message.title === "Self-check questions missing") {
+        setOpenAccordion(4);
       }
       setGradingStatus(null);
       setShowGradingOverlay(false);
@@ -531,19 +528,6 @@ const Grading = () => {
         <title>Grading | Elagrade</title>
         <meta name="description" content={"Elagrade - Grading"} />
       </Head>
-      {/*<AnnouncementBar
-        icon={<BsExclamationDiamond />}
-        message="Please verify your email"
-        customClass={announcementBarClass}
-        onClick={() =>
-          setAlertMessage(
-            `We've sent a verification email to ${
-              userDetails?.email ? userDetails.email : "your email"
-            }. Please confirm it.`
-          )
-        }
-      />*/}
-
       <AnnouncementBar
         icon={<FaRegLightbulb />}
         customStyle={{ backgroundColor: "unset", cursor: "default" }}
