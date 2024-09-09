@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Elagrade - AI Writing Grader For ELA Teachers</title>
+        <title>Elagrade - AI Paper Grader For ELA Teachers</title>
         <meta
           name="description"
           content={

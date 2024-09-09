@@ -5,12 +5,12 @@ author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
 slug: 'do-specialized-essay-graders-even-make-sense-when-you-can-grade-papers-with-chatgpt-for-free'
-description: 'The short answer is no, the long answer is yes. In this article I''m discussing whether the AI is getting more stupid and what is the advantage of specialized software over ChatGPT for grading essays with AI?'
+description: 'The short answer is no, the long answer is yes. In this article I''m discussing whether the AI is getting more stupid and what is the advantage of specialized software over ChatGPT for grading essays with AI.'
 coverImage: '/images/robot-IwOD.webp'
 publishedAt: '2024-09-09T07:17:21.028Z'
 ---
 
-![](/images/robot-A0Nj.webp)
+![specialized essay graders versus grading papers with ChatGPT](/images/robot-A0Nj.webp)
 
 **The short answer is no, the long answer is yes.**
 
