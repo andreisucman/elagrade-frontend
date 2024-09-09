@@ -10,7 +10,7 @@ coverImage: '/images/robot-IwOD.webp'
 publishedAt: '2024-09-09T07:17:21.028Z'
 ---
 
-![](/images/robot-k2MD.webp)
+![](/images/robot-A0Nj.webp)
 
 **The short answer is no, the long answer is yes.**
 
@@ -28,7 +28,9 @@ But, there is a problem with this grading method that not many teachers know abo
 
 When ChatGPT just rolled out at the end of 2022, it could do a lot of things. The model had exceptional attention to detail and a high ratio of meaningful answers.
 
-Later introduced the premium GP4 version was even smarter. It was so smart that it gave the impression that you were talking to a real person. This was so by design.
+Later introduced the premium GP4 version was even better. It was so smart that it gave the impression that you were talking to a real person.
+
+This was so by design.
 
 The producing company OpenAI aimed to create a wow effect which would save it from the need to promote their product as the promotion would happen organically via word of mouth.
 
