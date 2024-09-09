@@ -16,8 +16,6 @@ export default function Index({ posts }: Props) {
   const hasMoreRef = useRef(false);
   hasMoreRef.current = posts.length > showUntil;
 
-  console.log("posts", posts);
-
   return (
     <>
       <Head>
