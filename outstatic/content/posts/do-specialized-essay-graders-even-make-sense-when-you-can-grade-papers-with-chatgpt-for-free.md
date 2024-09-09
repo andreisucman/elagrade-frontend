@@ -1,6 +1,6 @@
 ---
 title: 'Do specialized essay graders even make sense when you can grade papers with ChatGPT for free?'
-status: 'draft'
+status: 'published'
 author:
   name: 'Andrei Sucman'
   picture: 'https://avatars.githubusercontent.com/u/67225216?v=4'
@@ -92,12 +92,64 @@ Therefore, if you're planning to get real value out of AI essay grading your bet
 
 The amount of effort and time dollars this will save you will outweigh the 20$ subscription fee pretty quickly.
 
-By now we have learned that ChatGPT has become significantly less capable over time. Consequently, using the free version of ChatGPT for grading homework is not a good idea because of the significant loss of time and effort for getting decent results, and a better option would be using a premium model that costs 20$ / month.
+### So what is the best option for grading papers with AI?
+
+By now we have learned that ChatGPT has become significantly less capable over time. 
+
+Consequently, using the free version of ChatGPT for grading homework is not a good idea because of the significant loss of time and effort for getting decent results, and a better option would be using a premium model that costs 20$ / month.
 
 But there's one more option - the best in my opinion - using specialized AI essay graders.
 
 For obvious reasons, I'll be talking about Elagrade now, but you can probably extend the same arguments to other software too.
 
-As I've already mentioned, getting good results with ChatGPT in one go is hard because the model usually doesn't read everything you give it. It reads selectively, especially when the text is long, and the model is free. This means that you have to become good at writing your prompt in such a way that it retains its meaning even if it's not read entirely. One of the techniques for achieving this is duplicating the most important parts of your prompt. But overall, getting good results with one-shot grading is still difficult and unpredictable, and therefore, a better option is to ask follow-up questions. When you ask the follow-up questions, the AI returns to the text, finds the most relevant part, and reads it more thoroughly with the aim of finding the answer to the follow-up question. This time, the AI is not skimming as much as it does in the initial run when you're just asking it to grade the whole paper. The AI is searching and therefore paying much more attention, just like humans do when they search. But as we've already discussed, asking follow-up questions takes time and effort. The good news though, is that this process can be automated. And this is what Elagrade does for you. Not only do you take advantage of a polished initial prompt, but you also can specify a set of follow-up questions that the model will use to check itself before providing you with the final grade. All of this is in addition to other benefits such as free renewable monthly quota, prepaid pricing, consistent grades over multiple runs, bulk grading of up to 100 papers at a time, and the results available as a single Word document with the same formatting. You can read more about how to use Elagrade for grading essays in this article called How Accurate and Reliable is an AI Paper Grader here https://elagrade.com/blog/how-accurate-and-reliable-is-an-ai-paper-grader
+As I've already mentioned, getting good results with ChatGPT in one go is hard because the model usually doesn't read everything you give it. 
 
-In conclusion, it's possible to grade essays using ChatGPT for free, but you pay with your time and effort, which you can approximately quantify by multiplying the time you've spent on guiding the model with your hourly wage. Therefore, it's better to use the premium version of the AI as it's much more capable of following the instructions than the free model. That said, you will still have to guide the model, albeit less, and copy-paste the results. So, instead, you might want to check out specialized grading software such as Elagrade, which lets you automate the follow-up process, grade assignments in bulk, and get the result as a Word document report, which reduces the grading time of the whole class to several minutes. Elagrade gives 20 pages (10k words) each month for free. And if you want more, you don't need a subscription. So try it out both ways and choose what's better for you. Happy grading.
+It reads selectively, especially when the text is long, and the model is free. 
+
+This means that you have to become good at writing your prompt in such a way that it retains its meaning even if it's not read entirely. 
+
+One of the techniques for achieving this is duplicating the most important parts of your prompt. 
+
+But overall, getting good results with one-shot grading is still difficult and unpredictable, and therefore, a better option is to ask follow-up questions. 
+
+When you ask the follow-up questions, the AI searches the most relevant part of the text, and reads it more thoroughly with the aim of finding the answer to the follow-up question. 
+
+This time, the AI is not skimming as much as it does in the initial run when you're just asking it to grade the whole paper. The reason is because it has much less text and more focused objective to work with.
+
+The AI is searching and therefore paying much more attention, just like humans do. 
+
+Yet as we've already discussed, asking follow-up questions takes time and effort, which depending on the amount and details you're expecting to get can negate the time savings you're getting from using the AI. 
+
+The good news though, is that asking follow-up questions can be automated. 
+
+And this is what Elagrade does for you. 
+
+Not only do you take advantage of a polished initial prompt, but you also can specify a set of follow-up questions that the model will use to check itself before providing you with the final assessment. 
+
+All of this is in addition to other benefits such as free renewable monthly quota, prepaid pricing, consistent grades over multiple runs, bulk grading of up to 100 papers at a time, and the results available as a single Word document with the same formatting. 
+
+You can read more about how to use Elagrade for grading essays in this article called [How Accurate and Reliable is an AI Paper Grader](https://elagrade.com/blog/how-accurate-and-reliable-is-an-ai-paper-grader).
+
+### Specialized essay graders are best, premium LLMs go next, and the free bots are for sadomasochists
+
+In conclusion, it's possible to grade essays using ChatGPT for free, but you pay with your time and effort, which you can approximately quantify by multiplying the time you've spent on guiding the model with your hourly wage. 
+
+Therefore, it's better to use the premium version of the AI as it's much more capable of following the instructions than the free model. 
+
+That said, you will still have to guide the model, albeit less, and copy-paste the results. 
+
+So, instead, you might want to check out specialized grading software such as Elagrade, which lets you automate the follow-up process, grade assignments in bulk, and get the result as a Word document report, which reduces the grading time of the whole class to several minutes. 
+
+Elagrade gives 20 pages (10k words) each month for free. And if you want more, you don't need a subscription. 
+
+So try it out both ways and choose what's better for you. 
+
+Happy grading.
+
+## You may also like
+
+[How To Grade Essays With ChatGPT](https://elagrade.com/blog/how-to-grade-essays-with-chatgpt)
+
+[The Best Online Essay Grader For English Teachers](https://elagrade.com/blog/the-best-online-essay-grader-for-english-teachers)
+
+[How ELA Teachers Can Embrace AI Essay Grading to Meet Educational Demands](https://elagrade.com/blog/how-ela-teachers-can-embrace-ai-essay-grading)
