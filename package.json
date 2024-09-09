@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-sitemap": "^0.8.1",
     "@stripe/react-stripe-js": "^2.4.0",
     "@stripe/stripe-js": "^2.2.2",
     "idb-keyval": "^6.2.1",

@@ -1,9 +1,2 @@
-[functions]
-
-  [functions.___netlify-handler]
-  included_files = [
-    "outstatic/content/posts/**",
-  ]
-
-  [[plugins]]
-  package = "@netlify/plugin-nextjs"
+[[plugins]]
+package = "@netlify/plugin-sitemap"
