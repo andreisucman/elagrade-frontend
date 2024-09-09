@@ -16,6 +16,8 @@ export default function Index({ posts }: Props) {
   const hasMoreRef = useRef(false);
   hasMoreRef.current = posts.length > showUntil;
 
+  console.log("posts", posts);
+
   return (
     <>
       <Head>
@@ -28,7 +30,7 @@ export default function Index({ posts }: Props) {
       <BlogAnnouncement />
       <div className={styles.container}>
         <h1 className={styles.title}>Blog</h1>
-        {posts?.length > 0 ? (
+        {posts && posts.length > 0 ? (
           <div className={styles.content}>
             {posts.map((post: any, index: number) => {
               if (index > showUntil) return;
