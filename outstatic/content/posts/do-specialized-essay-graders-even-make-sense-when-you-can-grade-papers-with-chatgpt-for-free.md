@@ -10,27 +10,91 @@ coverImage: '/images/robot-IwOD.webp'
 publishedAt: '2024-09-09T07:17:21.028Z'
 ---
 
-The short answer is no, the long answer is yes.
+## The short answer is no, the long answer is yes.
 
-Have you tried grading papers using ChatGPT or Google Gemini? Both have free plans with unlimited quota. They're simple to use, you register in a few clicks, paste the text, and give the instructions for grading it. And if it gets something wrong you can guide it in the right direction until it gives you an acceptable response. Since these tools are free, every teacher can use them. We've made a step-by-step guide showing how to grade papers with ChatGPT here. But, there is a problem with this grading method that not many teachers know about. In fact, this problem is not generally known to people outside of the AI engineering world, because it's not officially accepted. The problem is that the AI is getting more stupid; the free models in particular.
+Have you tried grading papers using ChatGPT or Google Gemini? Both have free plans with unlimited quota. 
 
-When ChatGPT just rolled out at the end of 2022, it could do a lot of things. The model had exceptional attention to detail and a high ratio of meaningful answers. Later introduced the premium GP4 version was even smarter. It was so smart that it gave the impression that you were talking to a real person. This was so by design. The producing company OpenAI aimed to create a wow effect which would save it from the need to promote their product as the promotion would happen organically via word of mouth. And they were right in making this bet. Very soon chat.openai.com grew to over 1 billion visits and billions of dollars in sales without OpenAI having to spend a dime on promotion. 
+They're simple to use, you register in a few clicks, paste the text, and give the instructions for grading it. 
 
-After securing a huge user base and making their model a name, OpenAI pursued another clever strategy. They promised their users to make models faster and drop the prices for the API (programmatic access). A great promise isn't it? Better service at a lower cost. Sounds too good to be true. And as experience shows, things that are too good to be true usually are too good to be true. And so it turned out that these benefits are going to happen at the expense of the service quality. 
+And if it gets something wrong you can guide it in the right direction until it gives you an acceptable response. 
 
-But here's the catch. The company hasn't accepted that shift (obviously), nor did they change the names of the models, and neither lowered the price to now much less capable premium model for the general public. In other words, people still pay 20$ / month for a premium model that is not nearly as premium as it used to be initially.
+Since these tools are free, every teacher can use them. We've made a step-by-step guide showing how to grade papers with ChatGPT here. 
 
-But the only way to uncover this speculation is to compare the statistics of the old results from the past with the new ones. Unfortunately, it was only developers who could do it. And they've done it. Here is a thread on the OpenAI forum where tens of developers complain about the models getting stupider with time. https://community.openai.com/t/why-chatgpt-4-0-is-getting-stupider-and-stupider/590741
+But, there is a problem with this grading method that not many teachers know about. In fact, this problem is not generally known to people outside of the AI engineering world, because it's not officially accepted. The problem is that the AI is getting more stupid; the free models in particular.
 
-Now, you probably see what I'm getting. With the models becoming stupider, getting satisfactory results starts taking more time and skill. In fact, it's now almost impossible to get a decent reply from the first go with a long prompt. You have to craft the prompt carefully and use the GPT4o model (premium) to have a chance that it duly fulfills all of the requirements. By crafting the prompt carefully, I mean choosing proper words in the right order. This is known as prompt engineering. It was not that critical in the early days when the model was smart, but it became more important as time went by. Prompt engineering is a fun activity for people who love thinking, as you start really paying attention to the meaning of the words and their location in the sentence. But it takes time and effort.
+### Why was ChatGPT so good?
 
-This means that if you intend to grade a paper with over 1k words with ChatGPT, your best bet would be to subscribe to their premium plan, which costs 20$ / month because the free model is not capable of grasping all of the context from a text of that size to provide a meaningful reply without leaving much of the context out. It also means that you'll have to get better at communicating your instructions to the AI. 
+When ChatGPT just rolled out at the end of 2022, it could do a lot of things. The model had exceptional attention to detail and a high ratio of meaningful answers. 
 
-But how bad is the free model? Because 20$ is good money in the current economy, and the premium model has a limited quota of 50 messages every 3 hours, which is not ideal for teachers with many students. So why not just use the free version and give the model more instructions? That's how most teachers who start grading essays with AI think, and it kind of makes sense, if not one subtle detail. The detail is that the amount of time you have to spend on reading the replies of the free model, giving it additional guidance, and then reading the updated replies is significant. And so, instead of saving time and effort from having to read the student's work, you end up having to read AI's replies, writing additional instructions, and then still having to skim the paper to ensure that the AI grasped everything correctly. Time this and multiply by your hourly wage to get how much you're losing. That's why using a free AI model is not a good option unless you're very new to it and just want to see how it feels. Therefore, if you're planning to get real value out of AI essay grading your better choice would be to go with the premium version. The amount of effort and time dollars this will save you will outweigh the 20$ subscription fee pretty quickly.
+Later introduced the premium GP4 version was even smarter. It was so smart that it gave the impression that you were talking to a real person. This was so by design. 
 
-By now we have learned that ChatGPT has become significantly less capable over time. Consequently, using the free version of ChatGPT for grading homework is not a good idea because of the significant loss of time and effort for getting decent results, and a better option would be using a premium model that costs 20$ / month. 
+The producing company OpenAI aimed to create a wow effect which would save it from the need to promote their product as the promotion would happen organically via word of mouth.
 
-But there's one more option - the best in my opinion - using specialized AI essay graders. 
+And they were right in making this bet. Very soon chat.openai.com grew to over 1 billion visits and billions of dollars in sales without OpenAI having to spend a dime on promotion.
+
+### The new promise from OpenAI
+
+After securing a huge user base and making their model a name, OpenAI pursued another clever strategy. They promised their users to make models faster and drop the prices for the API (programmatic access). 
+
+A great promise isn't it? Better service at a lower cost. Sounds too good to be true. 
+
+And as experience shows, things that are too good to be true usually are too good to be true. And so it turned out that these benefits are going to happen at the expense of the service quality.
+
+But here's the catch. The company hasn't publicly accepted that shift. In fact this is one of the most ignored topic on the forum. Nor did they change the names of the models, and neither lowered the price to now much less capable premium model for the general public. 
+
+In other words, people still pay 20$ / month for a 'premium' model that is comparable to the one they were getting for free initially. 
+
+Profit.
+
+Yet, since this truth is not publicly accepted, it humbly takes it's place somewhere between the annunaki and the golden billion conspiracy theories. 
+
+And the only way to uncover this speculation is to compare the statistics of the old results from the past with the new ones. Something the developers did. Here is a thread on the OpenAI forum where [tens of developers complain about the models getting stupider](https://community.openai.com/t/why-chatgpt-4-0-is-getting-stupider-and-stupider/590741) with time. 
+
+### Grading papers with ChatGPT now takes more skill
+
+Now, you probably see what I'm getting. With the models becoming stupider, getting satisfactory results is starting taking more time and skill. 
+
+In fact, it's now almost impossible to get a decent reply from the first go with a long prompt. 
+
+You have to craft the prompt carefully and use the GPT4o model (premium) to have a chance that it duly fulfills all of the requirements. 
+
+By crafting the prompt carefully, I mean choosing proper words in the right order. This is known as prompt engineering. 
+
+It was not that critical in the early days when the model was smart, but it became more important as time went by. 
+
+Prompt engineering is a fun activity for people who love thinking, as it makes you pay attention to the meaning of the words and their location in the sentence. 
+
+But it's hard.
+
+This means that if you intend to grade a paper with over 1k words with ChatGPT, your best bet would be to subscribe to their premium plan, which costs 20$ / month because the free model is not capable of grasping all of the context from a text of that size to provide a meaningful reply without leaving much of the context out. 
+
+It also means that you'll have to get better at communicating your instructions to the AI.
+
+### How bad is the free ChatGPT model for marking papers?
+
+But how bad is the free model? 
+
+Because 20$ is good money in the current economy, and the premium model has a limited quota of 50 messages every 3 hours, which is not ideal for teachers with many students. 
+
+So why not just use the free version and give the model a ton more instructions? 
+
+That's how most teachers who start grading essays with AI think, and it kind of makes sense, if not one subtle detail. 
+
+The detail is that the amount of time you have to spend on reading and writing the additional replies is significant. 
+
+And so, instead of saving time and effort on having to read the student's work, you end up wasting it on reading AI's replies, writing additional instructions, and then still having to skim the paper to ensure that the AI grasped everything correctly and you won't end up in an embarrassing situation. 
+
+Time this and multiply by your hourly wage to get how much you're losing. 
+
+That's why using a free AI model is not a good option unless you're very new to it and just want to see how it feels. 
+
+Therefore, if you're planning to get real value out of AI essay grading your better choice would be to go with the premium version. 
+
+The amount of effort and time dollars this will save you will outweigh the 20$ subscription fee pretty quickly.
+
+By now we have learned that ChatGPT has become significantly less capable over time. Consequently, using the free version of ChatGPT for grading homework is not a good idea because of the significant loss of time and effort for getting decent results, and a better option would be using a premium model that costs 20$ / month.
+
+But there's one more option - the best in my opinion - using specialized AI essay graders.
 
 For obvious reasons, I'll be talking about Elagrade now, but you can probably extend the same arguments to other software too.
 
