@@ -27,10 +27,9 @@ const SideComponent = () => {
       <div className={styles.content}>
         <h3 className={styles.title}>Imagine there is a person</h3>
         <p>
-          Who does all of the grading for you so you have 30 more hours each
-          month for accomplishing your goals.
+          Who does all of the grading for you so that you have more time for things you love.
         </p>
-        <p>Elagrade can be that person. </p>
+        <p>Elagrade can be that person for free. </p>
         <Link className={styles.link} href="/#intro">
           Here's how.
         </Link>
