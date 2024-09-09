@@ -1,5 +1,5 @@
 ---
-title: 'Do specialized essay graders even make sense when you can grade papers with ChatGPT for free?'
+title: 'Do Specialized Essay Graders Even Make Sense When You Can Grade Papers With ChatGPT For Free?'
 status: 'published'
 author:
   name: 'Andrei Sucman'
@@ -100,7 +100,7 @@ That's why using a free AI model is not a good option unless you're very new to 
 
 Therefore, if you're planning to get real value out of the AI essay grading a better choice would be to go with the premium version.
 
-The amount of effort-and-time-dollars this will save you will outweigh the 20$ subscription fee pretty quickly. 
+The amount of effort-and-time-dollars this will save you will outweigh the 20$ subscription fee pretty quickly.
 
 Or you can also choose a better and cheaper solution, I'm going to reveal in a moment (Who would have thought?).
 
