@@ -10,7 +10,9 @@ coverImage: '/images/robot-IwOD.webp'
 publishedAt: '2024-09-09T07:17:21.028Z'
 ---
 
-## The short answer is no, the long answer is yes.
+![](/images/robot-M1ND.webp)
+
+**The short answer is no, the long answer is yes.**
 
 Have you tried grading papers using ChatGPT or Google Gemini? Both have free plans with unlimited quota.
 
