@@ -10,7 +10,7 @@ coverImage: '/images/robot-IwOD.webp'
 publishedAt: '2024-09-09T07:17:21.028Z'
 ---
 
-![](/images/robot-A0Nj.webp)
+![specialized essay graders versus grading papers with ChatGPT](/images/robot-A0Nj.webp)
 
 **The short answer is no, the long answer is yes.**
 
