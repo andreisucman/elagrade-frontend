@@ -1,0 +1,6 @@
+[functions]
+
+  [functions.___netlify-handler]
+  included_files = [
+    "outstatic/content/posts/**.md",
+  ]
