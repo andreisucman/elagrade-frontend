@@ -10,7 +10,7 @@ coverImage: '/images/robot-IwOD.webp'
 publishedAt: '2024-09-09T07:17:21.028Z'
 ---
 
-![](/images/robot-c2OD.webp)
+![](/images/robot-A0Nj.webp)
 
 **The short answer is no, the long answer is yes.**
 
@@ -20,7 +20,7 @@ They're simple to use, you register in a few clicks, paste the text, and give th
 
 And if it gets something wrong you can guide it in the right direction until it gives you an acceptable response.
 
-Since these tools are free, every teacher can use them. We've made a step-by-step guide showing [how to grade papers with ChatGPT here](https://elagrade.com/blog/how-to-grade-essays-with-chatgpt).
+Since these tools are free, every teacher can use them. We've made a step-by-step guide showing [***how to grade papers with ChatGPT here***](https://elagrade.com/blog/how-to-grade-essays-with-chatgpt)***.***
 
 But, there is a problem with this grading method that not many teachers know about. In fact, this problem is not generally known to people outside of the AI engineering world, because it's not officially accepted. The problem is that the AI is getting more stupid; the free models in particular.
 
@@ -28,7 +28,9 @@ But, there is a problem with this grading method that not many teachers know abo
 
 When ChatGPT just rolled out at the end of 2022, it could do a lot of things. The model had exceptional attention to detail and a high ratio of meaningful answers.
 
-Later introduced the premium GP4 version was even smarter. It was so smart that it gave the impression that you were talking to a real person. This was so by design.
+Later introduced the premium GP4 version was even better. It was so smart that it gave the impression that you were talking to a real person.
+
+This was so by design.
 
 The producing company OpenAI aimed to create a wow effect which would save it from the need to promote their product as the promotion would happen organically via word of mouth.
 
@@ -50,7 +52,7 @@ Profit.
 
 Yet, since this truth is not publicly accepted, it humbly takes it's place somewhere between the annunaki and the golden billion conspiracy theories.
 
-And the only way to uncover this speculation is to compare the statistics of the old results from the past with the new ones. Something the developers did. Here is a thread on the OpenAI forum where [tens of developers complain about the models getting stupider](https://community.openai.com/t/why-chatgpt-4-0-is-getting-stupider-and-stupider/590741) with time.
+And the only way to uncover this speculation is to compare the statistics of the old results from the past with the new ones. Something the developers did. Here is a thread on the OpenAI forum where [***tens of developers complain about the models getting stupider***](https://community.openai.com/t/why-chatgpt-4-0-is-getting-stupider-and-stupider/590741) with time.
 
 ### Grading papers with ChatGPT now takes more skill
 
@@ -130,7 +132,7 @@ Not only do you take advantage of a polished initial prompt, but you also can sp
 
 All of this is in addition to other benefits such as free renewable monthly quota, prepaid pricing, consistent grades over multiple runs, bulk grading of up to 100 papers at a time, and the results available as a single Word document with the same formatting.
 
-You can read more about how to use Elagrade for grading essays in this article called [How Accurate and Reliable is an AI Paper Grader](https://elagrade.com/blog/how-accurate-and-reliable-is-an-ai-paper-grader).
+You can read more about how to use Elagrade for grading essays in this article called [***how accurate and reliable is an AI paper grader***](https://elagrade.com/blog/how-accurate-and-reliable-is-an-ai-paper-grader).
 
 ### Specialized essay graders are best, premium LLMs go next, and the free bots are for sadomasochists
 
