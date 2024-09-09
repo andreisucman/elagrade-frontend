@@ -10,7 +10,7 @@ coverImage: '/images/robot-IwOD.webp'
 publishedAt: '2024-09-09T07:17:21.028Z'
 ---
 
-![](/images/robot-M1ND.webp)
+![](/images/robot-c2OD.webp)
 
 **The short answer is no, the long answer is yes.**
 
@@ -20,7 +20,7 @@ They're simple to use, you register in a few clicks, paste the text, and give th
 
 And if it gets something wrong you can guide it in the right direction until it gives you an acceptable response.
 
-Since these tools are free, every teacher can use them. We've made a step-by-step guide showing how to grade papers with ChatGPT here.
+Since these tools are free, every teacher can use them. We've made a step-by-step guide showing [how to grade papers with ChatGPT here](https://elagrade.com/blog/how-to-grade-essays-with-chatgpt).
 
 But, there is a problem with this grading method that not many teachers know about. In fact, this problem is not generally known to people outside of the AI engineering world, because it's not officially accepted. The problem is that the AI is getting more stupid; the free models in particular.
 
