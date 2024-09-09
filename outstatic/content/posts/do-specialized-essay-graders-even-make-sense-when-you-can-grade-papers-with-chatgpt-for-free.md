@@ -120,15 +120,15 @@ It reads selectively, especially when the text is long which means that you have
 
 One of the techniques for achieving this is duplicating the most important parts of your prompt. And there are others.
 
-But still, overall, getting good results with one-shot grading is difficult and unpredictable, and therefore, a better option would to ask follow-up questions.
+But still, overall, getting good results with one-shot grading is difficult and unpredictable, and therefore, a better option would ne to ask follow-up questions.
 
-When you ask the follow-up questions, the AI isolates the most relevant part of the text, and reads it more thoroughly with the aim of finding the answer to your question.
+When you ask the follow-up questions, the AI isolates the most relevant parts of the text, and reads them more thoroughly with the aim of finding the answer to your question.
 
 This means that the AI is not skimming as much as it does in the initial run when it has a much longer text and a much less specific task.
 
 The AI is searching and therefore paying much more attention, just like we, humans do.
 
-Yet as we've already discussed, asking follow-up questions takes time and effort, which depending on the number of details you're expecting to get can negate the time saving benefit you're getting from using the AI.
+Yet as we've already discussed, asking follow-up questions takes time and effort, which can negate the time saving benefit you're getting from using the AI.
 
 The good news however, is that asking follow-up questions can be automated.
 
@@ -136,7 +136,7 @@ And this is what Elagrade does for you.
 
 With Elagrade, not only do you get the advantage of a polished initial prompt, but you also can specify a set of follow-up questions that the model will use to check itself before providing you with the final assessment.
 
-All of this is in addition to other benefits such as the free renewable monthly quota, prepaid pricing, consistent grades over multiple runs, bulk grading of up to 100 papers at a time, and the results available as a single Word document report.
+All of this is in addition to other benefits such as the free renewable monthly quota, not having to retype your rubric, prepaid pricing, consistent grades over multiple runs, bulk grading of up to 100 papers at a time, and the results available as a single Word document report.
 
 You can read more about how to use Elagrade for grading essays in this article called [***how accurate and reliable is an AI paper grader***](https://elagrade.com/blog/how-accurate-and-reliable-is-an-ai-paper-grader).
 
@@ -150,7 +150,7 @@ That said, you will still have to guide it, albeit less, and copy-paste the outp
 
 So, instead, you might want to check out specialized grading software such as Elagrade, which lets you automate the follow-up process, grade assignments in bulk, and get the result as a single Word document report, which reduces the grading time of the whole class to several minutes.
 
-Elagrade gives 20 pages (10k words) each month for free. And if you want more, you don't have to buy a subscription.
+Elagrade gives you 20 pages (10k words) free each month. And if you want more, you ***don't*** have to buy a subscription.
 
 So try out both of the ways and choose what's better for you.
 
