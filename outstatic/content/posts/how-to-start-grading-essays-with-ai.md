@@ -87,3 +87,5 @@ To see it in action, head over to [elagrade.com](https://elagrade.com) and watch
 [What Ai Essay Grader For Teachers Is Easy To Use And Provides Feedback](https://elagrade.com/blog/what-ai-essay-grader-for-teachers-is-easy-to-use-and-provides-feedback)
 
 [How Accurate and Reliable is an AI Paper Grader](https://elagrade.com/blog/how-accurate-and-reliable-is-an-ai-paper-grader)
+
+[Do specialized essay graders even make sense when you can grade papers with ChatGPT for free?](https://elagrade.com/blog/do-specialized-essay-graders-even-make-sense-when-you-can-grade-papers-with-chatgpt-for-free)
